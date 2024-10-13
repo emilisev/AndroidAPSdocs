@@ -1,5 +1,9 @@
 # Completing the Objectives
 
+```{contents} Table of Contents
+:depth: 3
+```
+
 **AAPS** has a series of **objectives** that you need to complete to progress from basic open looping to hybrid closed looping and full **AAPS** functionality. Completing the **objectives** ensures:
 
 * You have configured everything correctly in your **AAPS** setup

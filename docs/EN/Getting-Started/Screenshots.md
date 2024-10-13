@@ -1,5 +1,9 @@
 # AAPS screens
 
+```{contents} Table of Contents
+:depth: 3
+```
+
 ## The Homescreen
 
 ![Homescreen V2.7](../images/Home2020_Homescreen.png)
