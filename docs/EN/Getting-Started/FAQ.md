@@ -48,10 +48,10 @@ For safety, recommendations made are based on not one CGM reading but the averag
 
 ### Further readings
 There are several blogs with good tips to help you understand the practicalities of looping:
-  * [Fine-tuning Settings](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
-  * [Why DIA matters](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
+  * [Fine-tuning Settings](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
+  * [Why DIA matters](https://web.archive.org/web/20200813031621/https://seemycgm.com/category/diabetes/page/4/) See my CGM
   * [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-  * [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
+  * [Hormones and autosens](https://web.archive.org/web/20210804001815/http://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
 ## What emergency equipment is recommended to take with me?
 You have to have the same emergency equipment with you like every other T1D with insulin pump therapy.  When looping with AAPS it is strongly recommended to have the following additional equipment with or near to you:
