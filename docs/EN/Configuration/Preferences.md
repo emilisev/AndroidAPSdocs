@@ -88,7 +88,6 @@
 
   ![Prompt biometric protection](../images/Pref2020_PW.png)
 
-(Preferences-skin)=
 #### Skin
 
 - You can choose from four types of skins:
@@ -112,7 +111,6 @@
 
   ![Skins depending on phone's display orientation](../images/Screenshots_Skins.png)
 
-(Preferences-overview)=
 ## Overview
 
 - In overview section you can define preferences for home screen.
@@ -124,7 +122,6 @@
 - Useful while giving a presentation.
 - It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
 
-(Preferences-buttons)=
 ### Buttons
 
 - Define which buttons are visible on the bottom of your home screen.
@@ -137,7 +134,6 @@
 
   ![Preferences > Buttons > Carbs](../images/Pref2020_OV_Buttons3.png)
 
-(Preferences-quick-wizard)=
 ### Quick Wizard
 
 - If you have a frequent snack or meal, you can use the quick wizard button to easily enter amount of carbs and set calculation basics.
@@ -152,7 +148,6 @@
 
   ![Preferences > Quick Wizard Button](../images/Pref2020_OV_QuickWizard2.png)
 
-(Preferences-default-temp-targets)=
 ### Default temp targets
 
 - [Temp targets (TT)](../Usage/temptarget.md) allow you to define change your blood glucose target for a certain time period.
@@ -193,7 +188,6 @@
 
   ![Preferences > Notes in treatment dialogs](../images/Pref2020_OV_Notes.png)
 
-(Preferences-status-lights)=
 ### Status lights
 
 - Status lights give a visual warning for
@@ -219,7 +213,6 @@
 
 ![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
 
-(Preferences-superbolus)=
 #### Superbolus
 
 - Option to enable superbolus in bolus wizard.
@@ -264,13 +257,12 @@
 - To reduce number of notifications you can either use a wider BG target range or increase percentage of the minimal request rate.
 - This defines the relative change required to trigger a notification.
 
-(Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)=
 ## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
 
 Depending on your settings in [config builder](../Configuration/Config-Builder.md) you can choose between two algorithms:
 
 - [Advanced meal assist (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [Super Micro Bolus (OpenAPS SMB)](../Usage/Open-APS-features.md#super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### OpenAPS AMA settings
 
@@ -308,7 +300,7 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 #### Autosens
 
-- [Autosens](Open-APS-features-autosens) looks at blood glucose deviations (positive/negative/neutral).
+- [Autosens](../Usage/Open-APS-features.md#autosens) looks at blood glucose deviations (positive/negative/neutral).
 - It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
 - If you select "Autosens adjust target, too" the algorithm will also modify your glucose target.
 
@@ -317,10 +309,9 @@ When you feel comfortable, you can allow the system to start giving you addition
 - Normally you do not have to change the settings in this dialogue!
 - If you want to change them anyway make sure to read about details in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) and to understand what you are doing.
 
-(Preferences-openaps-smb-settings)=
 ### OpenAPS SMB settings
 
-- In contrast to AMA, [SMB](Open-APS-features-super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
+- In contrast to AMA, [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 
 - You must have started [objective 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
 
@@ -330,7 +321,7 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 - *How frequently SMBs will be given in min* is a restriction for SMB to be delivered only every 4 min by default. This value prevents the system from issuing SMB too often (for example in case of a temp target being set). You should not change this setting unless you know exactly about consequences.
 
-- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](Open-APS-features-autosens) will modify your glucose target according to your blood glucose deviations.
+- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../Usage/Open-APS-features.md#autosens) will modify your glucose target according to your blood glucose deviations.
 
 - If target is modified it will be displayed with a green background on your home screen.
 
@@ -388,7 +379,7 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 ### Advanced settings - autosens ratio
 
-- Define min. and max. [autosens](Open-APS-features-autosens) ratio.
+- Define min. and max. [autosens](../Usage/Open-APS-features.md#autosens) ratio.
 - Normally standard values (max. 1.2 and min. 0.7) should not be changed.
 
 ## Pump settings
@@ -403,7 +394,6 @@ The options here will vary depending on which pump driver you have selected in [
 
 If using AAPS to open loop then make sure you have selected Virtual Pump in config builder.
 
-(Preferences-nsclient)=
 ## NSClient
 
 ![NSClient](../images/Pref2020_NSClient.png)

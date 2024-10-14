@@ -1,4 +1,3 @@
-(Profiles-profile-switch)=
 # Profile switch & Profile Percentage
 
 This section will explain what is a **Profile Switch** and **Profile Percentage** . You can learn about how to create a **Profiles** at [Config Builder - profile](Config-Builder-profile).

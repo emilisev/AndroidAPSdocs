@@ -2,7 +2,7 @@
 
 ## February 2022
 
-- [BG quality warning sign](Screenshots-bg-warning-sign) @tanja
+- [BG quality warning sign](../Getting-Started/Screenshots.md#bg-warning-sign) @tanja
 - [Medtronic pump update](../Configuration/MedtronicPump.md) @dottedfingertips
 - [Necessary checks after update to AAPS 3.0](../Installing-AndroidAPS/update3_0.md) @tanja
 - [Omnipod Dash](../Configuration/OmnipodDASH.md) @Freloner @ robertrub @vanelsberg
@@ -84,11 +84,11 @@
 
 ## May 2020
 
-- [Extended bolus only for Dana + Insight pumps](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [Extended bolus only for Dana + Insight pumps](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
 - [Insight deactivate vibration](Accu-Chek-Insight-Pump-vibration) (firmware 3.x only)
 - [Minimal request rate](Preferences-minimal-request-change) to reduce number of notifications in open loop mode
 - [Patched Libre Link app](Libre2-step-1-build-your-own-patched-librelink-app) - check if correctly patched
-- [Prediction lines](Screenshots-prediction-lines) - more details
+- [Prediction lines](../Getting-Started/Screenshots.md#prediction-lines) - more details
 
 ## April 2020
 
@@ -99,16 +99,16 @@
 
 - [Build apk with Android Studio 3.6.1](../Installing-AndroidAPS/Building-APK.md)
 - [DanaRS with firmware v3](../Configuration/DanaRS-Insulin-Pump.md) **cannot currently be used with AAPS!**
-- [Extended bolus and switch to open loop](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [Extended bolus and switch to open loop](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
 - [Update apk with Android Studio 3.6.1](../Installing-AndroidAPS/Update-to-new-version.md)
 
 ## February 2020
 
 - [Automation caveats](Automation-good-practice-caveats)
-- [Autosens](Open-APS-features-autosens) - short explanation
+- [Autosens](../Usage/Open-APS-features.md#autosens) - short explanation
 - [Careportal alternatives](../Usage/CPbefore26.md)
-- [Extended bolus](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) feature - closed loop will be disabled
-- New [Local Profile plugin](Config-Builder-local-profile)
+- [Extended bolus](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only) feature - closed loop will be disabled
+- New [Local Profile plugin](../Configuration/Config-Builder.md#local-profile)
 - [Sample Setup](../Getting-Started/Sample-Setup.md) - update Dexcom G6
 - [Version 2.6.0](Releasenotes-version-2-6-0) - major new features
 - [Wear complications](../Configuration/Watchfaces.md)
@@ -130,9 +130,9 @@
 
 - [Automation - deactivate when disabling loop](Automation-important-note)
 - [Dexcom G6 replace transmitter update](xdrip-replace-transmitter)
-- [Extended bolus - why they do not work in a loop context](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [Extended bolus - why they do not work in a loop context](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
 - [FAQ - sports](FAQ-sports)
-- [Homescreen - lines on graph](Screenshots-section-f-main-graph)
+- [Homescreen - lines on graph](../Getting-Started/Screenshots.md#section-f---main-graph)
 - [Insight - Disable absolute values in NS Client](Accu-Chek-Insight-Pump-settings-in-aaps)
 - [Medtronic pump - possible double entries](../Configuration/MedtronicPump.md)
 - [New Freestyle Libre 2 tutorial](../Hardware/Libre2.md)
