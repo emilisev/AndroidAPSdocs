@@ -88,12 +88,12 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 * The DIA is not the same for each person. That's why you have to test it for yourself. 
 * But it must always be at least 5 hours.
 * For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AAPS uses minimum 5h as DIA.
-* You can read more about that in the Insulin Profile section of [this](Screenshots-insulin-profile) page.
+* You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots.md#insulin-profile) page.
 
 ### Insulin type differences
 * For 'Rapid-Acting', 'Ultra-Rapid' and 'Lyumjev' the DIA is the only variable you can adjust by yourself, the time to peak is fixed. 
 * Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. 
-* The [insulin curve graph](Screenshots-insulin-profile) helps you to understand the different curves.
+* The [insulin curve graph](../Getting-Started/Screenshots.md#insulin-profile) helps you to understand the different curves.
 * You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
 
 #### Rapid-Acting Oref
@@ -221,7 +221,7 @@ You should [export your settings](../Usage/ExportImportSettings.md) (including p
 See [Objectives](../Usage/Objectives.md) page for more information.
 
 ## Treatments
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout.  Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](Screenshots-carb-correction).
+If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout.  Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots.md#carb-correction).
 
 ## General
 ### Overview
@@ -278,7 +278,7 @@ Choose if you want to have [status lights](../Configuration/Preferences.md#statu
 (Config-Builder-actions)=
 ### Actions
 * Some buttons to quickly access common features.
-* See [AAPS screenshots](Screenshots-action-tab) for details.
+* See [AAPS screenshots](../Getting-Started/Screenshots.md#action-tab) for details.
 
 ### Automation
 User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.md).

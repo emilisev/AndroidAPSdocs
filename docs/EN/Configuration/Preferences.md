@@ -164,7 +164,7 @@
 
 ### Fill/Prime standard insulin amounts
 
-- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](Screenshots-action-tab).
+- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../Getting-Started/Screenshots.md#action-tab).
 - Pre-set values can be defined in this dialogue.
 
 (Preferences-range-for-visualization)=
@@ -193,7 +193,7 @@
 - Status lights give a visual warning for
 
   - Sensor age
-  - Sensor battery level for certain smart readers (see [screenshots page](Screenshots-sensor-level-battery) for details).
+  - Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery) for details).
   - Insulin age (days reservoir is used)
   - Reservoir level (units)
   - Cannula age

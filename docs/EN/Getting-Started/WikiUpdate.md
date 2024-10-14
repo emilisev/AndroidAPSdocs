@@ -52,9 +52,9 @@
 
 ## January 2021
 
-- [Action tab](Screenshots-action-tab) - more details on page 'AAPS screens'
+- [Action tab](../Getting-Started/Screenshots.md#action-tab) - more details on page 'AAPS screens'
 - Dexcom G6 with [Build Your Own Dexcom App](DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
-- Libre smart reader [battery level](Screenshots-sensor-level-battery)
+- Libre smart reader [battery level](../Getting-Started/Screenshots.md#sensor-level-battery)
 - [Objectives](Objectives-objective-3-prove-your-knowledge) - new questions
 - Other [new AAPS 2.8.0 functions](Releasenotes-version-2-8-0)
 
@@ -115,7 +115,7 @@
 
 ## January 2020
 
-- [Manual carb correction](Screenshots-carb-correction) for faulty carb entries
+- [Manual carb correction](../Getting-Started/Screenshots.md#carb-correction) for faulty carb entries
 - [Image size](make-a-PR-image-size) when editing docs
 
 ## December 2019
@@ -159,7 +159,7 @@
 ## September 2019
 
 - [Automate](../Usage/Automation.md)
-- [Bolus calculator](Screenshots-wrong-cob-detection) - slow carb absorption
+- [Bolus calculator](../Getting-Started/Screenshots.md#wrong-cob-detection) - slow carb absorption
 - [Nightscout security](Nightscout-security-considerations)
 - [Profile timeshift](Profiles-time-shift) (more details)
 - [Remote monitoring](../Children/Children.md)

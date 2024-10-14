@@ -312,7 +312,6 @@ When you want to make a meal bolus this is where you will normally make it from.
 * The CORR field is if you want to modify the end dosage for some reason.
 * The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
 
-(Screenshots-eating-reminder)=
 #### Eating reminder
 * For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AAPS
 
@@ -339,7 +338,6 @@ When you want to make a meal bolus this is where you will normally make it from.
 * If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
 * If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
 
-(Screenshots-wrong-cob-detection)=
 #### Wrong COB detection
 
 ![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
@@ -363,8 +361,6 @@ When you want to make a meal bolus this is where you will normally make it from.
    * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
    * Make sure to read the [details](../Usage/Extended-Carbs.md) before using this option.
 
-(Screenshots-careportal-section-n)=
-
 ### Careportal - section N
 
 * Displays information on
@@ -376,7 +372,6 @@ When you want to make a meal bolus this is where you will normally make it from.
    
 * Less information will be shown if [low resolution skin](../Configuration/Preferences.md#skin) is used.
 
-(Screenshots-sensor-level-battery)=
 #### Sensor level (battery)
 * Needs xDrip+ nightly build Dec. 10, 2020 or newer.
 * Works for CGM with additional transmitter such as MiaoMiao 2. (Technically sensor has to send cat level  information to xDrip+.)
@@ -405,7 +400,6 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
 
-(Screenshots-insulin-profile))=
 ## Insulin Profile
 
 ![Insulin Profile](../images/Screenshot_insulin_profile.png)
@@ -438,7 +432,6 @@ Careportal replicated the functions you will find on your Nightscout screen unde
 * If you have used the [Bolus Wizard](#bolus-wizard) to calculate insulin dosage you can review this calculation later on ts tab.
 * Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in ts.)
 
-(Screenshots-carb-correction)=
 ### Carb correction
 ![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
 
@@ -471,7 +464,6 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
    * Basal rate
    * Target: Blood glucose level that you want AAPS to be aiming for
 
-(Screenshots-treatment)=
 ## Treatment
 
 History of the following treatments:

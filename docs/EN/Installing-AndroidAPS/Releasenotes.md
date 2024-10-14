@@ -292,7 +292,7 @@ Release date: 01-01-2021
 ### Major new features
 
 - [Omnipod Eros support](../Configuration/OmnipodEros.md) @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org
-- [bolus advisor](Preferences-bolus-advisor) & [eating reminder](Screenshots-eating-reminder) @MilosKozak
+- [bolus advisor](Preferences-bolus-advisor) & [eating reminder](../Getting-Started/Screenshots.md#eating-reminder) @MilosKozak
 - [New watchface](Watchfaces-new-watchface-as-of-AAPS-2-8) @rICTx-T1D
 - Dana RS connection improvements @MilosKozak
 - Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
