@@ -30,17 +30,17 @@ Here you can jump to the second sandbox file - ["Jump"](./MoveTest/sandbox2.md).
 
 You can dirctly jump from here to the first label in the sandbox2.md file - ["Jump"](../Sandbox/MoveTest/sandbox2.md#this-is-a-test).
 
-:::{versionadded} 1.2.3
+```{versionadded} 1.2.3
 Explanation of the new feature.
-:::
+```
 
-:::{versionchanged} 1.2.3
+```{versionchanged} 1.2.3
 Explanation of the change.
-:::
+```
 
-:::{deprecated} 1.2.3
+```{deprecated} 1.2.3
 Explanation of the deprecation.
-:::
+```
 
 (sandbox1-this-is-a-test)=
 ## This is a test
