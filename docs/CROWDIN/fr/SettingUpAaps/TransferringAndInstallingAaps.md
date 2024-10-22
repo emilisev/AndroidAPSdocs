@@ -37,7 +37,7 @@ Lancez l'installation de l'APK en double-cliquant sur le nom de fichier dans l'a
 
 ![lancer l'installation de l'APK](../images/GoogleDriveMobileUploadedAPK.png)
 
-Si vous recevez une notification de sécurité vous indiquant que vous n'êtes pas autorisé.e à installer des applications depuis Google Drive pour le moment, veuillez l'autoriser temporairement. Pensez à le désactiver par la suite car cela représente un risque de sécurité si vous le laissez activé en permanence.
+Si vous recevez une notification de sécurité vous indiquant que vous n'êtes pas autorisé.e à installer des applications depuis Google Drive pour le moment, veuillez l'autoriser temporairement.
 
 ![Notification de sécurité Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
 
