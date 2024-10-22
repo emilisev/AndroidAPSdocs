@@ -31,7 +31,7 @@
 
 - Une fois que vous avez sélectionné votre pompe, une fenêtre apparaît pour demander un code PIN. Entrez le code PIN affiché sur votre pompe pour terminer la connexion.
 
- ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
+![image](../images/DiaconnG8/DiaconnG8_07.jpg)
 
 ## Contrôle de l'état de la pompe et synchronisation des journaux
 
@@ -79,7 +79,7 @@
 ![Options de la pompe Diaconn G8](../images/DiaconnG8/DiaconnG8_14.jpg)
 
 - Si l'option **Enreg. changement de réservoir** est activée, les informations sont automatiquement téléchargées sur Careportal quand un événement « Changement d'insuline » se produit.
-- Si l'option **Enreg. changement de site** est activée, les informations sont automatiquement téléchargées sur Careportal lorsqu'un événement "Changement de site" se produit.
+- If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a “Site Change” event occurs.
 - Si l'option **Enreg. changement de tubulure** est activée, les informations sont automatiquement téléchargées sur Careportal lorsqu'un événement « Changement de tubulure » se produit.
 - Si l'option **Enreg. changement de pile** est activée, les informations sont automatiquement téléchargées sur Careportal lorsqu'un événement "Changement de pile" se produit, et le bouton CHANGEMENT PILE POMPE dans l'onglet ACTION est désactivé. (Note: Pour changer la pile, veuillez arrêter toutes les fonctions d'injection en cours avant de continuer.)
 
@@ -88,4 +88,4 @@
 ### Fonction Bolus Étendu
 
 - Si vous utilisez un bolus étendu, cela désactivera la boucle fermée.
-- See [this page](../Usage/Extended-Carbs.md#why-extended-boluses-wont-work-in-a-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+- See [this page](../DailyLifeWithAaps/ExtendedCarbs.md#why-extended-boluses-wont-work-in-a-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
