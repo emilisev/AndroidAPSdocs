@@ -2,7 +2,7 @@
 
 Avant de construire votre plateforme, vous devez faire beaucoup de lecture pour comprendre comment tout fonctionne et pour en tirer le meilleur parti. Nous avons dressé une liste des endroits où vous pouvez vous rendre et nous espérons répondre à bon nombre de vos questions.
 
-## Lectures complémentaires
+## Further reading
 
 [OpenAPS.org #wearenotwaiting - https://openaps.org/](https://openaps.org/)
 
