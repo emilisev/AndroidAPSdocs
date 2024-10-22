@@ -1,4 +1,4 @@
-# Assistant de configuration
+# AAPS Setup Wizard
 
 Lorsque vous lancez **AAPS** pour la première fois, vous êtes guidé par l'"**Assistant de configuration**", pour configurer rapidement tous les paramètres de base de votre application. L'**Assistant de configuration** vous guide, afin d'éviter d'oublier quelque chose d'essentiel. Par exemple, les **paramètres d'autorisations** sont fondamentaux pour configurer correctement **AAPS**.
 
@@ -18,7 +18,7 @@ Alors, prenez votre temps pour configurer votre boucle, les avantages d'une bouc
 
 ```{admonition} Ask for Help
 :class: note
-Si vous trouvez une erreur dans la documentation ou si vous avez une suggestion pour mieux expliquer quelque chose, vous pouvez demander de l'aide à la communauté comme expliqué dans [Où trouver de l'aide](../Where-To-Go-For-Help/Connect-with-other-users.md).
+If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
 ```
 
 ## Guide pas à pas de l'assistant de configuration AAPS
@@ -55,13 +55,13 @@ La consommation de la batterie sur les smartphones reste une problématique, car
 
 Cependant, **AAPS** doit s'exécuter régulièrement, notamment pour recevoir les glycémies toutes les quelques minutes, puis appliquer l'algorithme qui décide comment gérer cette information, en fonction de vos spécifications. Par conséquent, nous devons l'autoriser à le faire, au niveau d'Android.
 
-Vous le ferez en donnant cette autorisation.
+You do this by confirming the setting.
 
 Cliquez sur le bouton "DEMANDE D'AUTORISATION" :
 
 ![image](../images/setup-wizard/Screenshot_20231202_125721.png)
 
-Cliquez "Autoriser" :
+Please select "Allow":
 
 ![image](../images/setup-wizard/Screenshot_20231202_125750.png)
 
@@ -133,7 +133,7 @@ Après avoir saisi le mot de passe deux fois, veuillez cliquer sur le bouton "SU
 
 ### Téléchargement Fabric
 
-Ici vous pouvez autoriser l'envoi automatique des rapports d'erreur en cas de plantage, ainsi que de données sur l'utilisation de l'appli.
+Here you can setup the usage of an automated crash and usage reporting service.
 
 Ce n'est pas obligatoire, mais c'est une bonne pratique de l'activer.
 
@@ -241,13 +241,13 @@ Pour l'instant, laissez ces options désactivées. Nous vous avons simplement am
 
 Retournez à l'écran précédent et sélectionnez "Paramètres de connexion".
 
-Ici vous pouvez affiner les conditions de téléchargement vers le serveur de reporting.
+Here you can configure how to transfer your data to the reporting server.
 
 Les aidants doivent activer "Utiliser la connexion mobile" sinon le smartphone qui sert au dépendant/enfant ne peut pas télécharger les données en dehors de la portée du WiFi, par exemple sur le chemin de l'école.
 
 Les autres utilisateurs d'**AAPS** peuvent désactiver le transfert via la connexion mobile s'ils veulent économiser de la bande passante ou de la batterie.
 
-Si vous ne savez pas trop, laissez simplement tout coché.
+If in doubt, just leave all enabled.
 
 Retournez à l'écran précédent et sélectionnez "Paramètres Avancés".
 
@@ -326,7 +326,7 @@ Revenez en arrière et cliquez sur "SUIVANT" pour passer à l'écran suivant :
 
 ![image](../images/setup-wizard/Screenshot_20231202_141958.png)
 
-### Profil
+### Profile
 
 Nous arrivons maintenant à une partie très importante de l'Assistant de configuration.
 
@@ -360,15 +360,15 @@ Entrez votre Durée d'action de l'insuline (DAI) en heures. Ensuite, appuyez sur
 
 ![image](../images/setup-wizard/Screenshot_20231202_142143.png)
 
-Entrez vos valeurs de ratio glucides / insuline :
+Enter your IC values:
 
 ![image](../images/setup-wizard/Screenshot_20231202_142903.png)
 
-Appuyez sur "SI". Entrez vos valeurs de sensibilité à l'insuline :
+Appuyez sur "BAS". Entrez vos valeurs de débit basal :
 
 ![image](../images/setup-wizard/Screenshot_20231202_143009.png)
 
-Appuyez sur "BAS". Entrez vos valeurs de débit basal :
+Appuyez sur "SI". Entrez vos valeurs de sensibilité à l'insuline :
 
 ![image](../images/setup-wizard/Screenshot_20231202_143623.png)
 
@@ -440,7 +440,7 @@ Appuyez sur "SUIVANT" pour passer à l'écran suivant :
 
 ![image](../images/setup-wizard/Screenshot_20231202_143935.png)
 
-### Algorithme APS
+### APS algorithm
 
 Choisissez l'algorithme SMB OpenAPS comme algorithme APS. Malgré son nom, la fonctionnalité SMB de l'algorithme est désactivée jusqu'à ce que vous soyez familier avec AAPS et ayez déjà travaillé sur les premiers objectifs. L'algorithme OpenAPS SMB est plus récent et de manière générale meilleur par rapport à OpenAPS AMA de toute façon.
 
@@ -455,7 +455,7 @@ Appuyez sur le bouton Engrenage pour voir les détails :
 
 ![image](../images/setup-wizard/Screenshot_20231202_144014.png)
 
-Parcourez seulement les options et ne changez rien ici.
+Only read the text and change nothing here.
 
 En raison des limitations imposées par les **Objectifs**, vous ne pouvez de toute façon pas utiliser les fonctionnalités "boucle fermée" ou "SMB" pour le moment.
 
@@ -485,7 +485,7 @@ Vous entrez maintenant les Objectifs. Un passage obligé pour accéder à d'autr
 
 Ici, nous commençons l'objectif 1, même si pour le moment notre configuration n'est pas complètement terminée et ne permet pas de valider cet objectif.
 
-Nous n'en sommes qu'au début.
+But this is the start.
 
 Appuyez sur le bouton vert "DÉPART" pour démarrer l'objectif 1 :
 
