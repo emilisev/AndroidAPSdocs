@@ -1,6 +1,6 @@
 # Automatisation avec une application Android Automate tierce
 
-**This article has been written before AAPS version 2.5. There is an [automation plugin in AAPS](./Automation.md) itself with AAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
+**This article has been written before AAPS version 2.5. There is an [automation plugin in AAPS](../DailyLifeWithAaps/Automations.md) itself with AAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
 
 As AAPS is a hybrid closed loop system, some user interaction is necessary though (e.g. tell the loop that you are walking, eating soon, lying on the sofa...). Frequent manual user inputs can be automated via external tools like Automate or IFTTT to extend the recent AAPS functionality.
 
@@ -32,11 +32,11 @@ In AAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NS
 
 In AAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Advanced Settings > Uncheck 'NS upload only (disabled sync)' and 'No upload to NS'.
 
-Soyez conscient des [problèmes de sécurité](Nightscout-security-considerations) qui pourraient se produire et soyez très prudent si vous utilisez une [pompe Insight](Accu-Chek-Insight-Pump-settings-in-aaps).
+Be aware of the [security issues](../SettingUpAaps/Nightscout.md#security-considerations) that might occure and be very careful if you are using an [Insight pump](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps).
 
 ![Paramètres de téléchargement Nighscout](../images/automate-aaps2.jpg)
 
-### Exemples de Scripts
+### Workflow examples
 
 #### Exemple 1: Si une activité (par ex. marche ou course) est détectée, définir une CT élevée. Et si l'activité se termine, attendre 20 minutes puis annuler la CT
 
@@ -44,7 +44,7 @@ Ce script écoutera les capteurs du smartphone (pédomètre, capteur de gravité
 
 Téléchargez le script Automate <https://llamalab.com/automate/community/flows/27808>.
 
-Éditez le script en appuyant sur le crayon > Script
+Edit the sling by tapping on the edit pencil > Flowchart
 
 ![Script Automate](../images/automate-app3.png)
 
@@ -52,8 +52,8 @@ Personnaliser le script en fonction de vos souhaits comme ceci :
 
 ![Script Automate](../images/automate-app6.png)
 
-1. = Définir CT élevée
-2. = Revenir à la cible normale 20 minutes après la fin de l'activité
+1. \= Définir CT élevée
+2. \= Revenir à la cible normale 20 minutes après la fin de l'activité
 
 1 ![Script Automate](../images/automate-app1.png)
 
@@ -63,15 +63,15 @@ URL de la requête : Votre URL-NS se terminant par /api/v1/treatments.json (par 
 
 Contenu de la requête :
 
-* targetTop / targetBottom: La valeur de la CT haute (la valeur haute et basse doivent être les mêmes)
-* duration: La durée de la CT haute (Après cette durée, il reviendra à la cible du profil standard sauf si l'activité se poursuit). 
-* secret : votre hachage SHA1 de l'API. Ce n'est PAS votre clé api ! Vouc pouvez convertir votre clé API au format SHA1 sur <http://www.sha1-online.com/>
+- targetTop / targetBottom: La valeur de la CT haute (la valeur haute et basse doivent être les mêmes)
+- duration: La durée de la CT haute (Après cette durée, il reviendra à la cible du profil standard sauf si l'activité se poursuit).
+- secret : votre hachage SHA1 de l'API. Ce n'est PAS votre clé api ! Vouc pouvez convertir votre clé API au format SHA1 sur <http://www.sha1-online.com/>
 
-Sauvegarde : Appuyez sur 'Save' après chaque modification de bloc puis sur le flèche de retour arrière
+Save: Tap on 'Done' and on the hook
 
-Démarrer le script : Cliquez sur le bouton Start
+Start sling: Tap on Play button
 
-#### Exemple 2 : Si xDrip+ envoie une alerte glycémie haute, alors définir une CT basse pendant xxx minutes.
+#### Exemple 2 : Si xDrip+ envoie une alerte glycémie haute, alors définir une CT basse pendant xxx minutes. minutes.
 
 Ce script va écouter le canal de notification xDrip+. Si une alerte glycémie haute spécifiée par l'utilisateur est déclenchée, alors Automate définira une cible temp basse ayant un niveau et une durée spécifiée par l'utilisateur. Après un certain temps, une autre alerte prolongera si nécessaire la durée de la CT faible.
 
@@ -93,13 +93,13 @@ Snooze par défaut : renseignez la durée souhaitée de votre CT ici, comme cela
 
 Ensuite, téléchargez le script d'automatisation <https://llamalab.com/automate/community/flows/27809>.
 
-Éditez le script en appuyant sur le crayon > Script
+Edit the sling by tapping on the edit pencil > Flowchart
 
 ![Script Automate](../images/automate-app3.png)
 
 Personnaliser le script en fonction de vos souhaits comme ceci :
 
-Dans le déclencheur 'Notification posted?', vous devez mettre dans 'Title' le nom de l'alerte xDrip+ qui doit déclencher le script et ajouter un caractère * avant et après ce nom.
+Dans le déclencheur 'Notification posted?', vous devez mettre dans 'Title' le nom de l'alerte xDrip+ qui doit déclencher le script et ajouter un caractère \* avant et après ce nom.
 
 ![Script Automate](../images/automate-app7.png)
 
@@ -109,17 +109,17 @@ URL de la requête : Votre URL-NS se terminant par /api/v1/treatments.json (par 
 
 Contenu de la requête :
 
-* targetTop / targetBottom : la valeur de la CT faible (les 2 doivent avoir la même valeur)
-* duration : la durée de votre CT faible (après cette durée AAPS reviendra à la cible standard de votre profil). Il est recommandé de mettre la même valeur que 'Snooze par défaut' de l'alerte xDrip+
-* secret : votre hachage SHA1 de l'API. Ce n'est PAS votre clé api ! Vouc pouvez convertir votre clé API au format SHA1 sur <http://www.sha1-online.com/>
+- targetTop / targetBottom : la valeur de la CT faible (les 2 doivent avoir la même valeur)
+- duration : la durée de votre CT faible (après cette durée AAPS reviendra à la cible standard de votre profil). Il est recommandé de mettre la même valeur que 'Snooze par défaut' de l'alerte xDrip+
+- secret : votre hachage SHA1 de l'API. Ce n'est PAS votre clé api ! Vouc pouvez convertir votre clé API au format SHA1 sur <http://www.sha1-online.com/>
 
-Sauvegarde : Appuyez sur 'Save' après chaque modification de bloc puis sur le flèche de retour arrière
+Save: Tap on 'Done' and on the hook
 
-Démarrer le script : Cliquez sur le bouton Start
+Start sling: Tap on Play button
 
 #### Exemple 3: À vous de l'ajouter !!!
 
-Please add further workflows by uploading .flo file to Automate community (under the keyword 'Nightscout') and describe it here by doing [Pull Request on AndroidAPSDocs repository](../make-a-PR.md).
+Please add further workflows by uploading .flo file to Automate community (under the keyword 'Nightscout') and describe it here by doing [Pull Request on AndroidAPSDocs repository](../SupportingAaps/HowToEditTheDocs.md).
 
 ## IF This, Then That (IFTTT)
 
