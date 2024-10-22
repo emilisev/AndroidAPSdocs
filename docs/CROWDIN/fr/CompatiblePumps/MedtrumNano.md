@@ -2,23 +2,25 @@
 
 These instructions are for configuring the Medtrum insulin pump.
 
-Ce logiciel est une partie d'un système de pancréas artificiel "Do it yourself" (faire soi-même), et ce n’est pas un produit fini destiné à la mise sur le marché. VOUS devez obligatoirement lire, apprendre et comprendre ce système, y compris la façon de l’utiliser. Attention, vous êtes le seul responsable de ce que vous faite avec ce système.
+Ce logiciel est une partie d'un système de pancréas artificiel "Do it yourself" (faire soi-même), et ce n’est pas un produit fini destiné à la mise sur le marché. VOUS devez obligatoirement lire, apprendre et comprendre ce système, y compris la façon de l’utiliser. You alone are responsible for what you do with it.
 
 ## Pump capabilities with AAPS
-* All loop functionality supported (SMB, TBR etc)
-* Automatic DST and timezone handling
-* Extended bolus is not supported by AAPS driver
+
+- All loop functionality supported (SMB, TBR etc)
+- Automatic DST and timezone handling
+- Extended bolus is not supported by AAPS driver
 
 ## Configuration matérielle et logicielle requise
-* **Compatible Medtrum pumpbase and reservoir patches**
-    - Currently supported:
-        - Medtrum TouchCare Nano with pumpbase refs: **MD0201** and **MD8201**.
-        - Medtrum TouchCare 300U with pumpbase ref: **MD8301**.
-        - If you have an unsupported model and are willing to donate hardware or assist with testing, please contact us via discord [here](https://discordapp.com/channels/629952586895851530/1076120802476441641).
-* **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
-* **Un téléphone Android compatible** avec une connexion Bluetooth BLE
-    - See AAPS [Release Notes](../Installing-AndroidAPS/Releasenotes.md)
-* [**Moniteur Glycémie continue (MGC)**](../Getting-Started/CompatiblesCgms.md)
+
+- **Compatible Medtrum pumpbase and reservoir patches**
+  - Currently supported:
+    - Medtrum TouchCare Nano with pumpbase refs: **MD0201** and **MD8201**.
+    - Medtrum TouchCare 300U with pumpbase ref: **MD8301**.
+    - If you have an unsupported model and are willing to donate hardware or assist with testing, please contact us via discord [here](https://discordapp.com/channels/629952586895851530/1076120802476441641).
+- **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
+- **Un téléphone Android compatible** avec une connexion Bluetooth BLE
+  - See AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
+- [**Moniteur Glycémie continue (MGC)**](../Getting-Started/CompatiblesCgms.md)
 
 ## Avant de commencer
 
@@ -26,9 +28,10 @@ Ce logiciel est une partie d'un système de pancréas artificiel "Do it yourself
 
 **The PDM and Medtrum App will not work with a patch that is activated by AAPS.** Previously you may have used your PDM or Medtrum app to send commands to your pump. For security reasons you can only use the activated patch with the device or app that was used to activate it.
 
-*This does NOT mean that you should throw away your PDM. It is recommended to keep it somewhere safe as a backup in case of emergencies, for instance if your phone gets lost or AAPS is not working correctly.*
+_This does NOT mean that you should throw away your PDM. It is recommended to keep it somewhere safe as a backup in case of emergencies, for instance if your phone gets lost or AAPS is not working correctly._
 
-**Your pump will not stop delivering insulin when it is not connected to AAPS** Default basal rates are programmed on the pump as defined in the current active profile. As long as AAPS is operational, it will send temporary basal rate commands that run for a maximum of 120 minutes. If for some reason the pump does not receive any new commands (for instance because communication was lost due to pump - phone distance) the pump will fall back to the default basal rate programmed on the pump once the Temporary Basal Rate ends.
+**Your pump will not stop delivering insulin when it is not connected to AAPS** Default basal rates are programmed on the pump as defined in the current active profile.
+As long as AAPS is operational, it will send temporary basal rate commands that run for a maximum of 120 minutes. If for some reason the pump does not receive any new commands (for instance because communication was lost due to pump - phone distance) the pump will fall back to the default basal rate programmed on the pump once the Temporary Basal Rate ends.
 
 **30 min Basal Rate Profiles are NOT supported in AAPS.** **The AAPS Profile does not support a 30 minute basal rate time frame** If you are new to AAPS and are setting up your basal rate profile for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and you will need to adjust your basal rate profile to start on the hour. Par exemple, si vous avez un débit de basal de 1,1 unités qui commence à 09h30 et a une durée de 2 heures se terminant à 11h30, cela ne marchera pas. Vous devrez mettre à jour ce taux de basal de 1,1 sur une plage horaire de 9h00 à 11h00 ou de 10h00 à 12h00. Even though the Medtrum pump hardware itself supports the 30 min basal rate profile increments, AAPS is not able to take them into account with its algorithms currently.
 
@@ -72,7 +75,7 @@ NOTE: This setting can only be changed when there is no patch active.
 
 #### Alarm settings
 
-***Default: Beep.***
+_**Default: Beep.**_
 
 This setting changes the way that the pump will alert you when there is a warning or error.
 
@@ -83,18 +86,19 @@ Note: In silent mode AAPS will still sound the alarm depending on your phone's v
 
 #### Notification on pump warning
 
-***Default: Enabled.***
+_**Default: Enabled.**_
 
-This settings changes the way AAPS will show notification on non ciritical pump warnings. When enabled a Notification will be shown on the phone when a pump warning occurs, including:
-    - Low battery
-    - Low reservoir (20 Units)
-    - Patch expiration warning
+This settings changes the way AAPS will show notification on non ciritical pump warnings.
+When enabled a Notification will be shown on the phone when a pump warning occurs, including:
+\- Low battery
+\- Low reservoir (20 Units)
+\- Patch expiration warning
 
 In either case these warnings are also shown on the Medtrum overview screen under [Active alarms](#active-alarms).
 
 #### Patch Expiration
 
-***Default: Enabled.***
+_**Default: Enabled.**_
 
 This setting changes the behavior of the patch. When enabled the patch will expire after 3 days and give an audible warning if you have sound enabled. After 3 days and 8 hours the patch will stop working.
 
@@ -102,13 +106,13 @@ If this setting is disabled, the patch will not warn you and will continue runni
 
 #### Pump expiry warning
 
-***Default: 72 hours.***
+_**Default: 72 hours.**_
 
 This setting changes the time of the expiration warning, when [Patch Expiration](#patch-expiration) is enabled, AAPS will give a notification on the set hour after activation.
 
 #### Hourly Maximum Insulin
 
-***Default: 25U.***
+_**Default: 25U.**_
 
 This setting changes the maximum amount of insulin that can be delivered in one hour. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#reset-alarms).
 
@@ -116,7 +120,7 @@ Set this to a sensible value for your insulin requirements.
 
 #### Daily Maximum Insulin
 
-***Default: 80U.***
+_**Default: 80U.**_
 
 This setting changes the maximum amount of insulin that can be delivered in one day. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#reset-alarms).
 
@@ -148,7 +152,7 @@ Go to preferences and select **Local Alerts**:
 
 ##### Alert if pump is unreachable
 
-***Default: Enabled.***
+_**Default: Enabled.**_
 
 This setting is forced to enabled when the Medtrum driver is enabled. It will alert you when the pump is unreachable. This can happen when the pump is out of range or when the pump is not responding due to a defective patch or pumpbase, for example when water leaks between the pumpbase and the patch.
 
@@ -156,7 +160,7 @@ For safety reasons this setting cannot be disabled.
 
 ##### Pump unreachable threshold [min]
 
-***Default: 30 min.***
+_**Default: 30 min.**_
 
 This setting changes the time after which AAPS will alert you when the pump is unreachable. This can happen when the pump is out of range or when the pump is not responding due to a defective patch or pumpbase, for example when water leaks between the pumpbase and the patch.
 
@@ -165,8 +169,9 @@ This setting can be changed when using Medtrum pump but it is recommended to set
 ### Step 3: Activate patch
 
 **Before you continue:**
+
 - Have your Medtrum Nano pumpbase and a reservoir patch ready.
-- Make sure that AAPS is properly set up and a [profile is activated](../Usage/Profiles.md).
+- Make sure that AAPS is properly set up and a [profile is activated](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 - Other devices that can talk to the Medtrum pump are disabled (PDM and Medtrum app)
 
 #### Activate patch from the Medtrum overview Tab
@@ -209,7 +214,8 @@ Once the prime is complete, press **Next** to continue.
 
 ![Attach patch](../images/medtrum/activation/AttachPatch.png)
 
-Clean the skin, remove stickers and attach the patch to your body. Remove safety lock and press the needle button on the patch to insert the cannula.
+Clean the skin, remove stickers and attach the patch to your body.
+Remove safety lock and press the needle button on the patch to insert the cannula.
 
 Press **Next** to activate the patch.
 
@@ -268,8 +274,8 @@ This shows the last time the pump was connected to AAPS.
 ##### Pump state:
 
 This shows the current state of the pump. For example:
-    - ACTIVE : The pump is activated and running normally
-    - STOPPED: The patch is not activated
+\- ACTIVE : The pump is activated and running normally
+\- STOPPED: The patch is not activated
 
 ##### Basal type:
 
@@ -325,17 +331,18 @@ This button will start the process to change the patch. See [Activate patch](#ac
 
 ### Reset alarms
 
-The alarm button will appear on the overview screen when there is an active alarm that can be reset. Pressing this button will reset the alarms and resume insulin delivery if the patch has been suspended due to the alarm. Par ex. when suspended due to a maximum daily insulin delivery alarm.
+The alarm button will appear on the overview screen when there is an active alarm that can be reset. Pressing this button will reset the alarms and resume insulin delivery if the patch has been suspended due to the alarm. E.g. Par ex. when suspended due to a maximum daily insulin delivery alarm.
 
 ![Reset alarms](../images/medtrum/ResetAlarms.png)
 
 Press the **Reset Alarms** button to reset the alarms and resume normal operation.
 
-## Résolution de problèmes
+## Troubleshooting
 
 ### Connection issues
 
 If you are experiencing connection timeouts or other connection issues:
+
 - In Android application settings for AAPS: Set location permission to "Allow all the time".
 
 ### Activation interrupted
@@ -345,6 +352,7 @@ If the activation process is interrupted for example by and empty phone battery 
 ### Preventing patch faults
 
 The patch can give a variety of errors. To prevent frequent errors:
+
 - Make sure the pumpbase is properly seated in the patch and no gaps are visible.
 - When filling the patch do not apply excessive force to the plunger. Do not try to fill the patch beyond the maximum that applies to your model.
 
@@ -352,7 +360,8 @@ The patch can give a variety of errors. To prevent frequent errors:
 
 All of the development work for the Medtrum driver is done by the community on a **volunteer** basis; we ask that you to remember that fact and use the following guidelines before requesting assistance:
 
--  **Niveau 0 :** Lisez la section correspondante de cette documentation pour vous assurer que vous comprenez comment la fonctionnalité avec laquelle vous avez des difficultés est censée fonctionner.
--  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#Medtrum* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AAPS/issues) if it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../Usage/Accessing-logfiles.md).
--  **Soyez patient - la plupart des membres de notre communauté sont des bénévoles de bonne nature, et résoudre les problèmes nécessite souvent du temps et de la patience de la part des utilisateurs et des développeurs.**
+- **Niveau 0 :** Lisez la section correspondante de cette documentation pour vous assurer que vous comprenez comment la fonctionnalité avec laquelle vous avez des difficultés est censée fonctionner.
+- **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the _#Medtrum_ channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
+- **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AAPS/issues) if it exists, please confirm/comment/add information on your problem.
+  If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
+- **Soyez patient - la plupart des membres de notre communauté sont des bénévoles de bonne nature, et résoudre les problèmes nécessite souvent du temps et de la patience de la part des utilisateurs et des développeurs.**
