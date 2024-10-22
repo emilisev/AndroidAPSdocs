@@ -13,14 +13,17 @@ De nombreux détails dans la documentation sur l'utilisation de **AAPS** prennen
 (preparing-safety-first)=
 
 ## La sécurité avant tout
+
 “Un grand pouvoir implique de grandes responsabilités... ”
 
 ### Sûreté technique
+
 **AAPS** dispose d'un large éventail de fonctionnalités liées à la sûreté. These impose constraints which are gradually removed through staged completion of a series of [Objectives](../SettingUpAaps/CompletingTheObjectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS** débloque des fonctionnalités lorsque vous terminez un objectif avec succès. Ce processus permet à l'utilisateur d'évoluer en toute sécurité par étapes successives, de la Boucle Ouverte à la Boucle Fermée, tout en apprenant les différentes fonctionnalités de **AAPS**.
 
 The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Des erreurs peuvent arriver quand un débutant est inexpérimenté et trop impatient de commencer avec **AAPS** ou a négligé des éléments importants. The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) aim to minimise these issues.
 
 ### Sûreté médicale
+
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
 :class: danger
 Attention à l'amélioration rapide du contrôle de la glycémie et à la réduction de l'HbA1c 
@@ -60,7 +63,6 @@ En un mot :
 Parmi les noms de médicaments inhibiteurs de SGLT-2 courants, on trouve : Invokana, Farxiga, Jardiance, Glyxambi, Synjardy, Steglatro et Xigduo XR, entre autres.
 ```
 
-
 ### Principes clés de la boucle avec AAPS
 
 Vous devez bien comprendre les principes et concepts clés de la boucle avant d'utiliser **AAPS**. Vous y parviendrez en investissant votre temps personnel dans la lecture de la documentation **AAPS** et en complétant les Objectifs, qui ont pour but de vous assurer un système solide pour une utilisation sûre et efficace de **AAPS**. Le volume de la documentation **AAPS** peut sembler impressionnant dans un premier temps, mais soyez patient et faite confiance au processus - avec la bonne approche, vous y arriverez !
@@ -69,7 +71,7 @@ La vitesse de progression dépendra de chacun, mais sachez qu'il faut générale
 
 Pour réussir avec **AAPS**, il faut une approche proactive, la volonté d'analyser données de glycémie et de la flexibilité pour procéder aux ajustements nécessaires à **AAPS** afin d’améliorer vos résultats. Il est presque impossible d’apprendre à pratiquer un sport uniquement en lisant les règles, on peut en dire autant d'**AAPS**.
 
-#### Attendez-vous à ce que ça prenne plus de temps que prévu et à faire face à des problèmes mineurs le temps de tout mettre en place et tout faire fonctionner
+#### Plan for delays and minor issues in getting everything set up and running
 
 Dans les premiers temps du démarrage avec **AAPS**, vous pouvez rencontrer des difficultés à faire communiquer avec succès tous les composants de la boucle les uns avec les autres (et les suiveurs éventuels), ou lorsque vous ajustez vos paramètres. Certains soucis ne peuvent pas être résolus tant qu'**AAPS** n'est pas utilisé dans la vie quotidienne, mais toute l'aide dont vous aurez besoin est disponible sur le groupe Facebook et sur Discord. Veillez à vous organiser et à choisir un moment approprié, comme une matinée calme en week-end (par ex. pas tard la nuit ou quand vous êtes fatigué, ou avant une réunion importante ou un voyage) pour travailler à la résolution des problèmes que vous pouvez rencontrer.
 
@@ -83,37 +85,31 @@ Le temps nécessaire à la compilation d'**AAPS** dépend de votre niveau de con
 
 Pour vous aider dans le processus de compilation, il y a des pages dédiées dans la documentation :
 
-- List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](../Getting-Started/FAQ.md) K);
+- List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](../UsefulLinks/FAQ.md) K);
 
-- “[How to install AAPS](../SettingUpAaps/BuildingAaps.md)? (Section D) which includes [Troubleshooting](../Usage/troubleshooting.md) Subsection.
+- “[How to install AAPS](../SettingUpAaps/BuildingAaps.md)? (Section D) which includes [Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) Subsection.
 
 Le temps nécessaire pour arriver à la boucle fermée dépendra de chacun, mais vous pouvez vous faire une idée [ici](#how-long-will-it-take-to-set-everything-up)
-
 
 #### Fichier de clés & exportation des paramètres de configuration
 
 Le fichier « keystore » ou « magasin de clés » (fichier .jks) est un fichier chiffré par mot de passe unique utilisé pour la création de votre version personnelle de **AAPS**. Votre téléphone Android l'utilise pour s'assurer que personne d'autre ne peut mettre à jour votre version personnelle sans le magasin de clés. En bref, dans le cadre de la compilation d'**AAPS** vous devriez :
 
-1.  Enregistrer le fichier de votre magasin de clés (fichier .jks utilisé pour signer votre application) dans un endroit sûr;
+1. Enregistrer le fichier de votre magasin de clés (fichier .jks utilisé pour signer votre application) dans un endroit sûr;
 
-2.  Vous assurer de conserver le mot de passe de votre fichier de clés.
-
+2. Vous assurer de conserver le mot de passe de votre fichier de clés.
 
 De cette façon, vous pourrez utiliser ce même fichier de clés à chaque fois qu'une nouvelle version de **AAPS** sera créée. En moyenne, vous aurez à faire 2 mises à jour d'**AAPS** chaque année.
 
-In addition, **AAPS** provides the ability to [export all your configuration settings](../Usage/ExportImportSettings.md). Cela vous permet de récupérer votre système en toute sécurité tout en changeant de téléphone, de mettre à jour/réinstaller l'application avec un minimum d'interruption. 
+In addition, **AAPS** provides the ability to [export all your configuration settings](../Maintenance/ExportImportSettings.md). Cela vous permet de récupérer votre système en toute sécurité tout en changeant de téléphone, de mettre à jour/réinstaller l'application avec un minimum d'interruption.
 
-#### Résolution de problèmes
+#### Troubleshooting
 
 N''hésitez pas à contacter la communauté AAPS s'il y a des points sur lesquels vous avez des hésitations - il n'y a pas de question bête ! Tous les utilisateurs, quel que soit leur niveau d'expérience, sont encouragés à poser leurs questions. Les temps de réponse aux questions sont généralement courts, grâce au grand nombre d'utilisateurs d'**AAPS**.
 
 ##### [demandez de l'aide sur le groupe AAPS Facebook](https://www.facebook.com/groups/AndroidAPSUsers/)
 
 ##### [demandez de l'aide sur le serveur Discord pour AAPS](https://discord.gg/4fQUWHZ4Mw)
-
-
-
-
 
 #### [Where to go for help](../Where-To-Go-For-Help/Background-reading.md)?
 
@@ -127,30 +123,35 @@ This is a [section specificially for clinicians](../Resources/clinician-guide-to
 
 Ce schéma offre un aperçu des composants clés (matériel et logiciel) du système **AAPS** :
 
-![préparation_vue_d_ensemble](../images/preparing_images/AAPS_preparing_overview_01.png)
-
+![préparation\_vue\_d\_ensemble](../images/preparing_images/AAPS_preparing_overview_01.png)
 
 En plus des trois composants matériels de base (téléphone, pompe, capteur de glycémie), nous avons également besoin de : 1) L'application **AAPS** 2) Un serveur de reporting et 3) Une application pour suivre la mesure en continu du glucose (MCG)
+
+1. The **AAPS** app
+2. Attendez-vous à ce que ça prenne plus de temps que prévu et à faire face à des problèmes mineurs le temps de tout mettre en place et tout faire fonctionner
+3. A continuous glucose monitor (CGM) app
 
 ### 1) L'application Android pour téléphone : **AAPS**
 
 **AAPS** est une application qui s'exécute sur les smartphones et appareils Android. Vous allez compiler l'application **AAPS** (un fichier apk) vous-même, en suivant un guide détaillé. Vous aurez besoin de télécharger le code source de **AAPS** depuis GitHub, d'installer les programmes nécessaires (Android Studio, GitHub desktop) sur votre ordinateur et de compiler votre propre version de l'application **AAPS**. Vous transférerez ensuite l'application **AAPS** sur votre smartphone (par e-mail, câble USB _etc._) et vous l'installerez.
 
-### 2) Un serveur de reporting : NightScout (Tidepool*)
+### 2. Un serveur de reporting : NightScout (Tidepool\*)
 
-Afin de profiter de tous les avantages de **AAPS**, vous aurez besoin de configurer un serveur Nightscout. Vous pouvez le faire vous-même (lien vers les instructions) ou, à défaut, payer un petit abonnement pour un service Nightscout tout prêt installé (lien vers T1 pal 10.be etc). Nightscout est utilisé pour collecter les données de **AAPS** au fil du temps et peut générer des rapports détaillés mettant en relation les données de glycémie et d'insuline. Les aidants peuvent également utiliser Nightscout pour communiquer à distance avec l'application **AAPS**, pour superviser la gestion du diabète de leur enfant. Dans les fonctionnalités de communication à distance, on trouve la surveillance en temps réel de la glycémie et de l'insuline active, l'administration à distance d'insuline (par SMS) et les annonces de repas. Tenter d'analyser vos performances dans le suivi du diabète en examinant les données de glycémie séparément des données de la pompe, c'est comme conduire une voiture où le conducteur est aveugle et le passager décrit la scène.  Tidepool est disponible comme alternative à Nightscout, pour les versions AAPS 3.2 et ultérieures.
+Afin de profiter de tous les avantages de **AAPS**, vous aurez besoin de configurer un serveur Nightscout. Vous pouvez le faire vous-même (lien vers les instructions) ou, à défaut, payer un petit abonnement pour un service Nightscout tout prêt installé (lien vers T1 pal 10.be etc). Nightscout est utilisé pour collecter les données de **AAPS** au fil du temps et peut générer des rapports détaillés mettant en relation les données de glycémie et d'insuline. Les aidants peuvent également utiliser Nightscout pour communiquer à distance avec l'application **AAPS**, pour superviser la gestion du diabète de leur enfant. Dans les fonctionnalités de communication à distance, on trouve la surveillance en temps réel de la glycémie et de l'insuline active, l'administration à distance d'insuline (par SMS) et les annonces de repas.
+Tenter d'analyser vos performances dans le suivi du diabète en examinant les données de glycémie séparément des données de la pompe, c'est comme conduire une voiture où le conducteur est aveugle et le passager décrit la scène.  Tidepool est disponible comme alternative à Nightscout, pour les versions AAPS 3.2 et ultérieures.
 
-### 3) Application pour le capteur MGC
+### 3. Application pour le capteur MGC
 
 En fonction de votre capteur de glycémie/MGC, vous aurez besoin d'une application compatible pour recevoir les mesures de glycémie et les envoyer à **AAPS**. The different options are shown below and more information is given in the [compatible CGMs section](../Getting-Started/CompatiblesCgms.md):
 
-![options_dexcom](../images/preparing_images/AAPS_connectivity_Dex_02.png) ![options_libres](../images/preparing_images/AAPSconnectivity_libre.png) ![options_eversense](../images/preparing_images/AAPS_connectivity_eversense.png)
+![options\_dexcom](../images/preparing_images/AAPS_connectivity_Dex_02.png) ![options\_libres](../images/preparing_images/AAPSconnectivity_libre.png) ![options\_eversense](../images/preparing_images/AAPS_connectivity_eversense.png)
 
 ### Maintenance du système **AAPS**
 
 Aussi bien **Nightscout** qu'**AAPS** doivent être mis à jour environ une fois par an, car de nouvelles versions sont publiées. Dans certains cas, la mise à jour peut être repoussée, dans d'autres cas, elle est fortement recommandée ou considérée comme essentielle pour la sécurité. Ces mises à jour seront notifiées sur les groupes Facebook et les serveurs Discord. Les notes de version indiqueront clairement la marche à suivre. Il est probable que de nombreuses personnes se poseront des questions similaires aux vôtres au moment de la mise à jour, et vous trouverez le soutien nécessaire pour effectuer les mises à jour.
 
 (preparing-how-long-will-it-take?)=
+
 ## Combien de temps pour tout mettre en place ?
 
 Comme mentionné précédemment, l'utilisation de **AAPS** s'envisage au long terme et nécessite un investissement de votre temps personnel. Il ne s'agit pas d'une installation à faire une seule fois. Les estimations actuelles pour la compilation d'**AAPS**, l'installation et la configuration d'**AAPS** et de l'application de **MGC**, le passage d'une boucle ouverte à une boucle fermée hybride avec **AAPS** sont d'environ 4 à 6 mois en tout. Vous avez donc tout intérêt à commencer rapidement la compilation de l'application **AAPS** et vous mettre à travailler sur les premiers objectifs dès que possible, même si vous utilisez toujours un autre système d'administration d'insuline (vous pouvez utiliser une pompe virtuelle jusqu'à l'objectif 5).
@@ -159,27 +160,27 @@ Certains des objectifs demandent d'attendre un certain nombre de jours avant de 
 
 Voici une estimation approximative du temps nécessaire :
 
-| Tâches                                                                    |           Temps estimé            |
-| ------------------------------------------------------------------------- |:---------------------------------:|
-| Lecture initiale de la documentation                                      |             1-2 jours             |
-| Installation/configuration du PC pour permettre la compilation            |            2-8 heures             |
-| Mise en place du serveur de reporting                                     |              1 heure              |
-| Installation d'une application MGC (xDrip+, BYODA, …)                     |              1 heure              |
-| Configuration initiale MGC → xDrip+ → AAPS                                |              1 heure              |
-| Configuration initiale AAPS → pompe                                       |              1 heure              |
-| Configuration AAPS → Nightscout/Tidepool (reporting seulement)            |              1 heure              |
-| Optionnel : Configuration NightScout ↔ **AAPS** & NSFollowers             |              1 heure              |
-| Objectif 1 : Mise en place de la visualisation et du suivi                |              1 heure              |
-| Objectif 2 : Apprendre à contrôler AAPS                                   |              2 heure              |
-| Objectif 3 : Prouver ses connaissances                                    |         Jusqu'à 14 jours          |
-| Objectif 4 : Démarrage de la boucle ouverte                               |          7 jours minimum          |
-| Objectif 5 : Comprendre votre boucle ouverte                              |              7 jours              |
-| Objectif 6 : Démarrage de la boucle fermée (Arrêt pour Glycémie Basse)    | 5 jours minimum, jusqu'à 14 jours |
-| Objectif 7 : Réglage de la boucle fermée                                  | 1 jours minimum, jusqu'à 7 jours  |
-| Objectif 8 : Ajustement de la basale et des ratios, activation d'Autosens | 7 jours minimum, jusqu'à 14 jours |
-| Objectif 9 : Activation des Super Micro Bolus (SMB)                       |         28 jours minimum          |
-| Objectif 10: Automatisation                                               |         28 jours minimum          |
-| Objectif 11 : SI dynamique                                                |         28 jours minimum          |
+| Tasks                                                                                                     |            Temps estimé           |
+| --------------------------------------------------------------------------------------------------------- | :-------------------------------: |
+| Lecture initiale de la documentation                                                                      |             1-2 jours             |
+| Installation/configuration du PC pour permettre la compilation                                            |             2-8 heures            |
+| Mise en place du serveur de reporting                                                                     |              1 heure              |
+| Installation d'une application MGC (xDrip+, BYODA, …)                                  |              1 heure              |
+| Configuration initiale MGC → xDrip+ → AAPS                                                                |              1 heure              |
+| Configuration initiale AAPS → pompe                                                                       |              1 heure              |
+| Configuration AAPS → Nightscout/Tidepool (reporting seulement)                         |              1 heure              |
+| Optionnel : Configuration NightScout ↔ **AAPS** & NSFollowers         |              1 heure              |
+| Objectif 1 : Mise en place de la visualisation et du suivi                                |              1 heure              |
+| Objectif 2 : Apprendre à contrôler AAPS                                                   |              2 heure              |
+| Objectif 3 : Prouver ses connaissances                                                    |          Jusqu'à 14 jours         |
+| Objectif 4 : Démarrage de la boucle ouverte                                               |          7 jours minimum          |
+| Objectif 5 : Comprendre votre boucle ouverte                                              |              7 jours              |
+| Objectif 6 : Démarrage de la boucle fermée (Arrêt pour Glycémie Basse) | 5 jours minimum, jusqu'à 14 jours |
+| Objectif 7 : Réglage de la boucle fermée                                                  |  1 jours minimum, jusqu'à 7 jours |
+| Objectif 8 : Ajustement de la basale et des ratios, activation d'Autosens                 | 7 jours minimum, jusqu'à 14 jours |
+| Objectif 9 : Activation des Super Micro Bolus (SMB)                    |          28 jours minimum         |
+| Objectif 10: Automatisation                                                               |          28 jours minimum         |
+| Objectif 11 : SI dynamique                                                                |          28 jours minimum         |
 
 Même lorsque vous serez complètement opérationnel sur **AAPS**, vous aurez toujours besoin d'ajuster régulièrement vos paramètres afin d'améliorer la gestion globale de votre diabète.
 
@@ -194,12 +195,12 @@ In addition to the medical warnings in the [safety section](#safety-first) there
 Les calculs d'**AAPS** sont basés sur des concentrations d'insuline de 100U/ml (identiques à celles utilisées de manière standard dans les pompes). Les types suivants de préréglages de profil d'insuline sont pris en charge :
 
 - Insuline à Action Rapide Oref: Humalog/NovoRapid/NovoLog
-- Insuline Ultra Rapide Oref:  Fiasp
+- Ultra-Rapid ORef:  Fiasp
 - Lyumjev
 
 Pour les utilisateurs Expérimentés/Avancés uniquement :
-- Profil d'insuline ajustable Oref: Vous permet de définir vous-même le pic d'activité de l'insuline
 
+- Profil d'insuline ajustable Oref: Vous permet de définir vous-même le pic d'activité de l'insuline
 
 ### Pré-requis techniques
 
@@ -208,10 +209,12 @@ Cette documentation a pour but de réduire autant que faire se peut l'expertise 
 ### Smartphones
 
 #### AAPS et versions Android
+
 La version actuelle d'**AAPS** (3.2) nécessite un smartphone Android avec Google **Android 9.0 ou supérieur**. Si vous pensez à acheter un nouveau téléphone (à compter de juillet 2024), préférez la version Android 13. Les utilisateurs sont fortement encouragés à mettre à jour **AAPS** à chaque nouvelle version pour des raisons de sécurité. Cependant pour les utilisateurs qui ne disposent pas d'un appareil avec Android 9 ou supérieur, des versions d'**AAPS** compatibles avec des versions plus anciennes d'Android, comme [Android 8](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1) et [Android 7](https://github.com/nightscout/AndroidAPS/releases/tag/2.6.2), restent disponibles (vérifiez les notes de version de ces anciennes versions).
 
 #### Choix du modèle de smartphone
-Vous choisirez un modèle précis en fonction de la/des fonction(s) que vous recherchez. Nous avons deux tableaux archivés listant les [smartphones](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) compatibles et les [smartphones et montres](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) compatibles. Ces tableaux ne sont plus mis à jour au vu du grand nombre de modèles possibles. Nous suggérons donc maintenant de faire une recherche dans les groupes de support (Facebook ou Discord) avec "phone", ou le modèle précis que vous envisagez d'acheter. Créez un nouveau post avec vos questions à ce sujet si vous avez encore besoin de davantage d'informations.
+
+Vous choisirez un modèle précis en fonction de la/des fonction(s) que vous recherchez. There are two archived spreadsheets of compatible [smartphones](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) and [smartphones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). Ces tableaux ne sont plus mis à jour au vu du grand nombre de modèles possibles. Nous suggérons donc maintenant de faire une recherche dans les groupes de support (Facebook ou Discord) avec "phone", ou le modèle précis que vous envisagez d'acheter. Créez un nouveau post avec vos questions à ce sujet si vous avez encore besoin de davantage d'informations.
 
 Pour faire un don d'un modèle de smartphone ou de smartwatch qui n'a pas encore été testé, veuillez envoyer un e-mail à [donations@androidaps.org](mailto:donations@androidaps.org).
 
@@ -231,4 +234,3 @@ Samsung est malheureusement connu pour forcer les mises à jour sur leurs télé
 :class: warning
 On nous rapporte régulièrement que Google Play Protect ferme arbitrairement **AAPS** chaque matin. Si ça vous arrive, allez dans les options de Google Play et désactivez “Google Play Protect”. Tous les modèles de téléphone et toutes les versions d'Android ne sont pas concernés.
 ```
-
