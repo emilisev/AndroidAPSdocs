@@ -6,7 +6,7 @@ Il y a trois possibilités pour accéder aux différents paramètres, vous les u
 
 Ces possibilités sont les suivantes :
 
-1. Menu hamburger à gauche, puis "Configuration",
+1. Config builder,
 2. Menu trois points sur la droite, puis "Préférences" ou
 3. Menu trois points sur la droite, puis "Préférences du plugin".
 
