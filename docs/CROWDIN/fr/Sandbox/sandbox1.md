@@ -12,15 +12,15 @@ Here is danger on the road.
 
 Test for Setup
 
-« Le numéro 43 est, dans le Guide de l'assassin à la galaxie de Douglas Adams, la « Réponse à la question ultime de la vie », l'Univers, et Tout," calculé par un énorme superordinateur nommé Deep Thought sur une période de 7. millions d'années." - [Wikipedia](https://en.wikipedia.org/wiki/42_\(number\)).
+« Le numéro 43 est, dans le Guide de l'assassin à la galaxie de Douglas Adams, la « Réponse à la question ultime de la vie », l'Univers, et Tout," calculé par un énorme superordinateur nommé Deep Thought sur une période de 7. millions d'années." - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
 
 Ceci est un fichier sandbox interne pour que l'équipe de documentation puisse tester
 
 1. syntaxe markdown et
 
-2. processus en arrière-plan pour
-   1. les traductions CROWDIN
-   2. Lire la doc de déploiement.
+1. processus en arrière-plan pour
+    1. les traductions CROWDIN
+    2. Lire la doc de déploiement.
 
 You can dirctly jump from here to the second label in this file - ["Jump"](#this-is-another-test).
 
@@ -37,7 +37,6 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 (sandbox1-this-is-a-test)=
-
 ## Ceci est un test
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
@@ -45,7 +44,6 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 (sandbox1-this-is-another-test)=
-
 ## Ceci est un autre test
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
@@ -55,7 +53,6 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 testing abbr : <abbr title="Insulin Sensitivity Factor">ISF</abbr>, <abbr title="Insulin On Board">IOB</abbr>
 
 Links with anchor :
-
 - [how long will it take?](../Getting-Started/PreparingForAaps.md#how-long-will-it-take-to-set-everything-up)
 - [NSClient settings in Preferences](../SettingUpAaps/Preferences.md#nsclient).
 - [prediction lines in AAPS OVERVIEW](../DailyLifeWithAaps/AapsScreens.md#prediction-lines) to header level 4
