@@ -1,10 +1,9 @@
 # How to translate strings for the AAPS app or the documentation
 
-- Pour les chaînes utilisées dans l'application, allez sur <https://crowdin.com/project/androidaps> et connectez-vous à l'aide de votre compte GitHub
+* For the the strings used in the app go to [https://crowdin.com/project/androidaps](https://crowdin.com/project/androidaps) and login using your GitHub account
+* For the documentation please visit [https://crowdin.com/project/androidapsdocs](https://crowdin.com/project/androidapsdocs) and login using your GitHub account
 
-- Pour la documentation, allez sur <https://crowdin.com/project/androidapsdocs> et connectez vous à l'aide de votre compte GitHub
-
-- Envoyez une demande d'adhésion à l'équipe Wiki. Pour le faire, cliquez sur le drapeau de la langue souhaitée, puis sur le bouton "Join" dans le coin supérieur droit de la page suivante. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
+* Envoyez une demande d'adhésion à l'équipe Wiki. Pour le faire, cliquez sur le drapeau de la langue souhaitée, puis sur le bouton "Join" dans le coin supérieur droit de la page suivante. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
 
 ```{admonition} Time for Approval
 :class: note
@@ -12,72 +11,71 @@
 The approval is a manual step. As non profit organization we don't provide SLAs but in general the approval will be done in < 1 day. If not please contact the Doc team via Facebook or Discord.
 ```
 
-- When we approve you, click the flag
-  ![When we approve you, click the flag](../images/translation_flags.png)
+* When we approve you, click the flag ![When we approve you, click the flag](../images/translation_flags.png)
 
 ## Translation of the app
 
 (translations-translate-strings-for-AAPS-app)=
-
 ### Translate strings for AAPS app
 
-- If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
+* If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
 
-  ![Click translate all](../images/translations-click-translate-all.png)
+   ![Click translate all](../images/translations-click-translate-all.png)
 
-- If you want to translate an individual file please search for the file via search dialog or tree structure and click on the filename to start the translation work on strings in that file.
+* If you want to translate an individual file please search for the file via search dialog or tree structure and click on the filename to start the translation work on strings in that file.
 
-  ![Click strings.xml](../images/translations-click-strings.png)
+   ![Click strings.xml](../images/translations-click-strings.png)
 
-- Translate sentences on left side by adding new translated text or use & edit suggestion
+* Translate sentences on left side by adding new translated text or use & edit suggestion
 
-  ![Translation app](../images/translations-translate.png)
+   ![Translation app](../images/translations-translate.png)
+
 
 ### Proofread strings for AAPS app
 
-- Proofreaders start by selecting "Proofread" when starting from the language home screen.
+* Proofreaders start by selecting "Proofread" when starting from the language home screen.
 
-  ![Proofreading mode app](../images/translations-proofreading-mode.png)
+   ![Proofreading mode app](../images/translations-proofreading-mode.png)
+
 
   and approve translated texts
 
-  ![approve text](../images/translations-proofreading.png)
+   ![approve text](../images/translations-proofreading.png)
 
 When a proofreader approves a translation it will be added to the next version of AAPS.
 
 (translations-translation-of-the-documentation)=
-
 ## Translation of the documentation
 
-- Click the name of the docs page you want to translate
+* Click the name of the docs page you want to translate
 
 ![Click docs page](../images/translation_WikiPage.png)
 
-- Translate sentences by sentence
 
-  1. The yellow text is the text you are working at the moment.
+* Translate sentences by sentence
 
-  2. The green text is already translated. You don't need to do this again.
+    1. The yellow text is the text you are working at the moment.
 
-  3. The red text is the remaining text which have to be translated.
+    1. The green text is already translated. You don't need to do this again.
 
-  4. This is the source text you are working on at the moment
+    1. The red text is the remaining text which have to be translated.
 
-  5. This is the translation you are preparing. You can copy the text from above or select one of the suggestions below.
+    1. This is the source text you are working on at the moment
 
-  6. These are the suggestion for a translation. Especially you can see how much Crowdin rates this as a fit or if it was already just in the past and come up through text rearrangements but not content change.
+    1. This is the translation you are preparing. You can copy the text from above or select one of the suggestions below.
 
-  7. Press the "save" button to save a proposal for the translation. It will then promoted to a proofreader for final check.
+    1. These are the suggestion for a translation. Especially you can see how much Crowdin rates this as a fit or if it was already just in the past and come up through text rearrangements but not content change.
+    1. Press the "save" button to save a proposal for the translation. It will then promoted to a proofreader for final check.
 
 ![Translation docs](../images/translation_WikiTranslate.png)
 
-- A translated page will not be published in docs before
+* A translated page will not be published in docs before
 
-  1. the translation is proofread
+    1. the translation is proofread
 
-  2. the sync run between Crowdin and Github finished (once an hour) which creates an PR for Github.
+    1. the sync run between Crowdin and Github finished (once an hour) which creates an PR for Github.
 
-  3. the PR in Github was approved.
+    1. the PR in Github was approved.
 
 In general this needs 1 - 3 days but might during holiday take a little bit longer.
 
@@ -96,12 +94,13 @@ It's the proofreaders job to have a special look on this!
 
 ### Proofreading
 
-- Proofreaders have to switch to Proofreading mode
+* Proofreaders have to switch to Proofreading mode
 
-  ![Proofreading mode docs](../images/translation_WikiProofreadingmode.png)
+   ![Proofreading mode docs](../images/translation_WikiProofreadingmode.png)
+
 
   and approve translated texts
 
-  ![approve text](../images/translations-proofreading.png)
+   ![approve text](../images/translations-proofreading.png)
 
-- When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during hollidays. To speed up the process you can inform docs team about new translations.
+* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during hollidays. To speed up the process you can inform docs team about new translations.
