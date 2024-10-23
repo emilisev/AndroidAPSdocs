@@ -31,7 +31,7 @@ Reads the data from the Eversense app notifications (works with the standard Eve
 
 ### Patched Eversense App
 
-Requires a patched version of the Eversense App (works completely offline, including backfilling).
+ Requires a patched version of the Eversense App (works completely offline, including backfilling).
 
 1. Uninstall the Eversense App (Warning: your local historical data (older than 1 week) will be lost!)
 
@@ -42,6 +42,8 @@ Requires a patched version of the Eversense App (works completely offline, inclu
 3. Configuration of ESEL:
 
    - Enable the setting "Get data from patched Eversense App"
+
+
 
 ![ESEL Broadcast](../images/ESELpatch.png)
 
