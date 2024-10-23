@@ -6,16 +6,16 @@ Voici une liste de certaines pompes et leur statut de prise en charge dans l'un 
 
 ***
 
-### Pompe Ypsomed ([Page d'accueil](https://www.ypsomed.com/en/diabetes-care-mylife.html))
+### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Etat de la boucle :** Version 1-1.5 (2ème trimestre 2018) ne sont pas candidates à la boucle. While they do have BT communication, communication is very limited and uni directional: Pump->App. In June 2022 (in Germany) company released, new version nicknamed DOSE (1.6), which allows setting bolus and TBR from their App. Plan to implement their own Loop was cancelled and they decided to partner up with CamAPS (support already implemented) and use their loop solution.
-More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
+**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, communication is very limited and uni directional: Pump->App. In June 2022 (in Germany) company released, new version nicknamed DOSE (1.6), which allows setting bolus and TBR from their App. Plan to implement their own Loop was cancelled and they decided to partner up with CamAPS (support already implemented) and use their loop solution. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
 
 **Hardware requirement for AAPS:** None. It's BT enabled.
 
 **Comments:** Dose version of pump had very heavy encryption added, so there is big probababilty that this pump won't be supported by AAPS in near future (or ever). We had developer working with Ypsomed and helping with medical trials, so maybe his version of driver will be alowed to be released, but this is just small possibility of that. You can find more information on our discord in channel "ypsopump-talk".
 
 ***
+
 
 ### Kaleido ([Homepage](https://www.hellokaleido.com/))
 
@@ -25,13 +25,15 @@ More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.ht
 
 ***
 
-### Equil (pump from Aidex/GlucoRx/MicroTechMD) ([Homepage](https://www.glucorx.ie/glucorx-equil/))
+
+### Equil (pump from Aidex/GlucoRx/MicroTechMD)  ([Homepage](https://www.glucorx.ie/glucorx-equil/))
 
 **Loop status:** Is a Loop candidate.
 
 **Hardware requirement for AAPS:** None. It seems to be BT enabled.
 
 **Comment:** Some people started looking into supporting pump in AAPS, but this is still in beginning phases. You can find more information on our discord in channel "equil".
+
 
 ***
 
@@ -63,11 +65,13 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 
 **Hardware requirement for AAPS:** None. It seems to be BT enabled.
 
+
 ***
 
 ### Medtronic Bluetooth
 
 **Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
+
 
 ### Willcare Insulin pump ([Homepage](http://shinmyungmedi.com/en/))
 
@@ -79,6 +83,7 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 
 ***
 
+
 ## Pompes plus vendues (les entreprises ne fonctionnent plus)
 
 ### Cellnovo Pump ([see businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
@@ -89,52 +94,57 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 
 **Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
+
 ## Pompes qui ne sont pas bouclable
+
+
 
 ### Animas Vibe
 
-**Loop status:** Not loopable. No remote control possibility.
-**Note:** Pump is not being sold anymore. Company stopped working in Pump business (J&J).
+**Loop status:** Not loopable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump business (J&J).
+
+
 
 ***
 
+
 ### Animas Ping
 
-**Loop status:** Not loopable. It has bolus possibility, but no TBR one.
-**Note** Stopped being sold when Vibe came out.
+**Loop status:** Not loopable. It has bolus possibility, but no TBR one. **Note** Stopped being sold when Vibe came out.
+
+
+
+
 
 ## Exigences pour que les pompes soient bouclables
 
 **Prerequisite**
-
 - La pompe doit prendre en charge un contrôle à distance (Bluetooth, fréquence radio, etc.). (BT, Radio frequency, etc)
 - Le protocole est piraté/documenté/etc.
 
 **Minimal requirement**
-
 - Définir le Débit de Basal Temporaire
 - Get Status
 - Annuler le Débit de Basal Temporaire
 
 **For oref1(SMB) or Bolusing:**
-
 - Définir le Bolus
 
 **Good to have**
-
 - Annuler le Bolus en cours
 - Obtenir le profil de basal (presque requis)
 - Définir le profil de basal (souhaitable)
 - Lire l'historique
 
 **Other (not required but good to have)**
-
 - Définir un bolus étendu
 - Annuler Bolus étendu
 - Lire l'historique
 - Lire la TDQ
 
+
 ***
+
 
 ### Other pumps support
 
