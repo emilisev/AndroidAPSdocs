@@ -12,7 +12,7 @@
 - Faites défiler vers le bas jusqu'à "Source des glycémies".
 - Sélectionnez la bonne source de glycémie si des changements sont nécessaires.
 
-![Source des glycémies](../images/ConfBuild_BG.png)
+![BG source](../images/ConfBuild_BG.png)
 
 ## Finish exam
 
