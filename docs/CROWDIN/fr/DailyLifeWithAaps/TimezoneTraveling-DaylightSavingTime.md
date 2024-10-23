@@ -6,39 +6,38 @@ Il n'y a aucun problème avec le changement de fuseau horaire dans le téléphon
 
 ## DanaRv2, DanaRS
 
-These pumps need a special care because AAPS is using history from the pump but the records in pump don't have timezone stamp. **Cela signifie que si vous changez simplement de fuseau horaire dans le téléphone, les enregistrements seront lus avec un fuseau horaire différent et seront doublés.**
+These pumps need a special care because AAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
 
 Pour éviter cela, il y a deux possibilités :
 
 ### Option 1 : Garder l'heure du domicile et décaler temporairement le profil
 
-- Désactiver l'option 'Date et heure automatiques' dans les paramètres de votre téléphone (changement de fuseau horaire manuel).
-- Le téléphone doit conserver votre heure normale comme à la maison pendant toute la période de voyage.
-- Faites un décalage horaire de votre profil en fonction de la différence de temps entre l'heure de la maison et l'heure de destination.
+* Désactiver l'option 'Date et heure automatiques' dans les paramètres de votre téléphone (changement de fuseau horaire manuel).
+* Le téléphone doit conserver votre heure normale comme à la maison pendant toute la période de voyage.
+* Faites un décalage horaire de votre profil en fonction de la différence de temps entre l'heure de la maison et l'heure de destination.
+   * Faites un appui long sur le nom du profil (au milieu de la section du haut sur la page d'accueil)
+   * Sélectionnez "Changement de profil"
+   * Définissez le 'Décalage horaire' en fonction de votre destination.
 
-  - Faites un appui long sur le nom du profil (au milieu de la section du haut sur la page d'accueil)
-  - Sélectionnez "Changement de profil"
-  - Définissez le 'Décalage horaire' en fonction de votre destination.
+   ![Profile switch with time shift](../images/ProfileSwitchTimeShift2.png)
 
-  ![Changement de profil avec décalage horaire](../images/ProfileSwitchTimeShift2.png)
-
-  - par ex. Vienne -> New York : Changement de profil +6 heures
-  - par ex. Vienne -> Sydney : Changement de profil -8 heures
-- Probably not an option if using [patched LibreLink app](../CompatibleCgms/Libre2.md#5-use-the-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
+   * par ex. Vienna -> New York: profile switch +6 hours
+   * par ex. Vienna -> Sydney: profile switch -8 hours
+* Probably not an option if using [patched LibreLink app](../CompatibleCgms/Libre2.md#5-use-the-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Option 2: Supprimer l'historique de la pompe
 
-- Désactiver l'option 'Date et heure automatiques' dans les paramètres de votre téléphone (changement de fuseau horaire manuel)
+* Désactiver l'option 'Date et heure automatiques' dans les paramètres de votre téléphone (changement de fuseau horaire manuel)
 
 Quand vous sortez de l'avion :
 
-- éteignez la pompe
-- modifiez le fuseau horaire sur le téléphone
-- éteignez le téléphone, allumez la pompe
-- effacez l'historique de la pompe
-- changez l'heure de la pompe
-- allumez le telephone
-- laissez le téléphone se connecter à la pompe et ré-ajuster l'heure
+* éteignez la pompe
+* modifiez le fuseau horaire sur le téléphone
+* éteignez le téléphone, allumez la pompe
+* effacez l'historique de la pompe
+* changez l'heure de la pompe
+* allumez le telephone
+* laissez le téléphone se connecter à la pompe et ré-ajuster l'heure
 
 ## Insight
 
@@ -79,55 +78,48 @@ If you bolus with the calculator please don't use COB and IOB unless you made su
 AAPS will issue an alarm if the time between pump and phone differs too much. In case of DST time adjustment, this would be in the middle of the night. To prevent this and enjoy your sleep instead, follow these steps so that you can force the time change at a time convenient to yourself:
 
 #### Actions à faire avant le changement d'heure
-
 1. Désactivez tous les paramètres qui définissent automatiquement le fuseau horaire, de sorte que vous pouvez forcer le changement d'heure quand vous le souhaitez. La façon dont vous pouvez le faire dépendra de votre smartphone et de la version Android.
 
-   - Certains ont deux paramètres, un pour le réglage automatique de l'heure (qui idéalement devrait rester activé) et un pour le réglage automatique du fuseau horaire (que vous devez désactiver).
-   - Malheureusement, certaines versions d'Android n'ont qu'un seul paramètre pour activer le réglage automatique de l'heure et celui du fuseau horaire. Vous devrez désactiver cette option pour le moment.
+   * Certains ont deux paramètres, un pour le réglage automatique de l'heure (qui idéalement devrait rester activé) et un pour le réglage automatique du fuseau horaire (que vous devez désactiver).
+   * Malheureusement, certaines versions d'Android n'ont qu'un seul paramètre pour activer le réglage automatique de l'heure et celui du fuseau horaire. Vous devrez désactiver cette option pour le moment.
 
 2. Trouvez un fuseau horaire qui a la même heure que la votre actuellement mais qui n'a pas de changement d'heure.
 
-   - Une liste de ces pays est disponible : [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   - Pour l'Europe Centrale (CET), cela pourrait être "Brazzaville" (Kongo). Changez le fuseau horaire de votre téléphone à Kongo.
+   * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
+   * Pour l'Europe Centrale (CET), cela pourrait être "Brazzaville" (Kongo). Changez le fuseau horaire de votre téléphone à Kongo.
 
 3. In AAPS refresh your pump.
-
 4. Vérifiez l'onglet Traitements... Si vous voyez des traitements en doublon :
 
-   - NE PAS appuyer sur "Supprimer les futurs traitements"
-   - Appuyez sur "Supprimer" sur tous les traitements futurs et les doublons. Cela devrait invalider les traitements plutôt que de les enlever, donc ils ne seront plus pris en compte pour l'IA.
+   * NE PAS appuyer sur "Supprimer les futurs traitements"
+   * Appuyez sur "Supprimer" sur tous les traitements futurs et les doublons. Cela devrait invalider les traitements plutôt que de les enlever, donc ils ne seront plus pris en compte pour l'IA.
 
-5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.\*
+5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
 
 #### Actions à faire apès le changement d'heure
-
 A good time to make this switch would be with low IOB. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your COB and IOB should both be close to zero.)
 
 1. Remettez le fuseau horaire Android de votre lieu actuel et réactivez le fuseau horaire automatique.
-
 2. AAPS will soon start alerting you that the Combo’s clock doesn’t match. Mettez à jour l’heure de la pompe manuellement via l’écran et les boutons de la pompe.
-
 3. On the AAPS “Combo” screen, press Refresh.
-
 4. Allez ensuite à l'écran Traitements et cherchez des événements dans le futur. Il ne devrait pas y en avoir beaucoup.
 
-   - NE PAS appuyer sur "Supprimer les futurs traitements"
-   - Appuyez sur "Supprimer" sur tous les traitements futurs et les doublons. Cela devrait invalider les traitements plutôt que de les enlever, donc ils ne seront plus pris en compte pour l'IA.
+   * NE PAS appuyer sur "Supprimer les futurs traitements"
+   * Appuyez sur "Supprimer" sur tous les traitements futurs et les doublons. Cela devrait invalider les traitements plutôt que de les enlever, donc ils ne seront plus pris en compte pour l'IA.
 
-5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.\*
-
+5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
 6. Faites comme d'habitude.
 
 ### Accu-Chek Insight
 
-- Le changement d'heure est effectué automatiquement. Aucune action requise.
+* Le changement d'heure est effectué automatiquement. Aucune action requise.
 
 ### Medtrum
 
-- Le changement d'heure est effectué automatiquement. Aucune action requise.
+* Le changement d'heure est effectué automatiquement. Aucune action requise.
 
 ### Other pumps
 
-- This feature is available since AAPS version 2.2.
-- To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
-- You will receive a notification on the main screen prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
+* This feature is available since AAPS version 2.2.
+* To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
+* You will receive a notification on the main screen prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
