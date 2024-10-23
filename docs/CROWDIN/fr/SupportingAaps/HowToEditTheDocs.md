@@ -1,7 +1,6 @@
 # Comment éditer la documentation
 
-**Cette description est juste pour l'édition de la documentation en anglais. Toutes les nouvelles informations doivent être ajoutées d'abord en Anglais.
-Si vous voulez traduire la documentation dans d'autres langues (merci), utilisez [crowdin](https://crowdin.com/project/androidapsdocs).**
+**This description is just for editing the English documentation. Toutes les nouvelles informations doivent être ajoutées d'abord en Anglais. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
 
 For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#code-syntax) section of this page.
 
@@ -11,25 +10,25 @@ For any questions, feedback or new ideas you can contact the documentation team 
 
 At some point it will be suggested that you make a pull request (PR), which is how your changes in the documentation are actually put onto the AAPS webpages, which are stored in GitHub.  It's actually not too hard to do a PR and it is a great way to contribute. You are reading this documentation right now because people like you made PRs. Don't worry about making a mistake or somehow editing the wrong documents. Your changes are reviewed before they are merged into the "formal" AAPS documentation repository.  You can't mess up the originals through any accidents in the process. The general process is:
 
-- Apportez des modifications au code ou à la documentation en modifiant le contenu existant.
-- Vérifiez deux fois que vos modifications vous semblent bonnes.
-- Prenez quelques notes sur ce qui a changé afin que les personnes puissent comprendre les modifications.
-- Créer un Pull Request, qui demande aux administrateurs d'utiliser vos modifications.
-- Ils feront une vérification et soit (1) ils fusionneront vos modifications, (2) ils vous feront un retour au sujet de vos modifications, ou (3) ils commenceront un nouveau document avec vos modifications.
+* Apportez des modifications au code ou à la documentation en modifiant le contenu existant.
+* Vérifiez deux fois que vos modifications vous semblent bonnes.
+* Prenez quelques notes sur ce qui a changé afin que les personnes puissent comprendre les modifications.
+* Créer un Pull Request, qui demande aux administrateurs d'utiliser vos modifications.
+* Ils feront une vérification et soit (1) ils fusionneront vos modifications, (2) ils vous feront un retour au sujet de vos modifications, ou (3) ils commenceront un nouveau document avec vos modifications.
 
-(Remarque : Si vous êtes un apprenant visuel, il y a une vidéo YouTube [ici](https://youtu.be/4b6tsL0_kzg) montrant le flux de travail PR.)
+(Side note:  If you are a visual learner, there is a YouTube video [here](https://youtu.be/4b6tsL0_kzg) showing the PR workflow.)
 
 Pour notre exemple, nous allons faire une modification à AndroidAPSdocs. This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
 
-1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
+1. Go to [https://github.com/openaps/AndroidAPSdocs](https://github.com/openaps/AndroidAPSdocs) and hit Fork in the upper right to make your own copy of the repository.
 
 ![Fork repo](../images/PR0.png)
 
 2. Allez sur n'importe quelle page et accédez à la page que vous souhaitez modifier. Cliquez sur la boîte noire en bas à gauche de la page avec le mot vert "v: latest" ou similaire. Dans la fenêtre pop up qui apparaît, cliquez sur le mot "edit" pour éditer dans GitHub.
 
-![éditer un document](../images/PR1.png)
+![edit doc](../images/PR1.png)
 
-Or you can click on the "Edit in GitHub" link in the upper right corner, and then click the pencil icon that appears in the top bar of the page contents to be edited. You will need to be already logged into your Github account to do this (if you don't have one, they are straightforward to set up).
+   Or you can click on the "Edit in GitHub" link in the upper right corner, and then click the pencil icon that appears in the top bar of the page contents to be edited. You will need to be already logged into your Github account to do this (if you don't have one, they are straightforward to set up).
 
 ![RTD io](../images/PR2.png)
 
@@ -37,28 +36,27 @@ Or you can click on the "Edit in GitHub" link in the upper right corner, and the
 
 Nous utilisons markdown pour les pages de documentation. Le fichier a obtenu le suffixe ".md". La spécification Markdown n'est pas corrigée et nous utilisons pour le moment le myst_parser pour nos fichiers markdown. Take care to use the correct syntax as [described below](#code-syntax).
 
-![Éditer la branche](../images/PR3.png)
+![Edit branch](../images/PR3.png)
 
 4. Vous avez travaillé dans l'onglet "<>Edit file". Sélectionnez l'onglet "Preview changes" pour afficher une prévisualisation de votre page et vérifier que tous vos changements sont comme vous le vouliez. Si vous voyez que c'est perfectible, revenez à l'onglet d'édition pour faire vos améliorations.
 
-![mode de prévisualisation](../images/PR5.png)
+![preview mode](../images/PR5.png)
 
-5. Une fois vos modifications terminées, faites défiler jusqu'au bas de la page.  Dans la zone du bas, indiquez vos commentaires dans le champ texte qui indique "Add an optional extended description...". Le titre par défaut est le nom de fichier. Essayez d'inclure une phrase expliquant la **raison** du la modification. Indiquer la raison permet d'aider les valideurs à comprendre ce que vous essayez de faire avec le PR.
+5. Une fois vos modifications terminées, faites défiler jusqu'au bas de la page.  Dans la zone du bas, indiquez vos commentaires dans le champ texte qui indique "Add an optional extended description...". Le titre par défaut est le nom de fichier. Try to include a sentence explaining the __reason__ for the change. Indiquer la raison permet d'aider les valideurs à comprendre ce que vous essayez de faire avec le PR.
 
-![commit commentaires](../images/PR4.png)
+![commit comments](../images/PR4.png)
 
 6. Cliquez sur le bouton vert "Propose file changes" ou "Commit changes". Dans la page qui s'affiche, cliquez sur "Create Pull Request" et de nouveau dans la page suivante, cliquez sur "Create Pull Request".
 
-![créer un pull request](../images/PR6.png)
+![create pull request](../images/PR6.png)
 
 7. Cela termine l'ouverture d'un Pull Request, PR. GitHub affecte au PR un numéro, situé après le titre et un caratère dièse. Retournez sur cette page pour vérifier si vous avez un retour (ou si vous avez des notifications GitHub envoyées par email, vous recevrez des emails vous indiquant toutes activités sur le PR). La modification sera maintenant dans une liste de PR que l'équipe de documentation va examiner et elle vous fera éventuellement des commentaires avant de l'intégrer dans la documentation principale d'AAPS ! Si vous voulez vérifier l'avancement du PR, vous pouvez cliquer sur le logo de la cloche dans le coin supérieur droit de votre compte GitHub pour voir toutes vos notifications.
 
-![Suivi des PR](../images/PR7.png)
+![PR tracking](../images/PR7.png)
 
 PS : Votre fork et votre branche seront toujours dans votre propre compte GitHub. Après avoir reçu une notification indiquant que votre PR avait été fusionné, vous pouvez supprimer votre branche si vous en avez terminé (la zone de notification de l'étape 8 fournira un lien pour supprimer la branche une fois qu'elle a été fermée ou fusionnée). Pour les modifications ultérieures, si vous suivez cette procédure, les éditions débuteront toujours par une version mise à jour des documents AndroidAPSdocs.  Si vous choisissez d'utiliser une autre méthode pour faire une demande de PR (par ex. en partant de la branche master de dossier local comme point de départ), vous devez vous assurer que votre dossier fork est à jour en effectuant une "comparaison" en premier et en fusionnent dans toutes les mises à jour qui ont été faite depuis que vous avez mis à jour votre fork.  Comme les gens ont tendance à oublier de mettre à jour leur fork, nous recommandons d'utiliser la procédure décrite ci-dessus pour faire vos PR jusqu'à ce que vous vous familiarisiez avec les exécutions des "comparaisons".
 
 (make-a-PR-code-syntax)=
-
 ## Syntaxe du Code
 
 We are using markdown for the documentation pages. Les fichiers ont le suffixe « .md ».
@@ -68,30 +66,28 @@ Markdown est un langage de formatage de texte très simple qui sépare le conten
 The writer only e.g. marks a headline as level 1 headline and the markdown processor generates the necessary HTML code during processing to render the heading in HTML.
 
 L'idée derrière est que
-
-- the writer should think about the text and not the formatting first,
-- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Windows and
-- vous pouvez générer plusieurs formats de sortie à partir d'un fichier markdown.
+* the writer should think about the text and not the formatting first,
+* the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Windows and
+* vous pouvez générer plusieurs formats de sortie à partir d'un fichier markdown.
 
 Markdown is not a 100% fixed standard and we try to stay as near as possible to the standard, to
-
-- rester flexible pour pouvoir changer d'outils de markdown si nécessaire ou contraints par les innovations des outils markdown et des services de markdown SaaS
-- enable us to use translation services to translate the English language in a target language like French or German. They can work on markdown but not complex formatting codes, because they can't separate content from layout, which might be fatal.
+* rester flexible pour pouvoir changer d'outils de markdown si nécessaire ou contraints par les innovations des outils markdown et des services de markdown SaaS
+* enable us to use translation services to translate the English language in a target language like French or German. They can work on markdown but not complex formatting codes, because they can't separate content from layout, which might be fatal.
 
 ### Titres
 
-- Titre 1 : `# titre`
-- Titre 2 : `## titre`
-- Titre 3 : `### titre`
-- Titre 4 : `#### headline`
+* Headline 1: `# headline`
+* Headline 2: `## headline`
+* Headline 3: `### headline`
+* Headline 4: `#### headline`
 
 We try to avoid further levels of headlines.
 
 ### Formatage du texte
 
-- **bold**: `**text**`
-- _italic_: `*text*`
-- _**bold italic**_: `***text***`
+* **bold**: `**text**`
+* *italic*: `*text*`
+* ***bold italic***: `***text***`
 
 ### Ordered list
 
@@ -102,8 +98,8 @@ We try to avoid further levels of headlines.
 ```
 
 1. premier
-2. deuxième
-3. troisième
+1. deuxième
+1. troisième
 
 ### Unordered list
 
@@ -116,6 +112,7 @@ We try to avoid further levels of headlines.
 - un élément
 - un autre élément
 - et un autre élément
+
 
 ### Multi level list
 
@@ -134,27 +131,27 @@ Vous pouvez insérer des "sous-listes" dans les listes en ajoutant 4 espaces de 
 ```
 
 1. premier
-2. deuxième
-3. troisième
-   1. un élément
-   2. un autre élément
-   3. et un autre élément
-4. quatre
-5. cinq
-6. six
+1. deuxième
+1. troisième
+    1. un élément
+    1. un autre élément
+    1. et un autre élément
+1. quatre
+1. cinq
+1. six
 
 ### Images
 
 Pour inclure des images, vous utilisez cette syntaxe de markdown.
 
-- images : `![alt text](../images/file.png)`
+* images: `![alt text](../images/file.png)`
 
 Le type d'image doit être PNG ou JPEG.
 
 Les noms d'images doivent respecter une des règles de nommage suivantes. Dans l'exemple j'utilise png comme extension. In case you use JPEG please use jpeg as a suffix instead.
 
-- `nom-de-fichier-image-xx.png` où xx est un nombre unique à deux chiffres pour les images dans ce fichier.
-- `nom-de-fichier-image-xx.png` où xx est un nom complet pour l'auteur du fichier md.
+* `filename-image-xx.png` where xx is a unique double digit number for the images in this file.
+* `filename-image-xx.png` where xx is a meaning full name for the author of the md file.
 
 Les images sont situées dans le dossier images pour la langue anglaise et propagées automatiquement vers les autres langues par Crowdin. Vous n'avez rien à faire pour cela !
 
@@ -162,9 +159,9 @@ Nous ne traduisons pas les images pour le moment.
 
 (make-a-PR-image-size)= Utilisez une taille raisonnable pour les images qui doivent être lisibles sur PC, tablette et mobiles.
 
-- Les captures d'écran de pages web doivent être au maximum de **1050 pixels de largeur**.
-- Diagrams of process flows should be up to **1050 pixels wide**.
-- Screenshots from the app should be up to **500 pixels wide**.
+* Screenshots from web pages images should be up to **1050 pixels wide**.
+* Diagrams of process flows should be up to **1050 pixels wide**.
+* Screenshots from the app should be up to **500 pixels wide**.
 
 ### Liens
 
@@ -172,13 +169,13 @@ Nous ne traduisons pas les images pour le moment.
 
 Les liens externes sont des liens vers des sites Web externes.
 
-- lien externe : `[alt text](www.url.tld)`
+* external link: `[alt text](www.url.tld)`
 
 #### Liens internes au début d'un fichier md
 
 Les liens internes vers les pages sont des liens vers le début d'un fichier md hébergé sur notre propre serveur.
 
-- lien interne vers une page .md : `[texte alternatif](../folder/file.md)`
+* internal link to .md page: `[alt text](../folder/file.md)`
 
 #### Liens internes vers une ligne spécifique d'un fichier
 
@@ -186,7 +183,7 @@ Les liens internes vers une ligne spécifique sont des liens vers n'importe quel
 
 Ajouter une référence nommée à l'emplacement dans le fichier md cible vers lequel vous voulez vous diriger.
 
-`(nom-de-mon-fichier-ceci-est-ma-reference-specifique)=`
+`(name-of-my-md-file-this-is-my-fancy-named-reference)=`
 
 La référence nommée doit être unique dans tous les fichiers md de la documentation AndroidAPSDocs et pas seulement dans le fichier md dans lequel elle réside !
 
@@ -195,15 +192,13 @@ C'est donc une bonne pratique de commencer par le nom du fichier, puis le nom de
 Utilisez uniquement des lettres minuscules et séparez les mots par un trait d'union.
 
 Ensuite, liez cette référence dans le texte que vous écrivez avec le type de lien suivant.
-
-- Lien interne vers une référence nommée : `[texte alternatif](nom-de-mon-fichier-ceci-est-ma-reference-specifique)`
+* Internal links to named inline refernces: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
 
 ### Notes, Avertissements, Réduction des Notes
 
 You can add notes and warning boxes to documentation.
 
-Furthermore you can add collapsing notes for detailed information which would users who are not interested in the details quench to read the text at all.
-Please use these carefully as the documentation should be as easy to read as possible.
+Furthermore you can add collapsing notes for detailed information which would users who are not interested in the details quench to read the text at all. Please use these carefully as the documentation should be as easy to read as possible.
 
 #### Notes
 
@@ -213,7 +208,6 @@ Please use these carefully as the documentation should be as easy to read as pos
 This is a note.
 ```
 ````
-
 ```{admonition} Note headline
 :class: note
 This is a note.
@@ -227,7 +221,6 @@ This is a note.
 This is a warning.
 ```
 ````
-
 ```{admonition} Warning headline 
 :class: warning
 This is a warning.
@@ -235,34 +228,16 @@ This is a warning.
 
 #### Collapsing Notes
 
-`````
+````
+```
+{admonition} further detailed readings for interested readers
+:class: dropdown
 
-    <br />#### Warnings
-    
-    ````
-    ```{admonition} Warning
-    :class: warning
-    This is a warning.
-    
-
-    ```{admonition} Warning headline 
-    :class: warning
-    This is a warning.
-    ```
-    
-    #### Collapsing Notes
-    
-    
-
-    {admonition} further detailed readings for interested readers
-    :class: dropdown
-    
-    This admonition has been collapsed,
-    meaning you can add longer form content here,
-    without it taking up too much space on the page.
-    
-
-`````
+This admonition has been collapsed,
+meaning you can add longer form content here,
+without it taking up too much space on the page.
+```
+````
 
 ```{admonition} further detailed readings for interested readers
 :class: dropdown
@@ -281,11 +256,11 @@ Avoid using tables with long texts as the contents is difficult to set in Markdo
 
 ### Contents
 
-1. English language writing tips
+1.  English language writing tips
 
-2. AAPS-specific writing notes
+2.  AAPS-specific writing notes
 
-3. Useful references
+3.  Useful references
 
 ### ![Image](../images/styleguide01.png) 1\. English language writing tips
 
@@ -293,15 +268,15 @@ Avoid using tables with long texts as the contents is difficult to set in Markdo
 
 Use plain English wherever possible. This helps non-native readers and also aids translation of AAPS documents into other languages. Write in a conversational way with the user, imagine you are sitting across the desk from the person you are writing for. Remember - most AAPS users do not have programming backgrounds. Diabetes itself also has a lot of jargon and abbreviations. Bear in mind that some people may be recently diagnosed, may not be as experienced as you with diabetes, or may have been given different diabetes training. If you use shorthand or an abbreviation, write it out in full the first time you use it, giving the abbreviation directly after it in brackets, like “super micro bolus (SMB)”. Also, link to the glossary. Technical terms which might not be familiar to the reader can be also be added in brackets.
 
-Instead of: _“What causes high postprandial BG peaks in closed loop?"_
+Instead of:  *“What causes high postprandial BG peaks in closed loop?"*
 
-Use: _“What causes a high BG peak **after lunch** (postprandial) in closed loop?"_
+Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?"*
 
 ##### Use plain words that everyone can understand
 
 Find an A-Z of alternative words to make your writing easier to understand here:
 
-<https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html>
+[https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html](https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html)
 
 #### Privacy/licensing concerns:
 
@@ -323,31 +298,34 @@ Particularly if you record video or screenshots, make sure not to disclose your 
 
 - Be visual! Wherever possible provide a brief diagram, screenshot or video.
 
+
 #### Don't be afraid to give instructions
 
 Commands are the fastest way to give instructions, but writers sometimes fear giving commands, writing “you should do this” instead of just “do this”. Perhaps people worry that commands sound too harsh. You can often solve this by putting the word 'please' in front. However, if something must be done, it is best not to say ‘please’ as it gives the reader the option to refuse.
 
-Instead of: _“You should just think of it as a complete statement."_
+Instead of: *“You should just think of it as a complete statement."*
 
-Use: _“Think of it as a complete statement.”_
+Use: *“Think of it as a complete statement.”*
 
 #### Mostly use active verbs, rather than passive verbs
 
 Example of an **active verb**:
 
-- _“The pump (subject) delivers (verb) the insulin (object).”_
+- *“The pump (subject) delivers (verb) the insulin (object).”*
+
 
 “delivers” is an active verb here. The sentence says what is doing the delivering before it says what is being delivered.
 
 Example of a **passive verb**:
 
-- _“The insulin (subject) is delivered (verb) by the pump (object)”_
+- *“The insulin (subject) is delivered (verb) by the pump (object)”*
 
-_“delivered”_ a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”.   Also consider starting with the active verb.
 
-Instead of: _“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”_
+*“delivered”* a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”.   Also consider starting with the active verb.
 
-Use: _“Connect your desired pump to the phone through the AAPS pump menu.”_
+Instead of: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
+
+Use: *“Connect your desired pump to the phone through the AAPS pump menu.”*
 
 Passive verbs can cause problems:
 
@@ -356,6 +334,7 @@ Passive verbs can cause problems:
 - They often make writing more long-winded.
 
 - They make writing less lively.
+
 
 ##### Good uses of passives
 
@@ -368,6 +347,7 @@ There are times when it might be appropriate to use a passive.
 - When you don't know who or what the doer is - 'the England team has been picked'.
 
 - If it simply sounds better.
+
 
 #### Avoid nominalisations
 
@@ -384,9 +364,9 @@ For example:
 
 They are often used **instead** of the verbs they come from, but they can sound as if nothing is actually happening. Too many of them can make writing very dull and heavy-going.
 
-Instead of: _“The implementation of the method has been done by a team.”_
+Instead of: *“The implementation of the method has been done by a team.”*
 
-Use: _“A team has implemented the method.”_
+Use: *“A team has implemented the method.”*
 
 #### Use lists where appropriate
 
@@ -395,6 +375,7 @@ Lists are excellent for splitting information up. There are two main types of li
 - A continuous sentence with several listed points picked out at the beginning, middle or end.
 
 - Separate bullet points with an introductory statement.
+
 
 In the bulleted list above, each point is a complete sentence so they each start with a capital letter and end with a full stop. Use bullet points rather than numbers or letters, as they draw your attention to each point without giving you extra information to take in.
 
@@ -407,6 +388,7 @@ In the bulleted list above, each point is a complete sentence so they each start
 - You can end a sentence with a preposition. In fact, it is something **we should stand up for**.
 
 - And **you** can use the same **word** twice in a sentence if **you** can't find a better **word**.
+
 
 #### Optimizing writing style by purpose
 
@@ -426,15 +408,15 @@ A tutorial helps the pupil acquire basic competence. The user will **learn by do
 
 - Future Tense -> to show the final target
 
-- Imperative Tense -> to do the tasks -> Concrete steps - avoid abstract concepts
+- Imperative Tense -> to do the tasks  -> Concrete steps - avoid abstract concepts
 
-- Past Tense -> to show accomplished tasks -> Quick and immediate visible results
+- Past Tense -> to show accomplished tasks  -> Quick and immediate visible results
 
 - Minimum Explanations -> strict necessary to complete the task - **what and why**
 
 - Ignore options/alternatives/…. No ambiguity
 
-- Step Transitions: finish a step with a sentence leading to the next step as a logical progression flow. Example: _You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step._
+- Step Transitions: finish a step with a sentence leading to the next step as a logical progression flow. Example: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
 
 - **Tutorial** Title (Level 1 heading)
 
@@ -452,6 +434,7 @@ A tutorial helps the pupil acquire basic competence. The user will **learn by do
 
 - Conclusion (Level 2 heading)
 
+
 ![Image](../images/styleguide04.png)
 
 ##### ![Image](../images/styleguide05.png) How-To Guides (e.g. a recipe)
@@ -468,8 +451,7 @@ A how-to guide’s purpose is to help the already-competent user perform a parti
 
 - Minimum Explanations -> strict necessary to complete the task -> **what and why**
 
-- Ignore options/alternatives/….
-  No ambiguity, but you can link to the reference entry or explanation entry
+- Ignore options/alternatives/…. No ambiguity, but you can link to the reference entry or explanation entry
 
 - **How-to**: Title (Level 1 heading)
 
@@ -486,6 +468,7 @@ A how-to guide’s purpose is to help the already-competent user perform a parti
 - Step n — Doing the Last Thing (Level 2 heading)
 
 - Conclusion paragraph
+
 
 ![Image](../images/styleguide06.png)
 
@@ -515,6 +498,7 @@ An explanation clarifies, deepens and broadens the reader’s understanding of a
 
 - Conclusion (Level 2 heading)
 
+
 ![Image](../images/styleguide08.png)
 
 ### 2\. AAPS-specific writing/updating notes
@@ -535,20 +519,21 @@ The **editor (e.g. a fellow AAPS user, or the person who receives the pull reque
 
 - Clearly state the version of Android Studio/AAPS you are writing for, or that the screenshots are taken from.
 
+
 ### 3\. Useful References
 
-<https://dev.readthedocs.io/en/latest/style-guide.html>
+[https://dev.readthedocs.io/en/latest/style-guide.html](https://dev.readthedocs.io/en/latest/style-guide.html)
 
 [Diátaxis (diataxis.fr)](https://diataxis.fr/)
 
-[Technical Writer Style Guide Examples | Technical Writer HQ](https://technicalwriterhq.com/writing/technical-writing/technical-writer-style-guide/)
+[Technical Writer Style Guide Examples  | Technical Writer HQ](https://technicalwriterhq.com/writing/technical-writing/technical-writer-style-guide/)
 
 [DigitalOcean's Technical Writing Guidelines | DigitalOcean](https://www.digitalocean.com/community/tutorials/digitalocean-s-technical-writing-guidelines)
 
 [Top 10 tips for Microsoft style and voice - Microsoft Style Guide | Microsoft Learn](https://learn.microsoft.com/en-us/style-guide/top-10-tips-style-voice?source=recommendations)
 
-<https://www.plainenglish.co.uk/how-to-write-in-plain-english.html>
+[https://www.plainenglish.co.uk/how-to-write-in-plain-english.html](https://www.plainenglish.co.uk/how-to-write-in-plain-english.html)
 
-<https://developers.google.com/style>
+[https://developers.google.com/style](https://developers.google.com/style)
 
-<https://www.mongodb.com/docs/meta/style-guide/screenshots/screenshot-guidelines/>
+[https://www.mongodb.com/docs/meta/style-guide/screenshots/screenshot-guidelines/](https://www.mongodb.com/docs/meta/style-guide/screenshots/screenshot-guidelines/)
