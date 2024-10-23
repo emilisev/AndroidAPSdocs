@@ -8,7 +8,7 @@ When carbs are entered by the user as part of a meal entry or carb correction, *
 
 The formula adopted by **AAPS** is:
 
-- absorbed_carbs = deviation \* ic / isf.
+- absorbed_carbs = deviation * ic / isf.
 
 The effect on the user’s **Profile** will:
 
@@ -28,6 +28,7 @@ Unabsorbed carbs are cut off after specified time:
 
 ![Oref1](../images/cob_oref0_orange_II.png)![Screenshot 2024-10-05 161009](https://github.com/user-attachments/assets/e4eb93b2-bc93-462d-b4d6-854bb9264953)
 
+
 ## Carbs Sensitivity - WeightedAverage
 
 Absorption is calculated to have COB = 0 after specified time:
@@ -36,13 +37,14 @@ Absorption is calculated to have COB = 0 after specified time:
 
 If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from **BG** deviations, an orange dot appears on the **COB** graph.
 
+
 ## Detection of wrong COB values
 
 **AAPS**  will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. In this case it will give the user an additional hint on the confirmation screen after usage of bolus wizard.
 
 ### How does AAPS detect wrong COB values?
 
-Ordinarily **AAPS** detects carb absorption through **BG** deviations. Incase the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](../SettingUpAaps/Preferences.md#min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). As this method calculates only the minimal carb absorption without considering **BG** deviations, it might lead to incorrect COB values.
+Ordinarily __AAPS__ detects carb absorption through **BG** deviations. Incase the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](../SettingUpAaps/Preferences.md#min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). As this method calculates only the minimal carb absorption without considering **BG** deviations, it might lead to incorrect COB values.
 
 ![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
 
@@ -55,24 +57,27 @@ In the screenshot above, 41% of time the carb absorption was calculated by the m
 - If you need a correction bolus, enter it manually.
 - Be careful not to overdose or insulin stacking!
 
+
 ### Pourquoi l'algorithme ne détecte-on pas correctement les GA ?
 
 This could be because:
-
 - Potentially the user overestimated carbs when entering them.
 - Activity / exercise after your previous meal.
 - I:C needs adjustment.
 - Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA).
 
+
 ## Correction manuelle des glucides
 
 If carbs are over or underestimated carbs this can be corrected through the Treatments tab and actions tab / menu as described [here](AapsScreens.md#carb-correction).
 
+
 ## Carb correction - how to delete a Carb entry from Treatments
+
 
 The ‘Treatments’ tab can be used to correct a faulty carb entry by deleting the entry in Treatments. This may be because the user over or underestimated the carb entry:
 
-![COB\_Screenshot 2024-10-05 170124](https://github.com/user-attachments/assets/e123d85d-907e-4545-bf1b-09fee4d42555)
+![COB_Screenshot 2024-10-05 170124](https://github.com/user-attachments/assets/e123d85d-907e-4545-bf1b-09fee4d42555)
 
 1. Check and remember actual **COB** and **IOB** on the **AAPS'** homescreen.
 2. Depending on the pump, the carbs in the Treatments tab might show together with insulin in one line or as a separate entry (i.e. with Dana RS).
@@ -82,3 +87,4 @@ The ‘Treatments’ tab can be used to correct a faulty carb entry by deleting 
 6. If carbs are not removed as intended and additional carbs are added as explained in this section, the **COB** entry will be too high and this could lead to **AAPS** delivering too much insulin.
 7. Enter correct carbs amount through carbs button on **AAPS’** homescreen and set the correct event time.
 8. If there is just one line in Treatment tab including carbs and insulin the user should add also the amount of insulin. Make sure to set the correct event time and check **IOB** on homescreen after confirming the new entry.
+
