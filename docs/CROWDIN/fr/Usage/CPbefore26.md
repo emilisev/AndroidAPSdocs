@@ -2,13 +2,13 @@
 
 Careportal reproduit les fonctions que vous pouvez trouver dans Nightscout sous le symbole “+” et vous permet d'ajouter des remarques à vos enregistrements. Mais Careportal n'envoyait aucune commande vers la pompe ! Donc, si vous ajoutiez un bolus à l'aide de cet écran, cela ajoutait simplement une information dans Nightscout, la pompe ne recevait pas de demande de bolus. Cela a provoqué de nombreuses incompréhensions.
 
-Le code utilisé à l'origine pour ajouter le support hors ligne de Careportal n'a pas été harmonisé avec le développement de AAPS et était vraiment bloquant pour les développements supplémentaires. **Par conséquent, la décision a été prise de supprimer Careportal dans la version 2.6 de AAPS.**
+Le code utilisé à l'origine pour ajouter le support hors ligne de Careportal n'a pas été harmonisé avec le développement de AAPS et était vraiment bloquant pour les développements supplémentaires. **Therefore, decision was made to remove careportal in AAPS version 2.6.**
 
 La plupart des fonctions de Careportal sont encore disponibles dans les Actions ou dans l'écran d'accueil. The actions can be reached either via actions tab or hamburger menu - depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md).
 
 Cette page indique où retrouver les fonctions précédemment disponibles dans Careportal.
 
-## Activité & Feedback
+## Activity & feedback
 
 ![Careportal activity & feedback](../images/Careportal_25_26_1_IIb.png)
 
@@ -19,11 +19,11 @@ Cette page indique où retrouver les fonctions précédemment disponibles dans C
 
 (CPbefore26-carbs-bolus)=
 
-## Glucides et bolus
+## Carbs & bolus
 
 ![Careportal carbs & bolus](../images/Careportal_25_26_2_IIa.png)
 
-- Pour renseigner un bolus - peu importe si c'est pour une collation, un repas ou une correction - utilisez le bouton Insuline sur l'écran d'accueil **et assurez vous de cocher "Ne pas administrer de bolus, enregistrer uniquement"!**
+- To note a bolus - no matter if for snack, meal or correction - use the insulin button on the homescreen **and make sure to tick "Do not bolus, record only"!**
 
 - L'option permettant d'antidater l'insulin - par ex. si vous avez oublié d'enregistrer une injection d'insuline par seringue - ne sera disponible que si la case "Ne pas administrer de bolus, enregistrer uniquement" est cochée.
 
@@ -33,7 +33,7 @@ Cette page indique où retrouver les fonctions précédemment disponibles dans C
 
 - Les débits de base temporaire peuvent être démarrés et arrêtés via le bouton de l'onglet/menu Actions. Veuillez noter que le bouton passe de "BASAL TEMPORAIRE" à "ANNULER x%" lorsqu'un débit de base temporaire est défini.
 
-## MGC et OpenAPS
+## CGM & OpenAPS
 
 ![Careportal CGM & OpenAPS](../images/Careportal_25_26_3_IIa.png)
 
