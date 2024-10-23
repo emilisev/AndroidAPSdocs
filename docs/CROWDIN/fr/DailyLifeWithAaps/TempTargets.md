@@ -1,7 +1,7 @@
+
 # Cibles temporaires
 
 ## Que sont les cibles temporaires et où puis-je les définir et les configurer ?
-
 A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their **BG** target range for planned activities. This is achieved by **AAPS** manipulating the user’s insulin usage.
 
 **AAPS** provides for three **Temp-Target** options suitable for exercise (**Temp-Target- Activity**), meals (**Temp-Target- Eating soon**) and predicted hypoglycemia (**Temp-Target-Hypo**). **Temp-Targets** are located under the **Actions tab**.
@@ -10,43 +10,44 @@ Users should have realistic expectations on the results that can be achieved whe
 
 A **Temp-Target** can take approximately 30 minutes or longer in order to attain a desired **BG** target. It is impossible for **AAPS** to achieve a **BG** target with immediate effect and users should be mindful of this when selecting a **Temp-Target**.
 
-The table below summarises the features of **Temp-Target- Activity**, **Temp-Target- Eating soon**, and **Temp-Target-Hypo**.
+The table below summarises the features of **Temp-Target- Activity**, **Temp-Target- Eating soon**,  and **Temp-Target-Hypo**.
 
-![TT1\_Screenshot 2024-01-26 231223](https://github.com/openaps/AndroidAPSdocs/assets/137224335/73eeadf1-c17e-4955-afd8-f49c281331e3)
+![TT1_Screenshot 2024-01-26 231223](https://github.com/openaps/AndroidAPSdocs/assets/137224335/73eeadf1-c17e-4955-afd8-f49c281331e3)
+
 
 ## Where can I select a Temp-Target?
-
 1. go to **Actions** tab in **AAPS**;
 2. select **Temporary Target** button; and then
 3. select desired **Temp-Target**
 
-![TT2\_Screenshot 2024-01-26 194028](https://github.com/openaps/AndroidAPSdocs/assets/137224335/9b53d358-dc97-4dc5-9ffc-3d24bceea203)
+![TT2_Screenshot 2024-01-26 194028](https://github.com/openaps/AndroidAPSdocs/assets/137224335/9b53d358-dc97-4dc5-9ffc-3d24bceea203)
 
 Alternatively, **Temp-Target** can be activated in the “Carbs” button (step 1) by selecting the desired **Temp-Target** in the shortcuts (step 2) as shown below:
 
-![TT3\_Screenshot 2024-01-26 194318](https://github.com/openaps/AndroidAPSdocs/assets/137224335/a0627667-fb73-4791-8a1a-328eaaf1af2a)
+![TT3_Screenshot 2024-01-26 194318](https://github.com/openaps/AndroidAPSdocs/assets/137224335/a0627667-fb73-4791-8a1a-328eaaf1af2a)
 
 ## Where can I change the default Temp-Target and override with my own preferences?
 
 To reconfigure the ‘BG target range’ and ‘duration’ allocated to the user’s default **Temp-Target** settings, go to the menu in **AAPS** on the top right hand corner and
-
 1. select **Preferences**
 2. scroll down to 'Overview’
 3. select ‘Default Temp-Targets’
 4. step 4 indicates (below) where to change **TT- Eating soon** time period
-5. step 5 indicates (below) where to change **TT - Eating soon** **BG** target range (and the same steps can be repeated for **TT -Activity** and **TT - Hypo**.
+5. step 5  indicates (below) where to change **TT - Eating soon** **BG** target range (and the same steps can be repeated for **TT -Activity** and **TT - Hypo**.
 
-![TT7\_Screenshot 2024-01-26 213136](https://github.com/openaps/AndroidAPSdocs/assets/137224335/82cc08af-82bf-49e2-9a66-178fc9f6aa56)
+![TT7_Screenshot 2024-01-26 213136](https://github.com/openaps/AndroidAPSdocs/assets/137224335/82cc08af-82bf-49e2-9a66-178fc9f6aa56)
+
 
 ## How do I cancel a Temp-Target?
 
 To cancel a **Temp-Target** running, select the “Cancel” button in **Temporary Target** under the **Actions** tab as shown below.
 
-![TT5\_Screenshot 2024-01-26 195309](https://github.com/openaps/AndroidAPSdocs/assets/137224335/a9299ec6-34ef-43da-a36c-4c06340878dc)
+![TT5_Screenshot 2024-01-26 195309](https://github.com/openaps/AndroidAPSdocs/assets/137224335/a9299ec6-34ef-43da-a36c-4c06340878dc)
 
 Or short-click on the ‘BG Target’ in the yellow/green box located in the top right corner of **AAPS**, and select ‘cancel’ as shown below:
 
-![Définir une cible temp.](../images/TempTarget_Set2.png)
+![Set temp target](../images/TempTarget_Set2.png)
+
 
 ## How do I select a “Default-Temp-Targets”
 
@@ -87,7 +88,7 @@ Additionally, if _'SMB with high Temp-Target'_ is deactivated, **AAPS** will not
 
 **Temp-Target -Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
 
-This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target -Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyjumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target -Eating soon** and this is particularly so, if eating a high carb diet.
+This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target -Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyjumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target -Eating soon**  and this is particularly so, if eating a high carb diet.
 
 You can read more about the “Eating soon mode” in the article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) or [here](https://diyps.org/tag/eating-soon-mode/).
 
@@ -97,7 +98,7 @@ Advanced, [objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-
 
 To action this select in **Preferences** > and deactivate _'Enable SMB with high Temp-Target'_.
 
-![TT8\_Screenshot 2024-01-26 230757](https://github.com/openaps/AndroidAPSdocs/assets/137224335/4471540e-fe2a-4ade-8f99-18ca0372da52)
+![TT8_Screenshot 2024-01-26 230757](https://github.com/openaps/AndroidAPSdocs/assets/137224335/4471540e-fe2a-4ade-8f99-18ca0372da52)
 
 This will ensure **AAPS** will not give **SMBs**, even with COB > 0, _'SMB with Temp-Target'_ or _'SMB alway'_ enabled and OpenAPS SMB active.
 
@@ -105,4 +106,4 @@ This will ensure **AAPS** will not give **SMBs**, even with COB > 0, _'SMB with 
 
 If the user requires an manual adjustment to the **Temp-Target** _long press_ the ‘Eating Soon’, ‘Activity’ or ‘Hypo’ button and then edit the values to the desired **BG** ‘target’ or ‘duration’ field.
 
-![Définir une cible temp. via l'onglet Action](../images/TempTarget_ActionTab.png)
+![Set temp target through Action tab](../images/TempTarget_ActionTab.png)
