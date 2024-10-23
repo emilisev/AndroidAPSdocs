@@ -1,5 +1,4 @@
 (Releasenotes-release-notes)=
-
 # Notes de Version
 
 Please follow the instructions in the [update manual](UpdateToNewVersion). Vous pouvez également trouver une section de dépannage répondant aux difficultés les plus courantes lors de la mise à jour dans la page du manuel de mise à jour.
@@ -17,9 +16,9 @@ Veuillez comprendre que cette modification n'a pas pour but de vous corriger mai
 ```{admonition} First version of AAPS
 :class: note
 
-La première version de test a déjà commencé en 2015. In 2016 has been the first released version.
+The first test version started already in 2015. In 2016 has been the first released version.
 
-La chronologie de ces versions n'est pas disponible pour le moment, mais comme cette question est posée plusieurs fois, nous la documenterons ici.
+The chronology of these releases is not available at the moment but as this questions is asked severeal times we document it here.
 
 ```
 
@@ -32,17 +31,17 @@ Afin de permettre aux utilisateurs ayant une ancienne version d'Android d'utilis
 ### Android 9 et supérieur
 
 - Utiliser la dernière version d'AAPS
-- Téléchargez le code AAPS depuis <https://github.com/nightscout/AndroidAPS>
+- Download AAPS Code from <https://github.com/nightscout/AndroidAPS>
 
 ### Android 8
 
-- Utiliser la version **2.8.2.1** d'AAPS
-- Téléchargez le code AAPS depuis <https://github.com/nightscout/AndroidAPS> branche 2.8.2.1
+- Use AAPS version **2.8.2.1**
+- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 2.8.2.1
 
 ### Android 7
 
-- Utiliser la version **2.6.2** d'AAPS
-- Téléchargez le code AAPS depuis <https://github.com/nightscout/AndroidAPS> branche 2.6.2
+- Use AAPS version **2.6.2**
+- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 2.6.2
 
 ## WearOS version
 
@@ -62,6 +61,7 @@ Release date: 23-10-2023
 - Si vous envoyez à xDrip+, vous devez configurer le plugin de synchronisation xDrip. In order to receive BGs from AAPS in xDrip, “xDrip+ Sync Follower” must be selected as source
 - Si vous voulez basculer vers le pilote ComboV2, Ruffy doit être désinstallé et la pompe doit être à nouveau appairée à AAPS
 - In order to use DynISF plugin you have to start Objective 11 (all previous must be in finished state to allow start of 11)
+
 
 ### Modifications
 
@@ -95,18 +95,15 @@ Release date: 23-10-2023
 - new 110k+ lines of code, changed 240k lines, 6884 changed files
 
 (Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)=
-
 ### Important comments on using v3 versus v1 API for Nightscout with AAPS
 
 v1 is the old protocol used for exchanging data between NS web site and NS server. It has many limitations
-
 - v1 sends only 2 days of data
 - v1 send all 2 days data on every reconnection
 - using websockets is mandatory = permanent connection, more battery compsumption
 - during frequent disconnects to NS connection is paused for 15 minutes to prevent high data usage
 
 v3 is new protocol. More safe and efficient
-
 - while using tokens you can better define access rights
 - protocol is more efficient on both sides (AAPS & NS)
 - It can read up to 3 months of data from NS
@@ -114,14 +111,12 @@ v3 is new protocol. More safe and efficient
 - NSClient is not paused on disconnections
 
 LIMITATIONS
-
 - NS 15 must be used with AAPS 3.2
 - v3 doesn't see updates done by v1 protocol (probably it will be resolved in some future version of NS)
 - in opposite because of old uneffective method of tracking changes v1 see changes done by v3
 - remember NS still uses v1 internaly so far thus is not possible to enter data through NS web UI if you are using v3. You must use AAPSClient on SMS if you want enter data remotely
 
 RECOMMENDED SETTING
-
 - because of all above you should choose only one method and use it on all devices (remember all other uploaders at time of writing this are using v1). If you decide to go to v3, select v3 in AAPS and all AAPSClients
 - v3 is preffered because of efficiency
 - using websockets or not using with v3 depends on your preference
@@ -132,7 +127,6 @@ RECOMMENDED SETTING
 Date de sortie : 19-07-2022
 
 (Releasenotes-important-hints-3-1-0)=
-
 ### Conseils importants
 
 - après la mise à jour désinstallez l'application Wear et installez la nouvelle version
@@ -161,18 +155,17 @@ Date de sortie : 19-07-2022
 Date de sortie : 31-01-2022
 
 (Releasenotes-important-hints-3-0-0)=
-
 ### Conseils importants
 
-- **La version minimale d'Android est maintenant 9.0.**
-- **Les données ne sont pas migrées vers la nouvelle base de données.** Ne vous plaignez pas, c'est un changement si énorme que ce n'est tout simplement pas possible. Ainsi après la mise à jour de l'IA, GA, traitements, etc seront effacés. You have to create new [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) and start with zero IOB and COB. Planifiez la mise à jour avec soin !!! C'est mieux si vous le faites sans insuline et glucides actifs
+- **Minimum Android version is 9.0 now.**
+- **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Ainsi après la mise à jour de l'IA, GA, traitements, etc seront effacés. You have to create new [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) and start with zero IOB and COB. Planifiez la mise à jour avec soin !!! C'est mieux si vous le faites sans insuline et glucides actifs
 - Utiliser la même version d'AAPS et de NSClient
 
 **Make sure to check and adjust settings after updating to 3.0 as described** [here](../Maintenance/Update3_0.md).
 
 ### Etapes de préparation
 
-**Au moins deux jours avant la mise à jour :**
+**At least two days before update:**
 
 - Désactivez Dexcom Bridge dans Nightscout
 - si vous utilisez G5/G6 et xDrip en tant que collecteur, vous devez mettre à jour xDrip vers une version "nocturne" plus récente que le 14 janvier 2022
@@ -186,7 +179,7 @@ Date de sortie : 31-01-2022
 
 - [Dana-i support](../CompatiblePumps/DanaRS-Insulin-Pump.md) @MilosKozak
 
-- [Support de la DiaconnG8](../CompatiblePumps/DiaconnG8.md)
+- [DiaconnG8 support](../CompatiblePumps/DiaconnG8.md)
 
 - Support de Glunovo
 
@@ -203,7 +196,7 @@ Date de sortie : 31-01-2022
   - Paramètres de synchronisation disponibles sans le mode ingénierie (pour les parents)
   - Possibilité de resynchroniser les données
 
-- Changement de comportement du changement de profil. Maintenant, on fait la différence entre le Changement de profil _(demandé par l'utilisateur)_ et le changement de profil _(une fois exécuté par pompe)_ @MilosKozak @Tebbe
+- Changement de comportement du changement de profil. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak @Tebbe
 
 - Vous pouvez démarrer la cible temporaire Activité lors de la création du changement de profil @MilosKozak
 
@@ -239,9 +232,9 @@ Date de sortie : 31-01-2022
 
 - Changement d'emplacement des fichiers:
 
-  > - /AAPS/extra (mode ingénierie)
-  > - /AAPS/logs /AAPS/exports
-  > - /AAPS/preferences
+  - /AAPS/extra (mode ingénierie)
+  - /AAPS/logs /AAPS/exports
+  - /AAPS/preferences
 
 ## Version 2.8.2
 
@@ -263,11 +256,10 @@ Date de sortie : 23-01-2021
 Date de sortie : 12-01-2021
 
 (conseils-importants-2-8-1-1)
-
 ### Conseils importants
 
-- L'option **NS_UPLOAD_ONLY** a été forcée à ON pour tous les utilisateurs de la version 2.8.1.
-- Si vous utilisez NSClient pour entrer les CT, les glucides ou les changements de profil, vous devez le désactiver dans AAPS mais **seulement dans le cas où votre synchronisation fonctionne bien** (càd. vous ne voyez pas de changements de données indésirables tels que la modification automatique de CT, DBT etc.).
+- Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users.
+- If you use NSClient to enter TT, carbs or profile switches you must turn it off in AAPS but **only in case your synchronization is working well** (ie. you don't see unwanted data changes like self modification of TT, TBR etc).
 - ATTENTION : NE PAS le faire si vous avez une autre application qui gère les traitements (comme xDrip broadcast/upload/sync...).
 - NS_UPLOAD_ONLY ne peut être désactivé que si le mode ingénierie est activé.
 
@@ -275,7 +267,7 @@ Date de sortie : 12-01-2021
 
 - RileyLink, Omnipod et la pompe MDT améliorations et corrections
 - NS_UPLOAD_ONLY forcé
-- correction pour SMB & appli. Dexcom
+- fix for SMB & Dexcom app
 - watchface fixes
 - rapport de plantage amélioré
 - gradle restauré pour permettre l'installation directe des cadrans de montres
@@ -286,17 +278,16 @@ Date de sortie : 12-01-2021
 - nouvelles traductions
 
 (Releasenotes-version-2-8-0)=
-
 ## Version 2.8.0
 
 Date de sortie : 01-01-2021
 
 ### Conseils importants
 
-- **La version minimale d'Android est 8.0 maintenant.** Pour les anciennes versions d'Android, vous pouvez toujours utiliser la version 2.6.1.4 de l'ancien dépôt.
+- **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo.
 - [Objectives have changed.](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) **Finish not completed objectives before update.**
-- Le dossier github est toujours sur <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AAPS and do a [new clone](../SettingUpAaps/BuildingAaps.md).
-- Utilisez [Android Studio 4.1.1](https://developer.android.com/studio/) ou une version plus récente pour construire l'apk.
+- Repository location still on <https://github.com/nightscout/AndroidAPS> . If you are not familiar with git the easiest way for update is remove directory with AAPS and do a [new clone](../SettingUpAaps/BuildingAaps.md).
+- Please use [Android Studio 4.1.1](https://developer.android.com/studio/) or newer to build the apk.
 
 ### Nouvelles fonctionnalités majeures
 
@@ -317,7 +308,6 @@ Date de sortie : 01-01-2021
 - Améliorations diverses et correctifs @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion
 
 (Releasenotes-version-2-7-0)=
-
 ## Version 2.7.0
 
 Date de sortie : 24-09-2020
@@ -357,12 +347,11 @@ You need at least start [objective 11 (in later versions objective 10!)](../Sett
 - Nouvelle documentation @Achim
 
 (Releasenotes-version-2-6-1-4)=
-
 ## Version 2.6.1.4
 
 Date de sortie : 04-05-2020
 
-Utilisez [Android Studio 3.6.1](https://developer.android.com/studio/) ou une version plus récente pour construire l'apk.
+Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
 ### Nouvelles fonctionnalités majeures
 
@@ -373,7 +362,7 @@ Utilisez [Android Studio 3.6.1](https://developer.android.com/studio/) ou une ve
 
 Date de sortie : 03-05-2020
 
-Utilisez [Android Studio 3.6.1](https://developer.android.com/studio/) ou une version plus récente pour construire l'apk.
+Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
 ### Nouvelles fonctionnalités majeures
 
@@ -384,7 +373,7 @@ Utilisez [Android Studio 3.6.1](https://developer.android.com/studio/) ou une ve
 
 Date de sortie : 19-04-2020
 
-Utilisez [Android Studio 3.6.1](https://developer.android.com/studio/) ou une version plus récente pour construire l'apk.
+Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
 ### Nouvelles fonctionnalités majeures
 
@@ -395,7 +384,7 @@ Utilisez [Android Studio 3.6.1](https://developer.android.com/studio/) ou une ve
 
 Date de sortie : 06-04-2020
 
-Utilisez [Android Studio 3.6.1](https://developer.android.com/studio/) ou une version plus récente pour construire l'apk.
+Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
 ### Nouvelles fonctionnalités majeures
 
@@ -406,11 +395,11 @@ Utilisez [Android Studio 3.6.1](https://developer.android.com/studio/) ou une ve
 
 Date de sortie : 21-03-2020
 
-Utilisez [Android Studio 3.6.1](https://developer.android.com/studio/) ou une version plus récente pour construire l'apk.
+Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
 ### Nouvelles fonctionnalités majeures
 
-- Permet de ne rentrer que `https://` dans les paramètres NSClient
+- Allow to enter only `https://` in NSClient settings
 - Fixed [BGI](../UsefulLinks/Glossary.md) displaying bug on watches
 - Correction de petits bugs de l'interface utilisateur
 - Fixed Insight crashes
@@ -422,18 +411,17 @@ Utilisez [Android Studio 3.6.1](https://developer.android.com/studio/) ou une ve
 - Correction de l'envoi des calibrations vers xDrip
 
 (Releasenotes-version-2-6-0)=
-
 ## Version 2.6.0
 
 Date de sortie : 29-02-2020
 
-Utilisez [Android Studio 3.6.1](https://developer.android.com/studio/) ou une version plus récente pour construire l'apk.
+Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
 ### Nouvelles fonctionnalités majeures
 
 - Petites modifications de l'affichage (page d'accueil...)
 
-- Onglet/Menu Careportal supprimé - plus de détails [ici](../Usage/CPbefore26.md)
+- Careportal tab / menu removed - more details [here](../Usage/CPbefore26.md)
 
 - New Local Profile plugin
 
@@ -455,7 +443,7 @@ Utilisez [Android Studio 3.6.1](https://developer.android.com/studio/) ou une ve
 
 - Diverses améliorations internes et de l'interface
 
-- [Complications Montre](../UsefulLinks/WearOsSmartwatch.md)
+- [Wear complications](../UsefulLinks/WearOsSmartwatch.md)
 
 - New [SMS commands](../RemoteFeatures/SMSCommands.md) BOLUS-MEAL, SMS, CARBS, TARGET, HELP
 
@@ -485,12 +473,9 @@ Utilisez [Android Studio 3.6.1](https://developer.android.com/studio/) ou une ve
 
 Date de sortie : 31-10-2019
 
-Please note the [important notes](ReleaseNotes#version-250) and [limitations](ReleaseNotes#is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](ReleaseNotes#version-250).
-\* Correction d'un bug dans le statut du réseau qui entraînait des plantages fréquent (pas critique mais gaspillerait beaucoup d'énergie).
-\* Nouvelle gestion des versions qui permettra de faire des mises à jour mineures sans déclencher la notification de mise à jour.
+Please note the [important notes](ReleaseNotes#version-250) and [limitations](ReleaseNotes#is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](ReleaseNotes#version-250). \* Correction d'un bug dans le statut du réseau qui entraînait des plantages fréquent (pas critique mais gaspillerait beaucoup d'énergie). \* Nouvelle gestion des versions qui permettra de faire des mises à jour mineures sans déclencher la notification de mise à jour.
 
 (Releasenotes-version-2-5-0)=
-
 ## Version 2.5.0
 
 Date de sortie : 26-10-2019
@@ -501,11 +486,10 @@ Date de sortie : 26-10-2019
 
 - Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../SettingUpAaps/BuildingAaps.md) or [update](UpdateToNewVersion).
 - If you are using xDrip [identify receiver](../CompatibleCgms/xDrip.md#identify-receiver) must be set.
-- Si vous utilisez le Dexcom G6 avec l'application Dexcom patchée, vous aurez besoin de la version présente dans le [dossier 2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+- If you are using Dexcom G6 with the patched Dexcom app you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 - Glimp est pris en charge à partir de la version 4.15.57 et plus récente.
 
 (Releasenotes-is-this-update-for-me-currently-is-not-supported)=
-
 ### Cette mise à jour est-elle pour moi? N'est actuellement PAS pris en charge
 
 - Android 5 and inférieurs
@@ -522,7 +506,7 @@ Date de sortie : 26-10-2019
 - Allow to [bolus only part](../SettingUpAaps/Preferences.md#advanced-settings-overview) from bolus wizard calculation
 - Affichage de l'activité de l'insuline
 - Ajustement des prévisions de l'IA par le résultat autosens
-- Nouveau support pour les apk des applications Dexcom patchées ([dossier 2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
+- New support for patched Dexcom apks ([2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
 - Vérificateur de signature
 - Autorisation de contourner les objectifs pour les utilisateurs d'OpenAPS
 - New [objectives](../SettingUpAaps/CompletingTheObjectives.md) - exam, application handling (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
@@ -562,7 +546,7 @@ Date de sortie : 29-03-2019
 
 ### Nouvelles fonctionnalités majeures
 
-- [Correction Changement d'heure](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#time-adjustment-daylight-savings-time-dst)
+- [DST fix](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#time-adjustment-daylight-savings-time-dst)
 - Wear Update
 - [SMS plugin](../RemoteFeatures/SMSCommands.md) update
 - Retour arrière dans les Objectifs.
@@ -585,7 +569,7 @@ Date de sortie : 03-03-2019
 
 ### Misc
 
-- Si vous n'utilisez pas la valeur par défaut de `smbmaxminutes` vous devez configurer à nouveau cette valeur
+- If you are using non default `smbmaxminutes` value you have to setup this value again
 
 ## Version 2.0
 
@@ -593,12 +577,11 @@ Date de sortie : 03-11-2018
 
 ### Nouvelles fonctionnalités majeures
 
-- Support de oref1/SMB ([documentation oref1](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)) Assurez-vous de bien lire la documentation pour savoir ce que vous pouvez attendre des SMB, comment il fonctionne, ce qu'il peut faire et comment l'utiliser pour qu'il marche en douceur.
+- oref1/SMB support ([oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achieve and how to use it so it can operate smoothly.
 - [\_Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md) pump support
 - Assistant de configuration : vous guide dans le processus de configuration d'AAPS
 
 (Releasenotes-settings-to-adjust-when-switching-from-ama-to-smb)=
-
 ### Paramètres à ajuster lors du passage d'AMA à SMB
 
 - L'objectif 10 doit être démarré pour pouvoir activer les SMB (l'onglet SMB montre généralement les restrictions appliquées)
@@ -609,18 +592,17 @@ Date de sortie : 03-11-2018
 
 - Remarque lors de la construction de l'apk d'AAPS 2.0 : Configuration on demand n'est pas supporté par la version actuelle du plugin Android Gradle ! Si votre construction échoue avec une erreur concernant la "configuration sur demande", faites les actions suivantes :
 
-  - Ouvrez la fenêtre Préférences en cliquant sur File > Settings (sur Mac, Android Studio > Preferences).
-  - Dans le panneau de gauche, cliquez sur Build, Execution, Deployment > Compiler.
+  - Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
+  - In the left pane, click Build, Execution, Deployment > Compiler.
   - Décochez la case Configure on demand.
   - Cliquez sur Appliquer ou OK.
 
 (Releasenotes-overview-tab)=
-
 ### Onglet Aperçu (Accueil)
 
 - Le ruban du haut donne accès à Suspendre/Désactiver la boucle, consulter/changer le profil et démarrer/arrêter les cibles temp. (CT). Les CT utilisent des paramètres par défauts configurés dans les préférences. La nouvelle option CT Hypo est une cible temp. haute pour empêcher la boucle de corriger trop agressivement les glucides de secours.
 - Boutons de traitement : l'ancien bouton de traitement est encore disponible, mais masqué par défaut. La visibilité des boutons peut maintenant être configurée. New insulin button, new carbs button (including [eCarbs/extended carbs](../DailyLifeWithAaps/ExtendedCarbs.md))
-- [Lignes de prédiction colorées](../DailyLifeWithAaps/AapsScreens.md#prediction-lines)
+- [Colored prediction lines](../DailyLifeWithAaps/AapsScreens.md#prediction-lines)
 - Option pour afficher un champ de notes dans les boites de dialogue insuline/glucides/calculatrice et amorcer+remplir, qui sont téléchargées dans NS
 - Mise à jour de la boîte de dialogue amorcer/remplir qui permet l'amorçage et créé une entrée Careportal pour le changement de site et le changement de cartouche
 
@@ -643,7 +625,7 @@ Date de sortie : 03-11-2018
 - Remplacement des onglets de la Configuration et des objectifs, ajout de descriptions
 - Nouvelle icône d'application
 - Beaucoup d'améliorations et de correctifs
-- Alerte indépendante de Nightscout si la pompe est injoignable pendant une durée longue (par ex. si la pile de la pompe est à plat) et pour des lectures de GLY manquées (voir _Alertes locales_ dans les paramètres)
+- Nightscout-independent alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
 - Option pour garder l'écran allumé
 - Option pour afficher les notifications AAPS comme des notifications Android
 - Filtrage avancé (permettant de toujours activer SMB et pendant 6h après les repas) pris en charge avec l'application Dexcom patchée ou xDrip+ avec le mode natif G5 en tant que source GLY.
