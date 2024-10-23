@@ -1,8 +1,9 @@
 # Dexcom G7 et ONE+
 
+
 ## Commençons par des fondamentaux
 
-Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. Plus de détails disponibles [ici](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
+Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. More details about this [here](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
 ![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 
@@ -11,11 +12,11 @@ Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not 
 **Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 / ONE+ values.  
 ```
 
-## 1. Patched Dexcom G7 App (DiaKEM)
+## 1.  Patched Dexcom G7 App (DiaKEM)
 
 **Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+.**
 
-### Install a new patched (!) Installez la nouvelle application G7 patchée et démarrez le capteur
+### Install a new patched (!) G7 app and start the sensor
 
 A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
 
@@ -38,17 +39,14 @@ A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not
 ## 2. xDrip+ (direct connection to G7 or ONE+)
 
 - Follow the instructions here: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
-
 - Select  xDrip+ in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
 
 - Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
 
 ## 3. xDrip+ (companion mode)
 
-- Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-
+-   Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
 - As data source in xDrip+ "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
+-   Select  xDrip+ in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
 
-- Select  xDrip+ in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
-
-- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
+-   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md) 
