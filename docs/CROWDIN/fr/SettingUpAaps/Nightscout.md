@@ -1,7 +1,6 @@
 # Nightscout
 
 (Nightscout-security-considerations)=
-
 ## Remarques sur la sécurité
 
 En complément des rapports, Nightscout peut également être utilisé pour contrôler AAPS. I.e. C'est-à-dire que vous pouvez définir des cibles temporaires ou ajouter des glucides futurs. Ces informations seront recueillies par AAPS qui agira en conséquence. Par conséquent, cela vaut la peine de penser à sécuriser votre site Nightscout.
@@ -18,12 +17,10 @@ Nightscout `API_SECRET` is your site main password: don't share it publicly.
 
 You can setup AAPS to accept Nightscout commands (profile changes, treatments, ...), or fully disable it.
 
-- Access the NSClient or NSClientV3 plugin settings with either 1) Main view -> Config Builder -> Synchronization -> NSClient Cog icon 2) NSCLIENT tab -> Three dots menu -> Plugin preferences
-  1. Main view -> Config Builder -> Synchronization -> NSClient Cog icon
-  2. NSCLIENT tab -> Three dots menu -> Plugin preferences
-- Enable all data upload to Nightscout (3) as this is now the standard method unless your BG data source is Nightscout.\
+* Access the NSClient or NSClientV3 plugin settings with either 1) Main view -> Config Builder -> Synchronization -> NSClient Cog icon 2) NSCLIENT tab -> Three dots menu -> Plugin preferences
+* Enable all data upload to Nightscout (3) as this is now the standard method unless your BG data source is Nightscout.  
   If your AAPS BG data source is Nightscout **do not** enable Upload BG data to NS (3).
-- Do not enable Receive/backfill data (4) unless Nightscout is your BG data source.
+* Do not enable Receive/backfill data (4) unless Nightscout is your BG data source.
 
 ![Nightscout upload only](../images/NSsafety.png)
 
@@ -35,37 +32,39 @@ Disabling these options makes sure no Nightscout change will be used by AAPS.
 
 #### Accept changes from Nightscout
 
-Enabling these options allow you to remotely change AAPS settings through Nightscout, like profiles modifications and switch, temporary targets and adding carbs that will be taken into account by AAPS.\
+Enabling these options allow you to remotely change AAPS settings through Nightscout, like profiles modifications and switch, temporary targets and adding carbs that will be taken into account by AAPS.  
 Note that insulin treatments will only be used for calculations like "Do not bolus, record only".
 
 ![Nightscout upload only](../images/NSsafety3.png)
+
+
 
 ### Autres paramètres de sécurité
 
 Keep your phone up to date as described in [safety first](../Getting-Started/PreparingForAaps.md#safety-first).
 
 (Nightscout-manual-nightscout-setup)=
-
 ## Manuel d'installation Nightscout
 
-Il est supposé que vous avez déjà un site Nightscout. Si ce n'est pas le cas, rendez-vous sur la page [Nightscout](http://nightscout.github.io/nightscout/new_user/) pour des instructions complètes sur la configuration. Les instructions ci-dessous sont alors les paramètres que vous devrez également ajouter à votre site Nightscout.  Your Nightscout site needs to be at least version 15 for AAPS 3.2, so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app.
+It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site.  Your Nightscout site needs to be at least version 15 for AAPS 3.2, so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app.
 
-- [Edit your variables](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
+* [Edit your variables](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
 
-- Ajouter ou modifier les variables comme suit :
-  - `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
-  - `DEVICESTATUS_ADVANCED` = `true`
-  - `SHOW_FORECAST` = `openaps`
-  - `PUMP_FIELDS` = `reservoir battery clock`
-  - Diverses alarmes peuvent être définies pour [surveiller la pompe](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), le pourcetage de pile en particulier est encouragé :
-    - `PUMP_WARN_BATT_P` = `51`
-    - `PUMP_URGENT_BATT_P` = `26`
+* Ajouter ou modifier les variables comme suit :
+  * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
+  * `DEVICESTATUS_ADVANCED` = `true`
+  * `SHOW_FORECAST` = `openaps`
+  * `PUMP_FIELDS` = `reservoir battery clock`
+  * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is encouraged:
+    * `PUMP_WARN_BATT_P` = `51`
+    * `PUMP_URGENT_BATT_P` = `26`
 
-- Save the modifications. Your Nightscout site should now allow you to display the pills. You can force default display adding them in `SHOW_PLUGINS`.
+* Save the modifications. Your Nightscout site should now allow you to display the pills. You can force default display adding them in `SHOW_PLUGINS`.
 
-  - `SHOW_PLUGINS` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
+  * `SHOW_PLUGINS` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
 
   ![Nightscout Pills](../images/nightscout1.png)
+
 
 ## Nightscout as a paid SaaS (Software as a Service)
 
