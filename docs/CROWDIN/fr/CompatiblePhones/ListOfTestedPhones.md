@@ -1,5 +1,4 @@
 (Phones-list-of-tested-phones)=
-
 # Liste des téléphones testés compatibles avec la pompe à insuline Omnipod
 
 Actuellement, nous avons une personne très investie qui travaille en coulisses, chargée de garantir l'intégrité de la liste de matériel de tous les téléphones Android/montres connectées capables de boucler avec l'Omnipod Dash. Celui-ci étant le dernier pilote de pompe ajouté à notre liste (en constante augmentation) de pompes à insuline pilotées par Bluetooth utilisables avec l'écosystème AAPS/OpenAPS!
@@ -19,9 +18,6 @@ Après avoir rempli les données du formulaire, le responsable vérifiera les do
 Pour tout problème constaté dans la feuille de calcul, veuillez nous contacter directement ou via un Issue GitHub dans le projet openaps/AndroidAPSDocs.
 
 (Phones-phone-background)=
-
 # Fond d'écran
 
-![phone background](../images/bg_phone_thump.jpg) </br>
-Design: Thiago :) </br>
-If you want to decorate your phone with more AAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)
+![phone background](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)
