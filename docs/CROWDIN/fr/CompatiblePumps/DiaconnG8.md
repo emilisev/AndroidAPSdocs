@@ -25,13 +25,13 @@
 - Il y a deux options pour vérifier votre numéro de modèle :
 
 1. Les 5 derniers chiffres du numéro SN au dos de la pompe.
-2. Cliquez sur le bouton O > Information > BLE > Derniers 5 chiffres.
+2. Click on O button > Information > BLE > Last 5 digits.
 
 ![image](../images/DiaconnG8/DiaconnG8_06.jpg)
 
 - Une fois que vous avez sélectionné votre pompe, une fenêtre apparaît pour demander un code PIN. Entrez le code PIN affiché sur votre pompe pour terminer la connexion.
 
-![image](../images/DiaconnG8/DiaconnG8_07.jpg)
+ ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
 
 ## Contrôle de l'état de la pompe et synchronisation des journaux
 
@@ -41,7 +41,7 @@
 
 ## Dépannage Bluetooth
 
-**Que faire dans le cas d'une connexion Bluetooth instable avec la pompe.**
+**What to do in the case of an unstable Bluetooth connection with the pump.**
 
 ### Méthode 1) Vérifiez à nouveau la pompe une fois la connexion à AAPS terminée.
 
@@ -73,17 +73,17 @@
 
 ### Réglage des options de pompe Diaconn G8
 
-- Configuration > Pompe > Diaconn G8 > Paramètres
-- DIACONN G8 en haut à droite> Menu 3 points en haut à droite > Préférences Diaconn G8
+- Config manager > pump > Diaconn G8 > Settings
+- DIACONN G8 at the top> 3 dots button on the top right > Diaconn G8 Preferences
 
-![Options de la pompe Diaconn G8](../images/DiaconnG8/DiaconnG8_14.jpg)
+![Diaconn G8 pump options](../images/DiaconnG8/DiaconnG8_14.jpg)
 
-- Si l'option **Enreg. changement de réservoir** est activée, les informations sont automatiquement téléchargées sur Careportal quand un événement « Changement d'insuline » se produit.
+- If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an “Insulin Change” event occurs.
 - If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a “Site Change” event occurs.
-- Si l'option **Enreg. changement de tubulure** est activée, les informations sont automatiquement téléchargées sur Careportal lorsqu'un événement « Changement de tubulure » se produit.
-- Si l'option **Enreg. changement de pile** est activée, les informations sont automatiquement téléchargées sur Careportal lorsqu'un événement "Changement de pile" se produit, et le bouton CHANGEMENT PILE POMPE dans l'onglet ACTION est désactivé. (Note: Pour changer la pile, veuillez arrêter toutes les fonctions d'injection en cours avant de continuer.)
+- If the **Log tube change** option is activated, the relevant details are automatically uploaded to the careportal when a “Tube Change” event occurs.
+- If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a “Battery Change” event occurs, and the PUMP BATTERY CHANGE button in the ACTION tab is deactivated. (Note: Pour changer la pile, veuillez arrêter toutes les fonctions d'injection en cours avant de continuer.)
 
-![Menu d'actions du Diaconn G8](../images/DiaconnG8/DiaconnG8_15.jpg)
+![Diaconn G8 actions menu](../images/DiaconnG8/DiaconnG8_15.jpg)
 
 ### Fonction Bolus Étendu
 
