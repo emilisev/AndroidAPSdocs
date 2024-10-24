@@ -1,14 +1,12 @@
 # How to translate strings for the AAPS app or the documentation
 
-* For the the strings used in the app go to [https://crowdin.com/project/androidaps](https://crowdin.com/project/androidaps) and login using your GitHub account
-* For the documentation please visit [https://crowdin.com/project/androidapsdocs](https://crowdin.com/project/androidapsdocs) and login using your GitHub account
+* Pour les chaînes utilisées dans l'application, allez sur <https://crowdin.com/project/androidaps> et connectez-vous à l'aide de votre compte GitHub
+* Pour la documentation, allez sur <https://crowdin.com/project/androidapsdocs> et connectez vous à l'aide de votre compte GitHub
 
 * Envoyez une demande d'adhésion à l'équipe Wiki. Pour le faire, cliquez sur le drapeau de la langue souhaitée, puis sur le bouton "Join" dans le coin supérieur droit de la page suivante. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
 
 ```{admonition} Time for Approval
-:class: note
-
-The approval is a manual step. As non profit organization we don't provide SLAs but in general the approval will be done in < 1 day. If not please contact the Doc team via Facebook or Discord.
+L'approbation est une étape manuelle. En tant qu’organisation à but non lucratif, nous ne fournissons pas de SLA, mais en général l’approbation se fera dans la journée. Si ce n'est pas le cas, veuillez contacter l'équipe Doc via Facebook ou Discord.
 ```
 
 * When we approve you, click the flag ![When we approve you, click the flag](../images/translation_flags.png)
@@ -82,13 +80,11 @@ In general this needs 1 - 3 days but might during holiday take a little bit long
 ### Translating links
 
 ```{admonition} Links are not translated anymore
-:class: note
-
-Links are not translated anymore. In the past we had a topic here but this is gone as through migraton to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
+Les liens ne sont plus traduits. Dans le passé, nous avions un chapitre particulier ici mais c'est terminé depuis la migraton vers Markdown et le myst_parser nous créons explicitement des étiquettes dans le texte anglais ce qui permet de propager ces étiquettes et les liens vers les autres langues.
 
 ```
 
-You are translating the text which represents the link. Please you have to be carefull **not** to remove the link which is represented by a pair of `<0></0>` tags or if their are more in one paragraph other numbers.
+You are translating the text which represents the link. S'il vous plaît vous devez être prudent de ne **pas** supprimer le lien qui est représenté par une paire de balises `<0></0>` ou représentées par une aure nombre s'il y en a plusieurs dans un même paragraphe.
 
 It's the proofreaders job to have a special look on this!
 
@@ -96,7 +92,7 @@ It's the proofreaders job to have a special look on this!
 
 * Proofreaders have to switch to Proofreading mode
 
-   ![Proofreading mode docs](../images/translation_WikiProofreadingmode.png)
+   ![Mode Relecture (Proofreading)](../images/translation_WikiProofreadingmode.png)
 
 
   and approve translated texts
