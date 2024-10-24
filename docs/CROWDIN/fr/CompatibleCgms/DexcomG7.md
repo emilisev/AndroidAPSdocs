@@ -3,7 +3,7 @@
 
 ## Commençons par des fondamentaux
 
-Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. More details about this [here](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
+Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. Plus de détails disponibles [ici](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
 ![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 
@@ -16,7 +16,7 @@ Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not 
 
 **Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+.**
 
-### Install a new patched (!) G7 app and start the sensor
+### Installez la nouvelle application G7 patchée et démarrez le capteur
 
 A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
 
