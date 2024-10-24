@@ -24,7 +24,7 @@ Si vous ne trouvez plus votre ancien fichier de clés ou son mot de passe, proc�
 ## Gradle Sync en échec
 Gradle Sync peut échouer pour diverses raisons. Quand vous recevez un message indiquant que la synchronisation gradle a échouée, ouvrez l'onglet "Build" (1) en bas d'Android Studio et vérifiez quel message d'erreur (2) est affiché.
 
-  ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
+  ![Échec de Gradle](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
 Ci-dessous les échecs courants de synchronisation de gradle :
 * [Uncommitted changes](#uncommitted-changes)
@@ -39,7 +39,7 @@ Ci-dessous les échecs courants de synchronisation de gradle :
 
 Si vous recevez un message d'erreur comme ceci
 
-![Gradle Uncommited Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
+![Changements non commités Gradle](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
 #### Étape 1 - Vérifiez l'installation de git
   * Ouvrez l'onglet Terminal (1) en bas d'Android Studio, copiez le texte suivant et collez le dans le terminal.
@@ -47,7 +47,7 @@ Si vous recevez un message d'erreur comme ceci
     git --version
     ```
 
-    ![Gradle Git Version](../images/studioTroubleshooting/03_GitVersion.png)
+    ![Gradle version de Git](../images/studioTroubleshooting/03_GitVersion.png)
 
     Note : Il y a un espace et deux traits d'union entre git et version !
 
@@ -59,7 +59,7 @@ Si vous recevez un message d'erreur comme ceci
     ```
     votre installation Git n'est pas correcte.
 
-  * [Check git installation](../SettingUpAaps/BuildingAaps.md#steps-for-installing-git)
+  * [Vérifiez l'installation de git](../SettingUpAaps/BuildingAaps.md#steps-for-installing-git)
 
   * Quand vous êtes sur Windows et que git vient juste d'être installé, vous devez redémarrer votre ordinateur pour rendre git disponible après l'installation
 
@@ -69,7 +69,7 @@ Si vous recevez un message d'erreur comme ceci
 
     Notez pour vous, dans quel répertoire il se trouve.
 
-  * Allez dans les variables d'environnement de Windows, sélectionnez la variable "PATH" et cliquez sur Modifier. Add the directory where you have found your git installation.
+  * Allez dans les variables d'environnement de Windows, sélectionnez la variable "PATH" et cliquez sur Modifier. Ajoutez le répertoire où vous avez trouvé votre installation de git.
 
   * Sauver et fermer.
 
@@ -77,14 +77,14 @@ Si vous recevez un message d'erreur comme ceci
 
 #### Étape 2 : Vérifier les modifications non commitées.
 
-  * In Android Studio, oben the "Commit" Tab (1) on the left-hand side. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
+  * Dans Android Studio, observez l'onglet « Commit » (1) à gauche. ![Onglet de commit : changements non commités](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
   * Vous pouvez voir "Default changeset" (2) ou "Unversioned files" (3):
 
     * Pour "Default Changeset", vous avez probablement mis à jour gradle ou modifié certains contenus du fichier par erreur.
 
     * Faites un clic droit sur "Default Changeset" et sélectionnez "Rollback"
 
-      ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
+      ![Onglet de commit : Restaurer les modifications](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
     * Les fichiers sont récupérés à nouveau depuis le serveur Git. If there are no other changes in the commit tab, go to [Step 3](#gradle-resync).
 
@@ -131,7 +131,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
   ![Incompatible version of Android Gradle plugin](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
 
-  You are using an outdated version of Android Studio. In the menu, go to Help > Check for updates and install any updates of Android Studio and its plugins that are found.
+  You are using an outdated version of Android Studio. You are using an outdated version of Android Studio.
 
 (troubleshooting_androidstudio-could-not-resolve-no-cached-version)=
 ### Could not resolve/No cached version
@@ -142,9 +142,9 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
   * Sur la droite, ouvrez l'onglet Gradle (1).
 
-    Make sure the button shown at (2) is *NOT* selected.
+    Assurez-vous que le bouton affiché (2) n'est *PAS* sélectionné.
 
-    ![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
+    ![Gradle mode hors connexion](../images/studioTroubleshooting/10_GradleOfflineMode.png)
 
   * Now you need to trigger a [Gradle Resync](#gradle-resync)
 
@@ -155,19 +155,19 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
   There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
-  ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+  ![Copie d'écran Impossible de démarrer le processus daemon](../images/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
 ### Resynchronisation Gradle
 
-  If you can still see the message that the gradle sync failed, now select the Link "Try again". ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
+  Si vous pouvez toujours voir le message que la synchronisation de gradle a échoué, sélectionnez maintenant le lien "Try again".![Gradle Sync en échec](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
 
   Si vous ne voyez plus le message, vous pouvez toujours le déclencher manuellement:
 
   * Ouvrez l'onglet Gradle (1) sur le côté droit de Android Studio.
 
-    ![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
+    ![Gradle Rechargement](../images/studioTroubleshooting/06_GradleResyncManually.png)
 
   * Right-click on AAPS (2)
 
@@ -177,7 +177,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
 Lorsque vous générez l'apk signé, vous pouvez obtenir la notification que la génération a été effectuée avec succès mais on vous dit que 0 variantes de compilation ont été générées:
 
-![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
+![APK généré avec 0 variantes de compilation](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
 C'est un faux avertissement. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](../SettingUpAaps/BuildingAaps.md#build-the-aaps-signed-apk)) and you will find the generated apk there!
 
@@ -186,7 +186,7 @@ C'est un faux avertissement. Check the directory your selected as "Destination f
 
 Si votre compilation est terminée avec succès mais que vous obtenez des avertissements du compilateur ou de kotlin (indiqués par un point d'exclamation jaune ou bleu), alors vous pouvez ignorer ces avertissements.
 
- ![Gradle finished with warnings](../images/studioTroubleshooting/13_BuildWithWarnings.png)
+ ![Gradle terminé avec des avertissements](../images/studioTroubleshooting/13_BuildWithWarnings.png)
 
 Votre application a été correctement compilée et peut être transférée au téléphone!
 
@@ -209,16 +209,16 @@ Cela semble être un bug avec Android Studio 3.5.1 et son environnement Java liv
 
 ## Application non installée.
 
-![phone app note installed](../images/Update_AppNotInstalled.png)
+![note d'application du téléphone installée](../images/Update_AppNotInstalled.png)
 
 * Assurez-vous d'avoir transféré le fichier “app-full-release.apk” sur votre téléphone.
 * Si vous avez le message "App non installé" sur votre téléphone, suivez ces étapes :
 
 1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
 2. Désinstaller AAPS sur votre téléphone.
-3. Enable airplane mode & turn off bluetooth.
+3. Activer le mode avion & désactiver bluetooth.
 4. Installer la nouvelle version (« app-full-release.apk »)
-5. [Import settings](../Maintenance/ExportImportSettings.md)
+5. [Importer les paramètres](../Maintenance/ExportImportSettings.md)
 6. Activer le bluetooth et désactiver le mode avion
 
 ## Application installée mais ancienne version
@@ -231,7 +231,7 @@ Si aucun des conseils ci-dessus ne vous a aidé, vous pourriez envisager de repa
 
 1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
 
-2. Ayez vos mots de passe pour la clé et le fichier de clés sous la main. In case you have forgotten passwords you can try to find them in project files as described [here](https://youtu.be/nS3wxnLgZOo).
+2. Ayez vos mots de passe pour la clé et le fichier de clés sous la main. Si vous avez oublié ces mots de passe vous pouvez essayer de les retrouver dans les fichiers du projet comme c'est décrit [ici](https://youtu.be/nS3wxnLgZOo).
 
     Ou vous pouvez recréer un nouveau fichier de clés.
 
@@ -245,7 +245,7 @@ Si aucun des conseils ci-dessus ne vous a aidé, vous pourriez envisager de repa
 
 Dans le cas où même construire l'application à partir de rien ne résout pas votre problème, vous pouvez essayer de désinstaller complètement Android Studio. Certains utilisateurs ont signalé que cela a résolu leur problème.
 
-**Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Les manuels pour une désinstallation complète peuvent être trouvés en ligne, par ex.
+**Assurez-vous de désinstaller tous les fichiers associés à Android Studio.** Si vous ne supprimez pas complètement tous les fichiers cachés, la désinstallation peut provoquer de nouveaux problèmes au lieu de résoudre ceux existants. Les manuels pour une désinstallation complète peuvent être trouvés en ligne, par ex.
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
