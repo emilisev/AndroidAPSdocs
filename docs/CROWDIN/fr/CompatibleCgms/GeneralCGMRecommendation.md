@@ -5,11 +5,11 @@
 Quel que soit le système CGM que vous utilisez, si vous allez utiliser un calibrage effectué sur le sang, il existe des règles très claires que vous devriez appliquer, que vous utilisiez ou non le logiciel DIY CGM ou les applications officielles.
 
 -   Assurez-vous que vos mains et le kit sont propres.
--   Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
+-   Essayez de calibrer lorsque vous avez une série de mesures avec une flèche plate (15-30 minutes sont habituellement suffisantes)
 -   Évitez de calibrer lorsque les glycémie montent ou descendent.
--   Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
+-   Faites "assez" de calibrations - sur les applications officielles, vous serez invité à effectuer des vérifications une ou deux fois par jour. Sur les systèmes DIY, vous pouvez ne pas être sollicités pour calibrer, mais soyez prudents si vous continuez sans calibration.
 -   For sensors not requiring or not allowing calibration, check at least daily real blood sugar. AAPS will be as safe as your sensor readings are reliable.
--   If it all possible, calibrate with some of your readings in a lower range (4-5mmol/l or 72-90mg/dl) and some at a slightly higher level (7-9mmol/l or 126-160mg/dl) as this provides a better range for the point/slope calibration.
+-   Si c'est possible, calibrez avec certaines de vos lectures dans une plage basse (4-5mmol/l ou 72-90mg/dl) et certains à un niveau légèrement plus élevé (7-9mmol/l ou 126-160mg/dl) car cela offre une meilleure gamme pour le calibrage des points par rapport à la pente.
 
 ## Réglage du capteur (G6)
 
@@ -31,10 +31,10 @@ Souvent une "erreur de capteur" peut être corrigée en buvant immédiatement et
 
 ### Saut de valeurs
 
-Vous pouvez essayer de modifier les paramètres de blocage du bruit dans xdrip (Paramètres - Inter-app settings - Noise Blocking) par ex". See also [Smoothing BG data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Vous pouvez essayer de modifier les paramètres de blocage du bruit dans xdrip (Paramètres - Inter-app settings - Noise Blocking) par ex". Vous pouvez trouver [plus d'informations ici](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ### Âge du capteur négatif
 
-![Negative sensor age](../images/Troubleshooting_SensorAge.png)
+![Âge du capteur négatif](../images/Troubleshooting_SensorAge.png)
 
-This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](../DailyLifeWithAaps/AapsScreens.md#action-tab) or a sensor insert with wrong date. Go to treatments tab \> careportal and delete the wrong entry.
+This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](../DailyLifeWithAaps/AapsScreens.md#action-tab) or a sensor insert with wrong date. Allez dans l'onglet Traitements > Careportal et supprimez la mauvaise entrée.
