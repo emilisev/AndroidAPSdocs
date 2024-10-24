@@ -16,9 +16,9 @@ Ce logiciel est une partie d'un système de pancréas artificiel "Do it yourself
         - Medtrum TouchCare 300U with pumpbase ref: **MD8301**.
         - If you have an unsupported model and are willing to donate hardware or assist with testing, please contact us via discord [here](https://discordapp.com/channels/629952586895851530/1076120802476441641).
 * **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
-* **Compatible Android phone** with a BLE Bluetooth connection
+* **Un téléphone Android compatible** avec une connexion Bluetooth BLE
     - See AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
-* [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
+* [**Moniteur Glycémie continue (MGC)**](../Getting-Started/CompatiblesCgms.md)
 
 ## Avant de commencer
 
@@ -56,7 +56,7 @@ On the top-left hand corner **hamburger menu** select **Config Builder**\ ➜\ *
 
 Selecting the **checkbox** next to the **Settings Gear** will allow the Medtrum overview to be displayed as a tab in the AAPS interface titled **Medtrum**. Checking this box will facilitate your access to the Medtrum commands when using AAPS and is highly recommended.
 
-![Config Builder](../images/medtrum/ConfigBuilder.png)
+![Configuration](../images/medtrum/ConfigBuilder.png)
 
 ### Step 2: Change Medtrum settings
 
@@ -352,7 +352,7 @@ The patch can give a variety of errors. To prevent frequent errors:
 
 All of the development work for the Medtrum driver is done by the community on a **volunteer** basis; we ask that you to remember that fact and use the following guidelines before requesting assistance:
 
--  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
+-  **Niveau 0 :** Lisez la section correspondante de cette documentation pour vous assurer que vous comprenez comment la fonctionnalité avec laquelle vous avez des difficultés est censée fonctionner.
 -  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#Medtrum* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
 -  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AAPS/issues) if it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
--  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
+-  **Soyez patient - la plupart des membres de notre communauté sont des bénévoles de bonne nature, et résoudre les problèmes nécessite souvent du temps et de la patience de la part des utilisateurs et des développeurs.**
