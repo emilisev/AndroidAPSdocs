@@ -109,7 +109,7 @@ Open <https://gmail.com>  in each browser window. Make sure your personal accou
 Your Gmail homepages screen should look like this:\
 ![](../images/Building-the-App/building_0010.png)
 
- #### In the new Gmail account (bottom window), open Gmail settings… 
+ In the new Gmail account (bottom window), open Gmail settings… 
 
 - Click on the gear on the left of the profile picture 
 - then select “**See all Settings**”
