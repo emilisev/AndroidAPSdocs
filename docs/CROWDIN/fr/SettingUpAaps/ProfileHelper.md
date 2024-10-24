@@ -7,22 +7,22 @@ L'assistant profil a deux fonctions :
 
 ## Profil pour les enfants (jusqu'à 18 ans)
 
-**Important note:**
+**Remarques importantes :**
 
-**Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
+**L'assistant profil a pour but de vous aider à trouver le profil initial de votre enfant. Même s'il est basée sur un ensemble de données de deux hôpitaux différents, discutez toujours avec votre équipe médicale avant d'utiliser un nouveau profil !**
 
 L'assistant de profil propose un ensemble de données d'enfants provenant de deux hôpitaux différents pour vous permettre de trouver un profil initial pour votre enfant jusqu'à 18 ans.
 
 ![Profile Helper Kids 1](../images/ProfileHelperKids1.png)
 
 1. Sélectionnez 'Assistant profil' dans le menu trois points en haut à droite de l'écran.
-2. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
+2. Ajustez le profil par défaut (basé sur le jeu de données de l'hôpital) en entrant l'âge de l'enfant et le DTQ **ou** le poids.
 3. Changez l'écran en cliquant sur la barre grise « 2 » à droite.
 4. Appuyez sur 'Profil actuel' et sélectionnez 'Profil par défaut DPV'.
 
 ![Profile Helper Kids 2](../images/ProfileHelperKids2.png)
 
-5. Adjust DPV Default profile (based on another hospital data set) by entering kids age, percentage of basal and either TDD Total **or** weight.
+5. Ajustez le Profil par défaut DPV (basé sur le jeu de données d'un autre hôpital) en entrant l'âge, le pourcentage de basal et aussi le DTQ **ou** le poids.
 6. Appuyez sur le bouton 'COMPARER LES PROFILS' en haut de l'écran.
 7. La comparaison des deux profils sélectionnés sera affichée.
 
