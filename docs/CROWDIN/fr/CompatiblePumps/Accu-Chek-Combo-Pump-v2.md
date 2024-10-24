@@ -2,7 +2,7 @@
 
 Ces instructions sont pour configurer la pompe Accu-Chek Combo à l'aide du nouveau pilote combov2, qui est disponible dans le cadre d'AAPS depuis la version 3.2. Ce driver est entièrement séparé de l'ancien.
 
-**This software is part of a DIY solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. Ce logiciel ne fait pas toute la gestion de votre diabète pour vous, mais il peut améliorer votre diabète et votre qualité de vie si vous êtes prêt à y consacrer le temps nécessaire. Ne vous précipitez pas, mais laissez vous le temps d’apprendre. You alone are responsible for what you do with it.**
+**Ce logiciel est un système "Do it yourself" (faire soi-même), et ce n’est pas un produit fini destiné à la mise sur le marché. VOUS devez obligatoirement lire, apprendre et comprendre ce système, y compris la façon de l’utiliser. Ce logiciel ne fait pas toute la gestion de votre diabète pour vous, mais il peut améliorer votre diabète et votre qualité de vie si vous êtes prêt à y consacrer le temps nécessaire. Ne vous précipitez pas, mais laissez vous le temps d’apprendre. You alone are responsible for what you do with it.**
 
 ## Configuration matérielle et logicielle requise
 
@@ -11,12 +11,12 @@ Ces instructions sont pour configurer la pompe Accu-Chek Combo à l'aide du nouv
 * Un téléphone compatible. Android 9 (Pie) ou plus récent. Si vous utilisez LineageOS, la version minimale supportée est 16.1. See [release notes](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version) for details.
 * L'application AAPS installée sur votre téléphone.
 
-Certains téléphones peuvent fonctionner mieux que d'autres, en fonction de la qualité du Bluetooth et s'ils ont une logique supplémentaire agressive d'économie d'énergie. A list of phones can be found in the [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) document. Cette liste n’est pas une liste complète. Elle reflète l’expérience personnelle de quelques utilisateurs. Nous vous encourageons à partager également votre expérience et ainsi aider les autres.
+Certains téléphones peuvent fonctionner mieux que d'autres, en fonction de la qualité du Bluetooth et s'ils ont une logique supplémentaire agressive d'économie d'énergie. Une liste de téléphones compatibles se trouvent dans le document [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit). Cette liste n’est pas une liste complète. Elle reflète l’expérience personnelle de quelques utilisateurs. Nous vous encourageons à partager également votre expérience et ainsi aider les autres.
 
 (combov2-before-you-begin)=
 ## Avant de commencer
 
-**SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error. Gardez votre appareil Smartpix / Realtyme à portée de main, ainsi que le logiciel de configuration 360. Planifiez de passer environ une heure pour tout configurer et vérifier que tout fonctionne correctement.
+**SÉCURITÉ AVANT TOUT** - ne pas tenter ce processus si vous ne pouvez pas récupérer en cas d'erreur. Gardez votre appareil Smartpix / Realtyme à portée de main, ainsi que le logiciel de configuration 360. Planifiez de passer environ une heure pour tout configurer et vérifier que tout fonctionne correctement.
 
 Soyez conscient des limitations suivantes :
 
@@ -28,7 +28,7 @@ Soyez conscient des limitations suivantes :
 * Il y a une autre problème où le redémarrage du téléphone n'aide pas. Il s'agit de presser un bouton sur la pompe (pour réinitialiser le Bluetooth de la pompe) afin que celle-ci accepte de nouveau les connexions du téléphone.
 * Le paramétrage d'un DBT sur la pompe doit être évité puisque la boucle assure le contrôle des DBT. La détection d'un nouveau DBT sur la pompe peut prendre jusqu'à 20 minutes et l'effet du DBT est seulement comptabilisé à l’instant où il est détecté, donc dans le pire des cas, il peut y avoir 20 minutes d’un DBT qui n’est pas pris en compte dans l’IA.
 
-Si vous avez utilisé l'ancien pilote Combo qui dépend de l'application distincte Ruffy, et que vous voulez passer à ce nouveau pilote Notez que le jumelage doit être fait à nouveau - Ruffy et le nouveau pilote Combo ne sont pas en mesure de partager des informations d'appairage. Also, make sure that Ruffy is _not_ running. En cas de doute, appuyez longuement sur l'icône de l'application Ruffy pour afficher un menu contextuel. Dans ce menu, appuyez sur l'icône "Information". Dans l'interface qui vient de s'ouvrir, appuyez sur "Forcer l'arrêt". De cette façon, vous êtes sûr qu'aucune instance Ruffy active ne peut pas interférer avec le nouveau pilote.
+Si vous avez utilisé l'ancien pilote Combo qui dépend de l'application distincte Ruffy, et que vous voulez passer à ce nouveau pilote Notez que le jumelage doit être fait à nouveau - Ruffy et le nouveau pilote Combo ne sont pas en mesure de partager des informations d'appairage. Si vous avez utilisé l'ancien pilote Combo qui dépend de l'application distincte Ruffy, et que vous voulez passer à ce nouveau pilote Notez que le jumelage doit être fait à nouveau - Ruffy et le nouveau pilote Combo ne sont pas en mesure de partager des informations d'appairage. En cas de doute, appuyez longuement sur l'icône de l'application Ruffy pour afficher un menu contextuel. Dans ce menu, appuyez sur l'icône "Information". Dans l'interface qui vient de s'ouvrir, appuyez sur "Forcer l'arrêt". De cette façon, vous êtes sûr qu'aucune instance Ruffy active ne peut pas interférer avec le nouveau pilote.
 
 De plus, si vous migrez depuis l'ancien pilote, soyez conscient que le nouveau pilote communique une commande bolus d'une manière complètement différente de celle du Combo qui est beaucoup plus rapide, donc ne soyez pas surpris quand un bolus commence immédiatement quel que soit le dosage. De plus, les suggestions générales, les trucs et astuces etc. ne s'applique pas ici à la gestion de l'appairage Ruffy et des problèmes de connexion car il s'agit d'un pilote entièrement nouveau qui ne partage aucun code avec l'ancien.
 
@@ -61,22 +61,22 @@ This new driver is currently written to support the following languages on the C
 
 ## Configuration du téléphone
 
-Il est très important de s'assurer que les optimisations de batterie sont désactivées. AAPS détecte déjà automatiquement quand il est soumis à ces optimisations, et demande dans son interface utilisateur que celles-ci soient désactivées. But, on modern Android phones, Bluetooth _itself_ is an app (a system app). And, usually, that "Bluetooth app" is run _with battery optimizations on by default_. Par conséquent, Bluetooth peut refuser de répondre lorsque le téléphone cherche à économiser de l'énergie parce qu'il tue l'application Bluetooth. Cela signifie que dans les paramètres de cette application système Bluetooth, les optimisations de batterie doivent également être désactivées. Malheureusement, l'application système Bluetooth diffère d'un téléphone à l'autre. In stock Android, go to Settings -> Apps -> See all N apps (N = the number of apps on your phone). Ensuite, ouvrez le menu en haut à droite, appuyez sur "Afficher le système" ou "Afficher les applications système" ou "Toutes les applications". Maintenant, dans la liste des applications nouvellement développées, recherchez une application « Bluetooth ». Sélectionnez-la, et sur son interface "App info", appuyez sur "Batterie". Là, désactivez les optimisations de batterie (parfois appelées "utilisation de la batterie").
+Il est très important de s'assurer que les optimisations de batterie sont désactivées. AAPS détecte déjà automatiquement quand il est soumis à ces optimisations, et demande dans son interface utilisateur que celles-ci soient désactivées. Mais, sur les téléphones Android modernes, le Bluetooth _lui-même_ est une application (une application système). Et, généralement, cette "application Bluetooth" est exécutée _avec des optimisations de batterie activées_ par défaut. Par conséquent, Bluetooth peut refuser de répondre lorsque le téléphone cherche à économiser de l'énergie parce qu'il tue l'application Bluetooth. Cela signifie que dans les paramètres de cette application système Bluetooth, les optimisations de batterie doivent également être désactivées. Malheureusement, l'application système Bluetooth diffère d'un téléphone à l'autre. Dans Android, allez dans Réglages -> Applications -> Voir toutes les N applications (N = le nombre d'applications sur votre téléphone). Ensuite, ouvrez le menu en haut à droite, appuyez sur "Afficher le système" ou "Afficher les applications système" ou "Toutes les applications". Maintenant, dans la liste des applications nouvellement développées, recherchez une application « Bluetooth ». Sélectionnez-la, et sur son interface "App info", appuyez sur "Batterie". Là, désactivez les optimisations de batterie (parfois appelées "utilisation de la batterie").
 
 ## Paramétrage Combo
 
 * Configurez la pompe à l'aide du logiciel de configuration Accu-Chek 360. Si vous n’avez pas le logiciel, veuillez contacter votre prestataire en france ou la hotline Accu-Chek dans les autres pays. Ils envoient généralement aux utilisateurs enregistrés un CD ou une clé USB avec le logiciel de configuration de la pompe et un périphérique de connexion infrarouge USB SmartPix (le périphérique Realtyme fonctionne aussi si vous en avez).
 
-  - **Required settings** (marked green in screenshots):
+  - **Paramètres requis** (marqués en vert dans les captures d'écran) :
 
      * Choisissez ou laissez la configuration du menu sur "Standard", cela affichera uniquement les menus et actions pris en charge sur la pompe, et masquera ceux qui ne sont pas supportés par AAPS (bolus duo/carré, débits de base multiples) et qui entraînent une limitation du fonctionnement de la boucle lors de leurs utilisation, et donc ne permet pas une exécution sécurisée de la boucle.
-     * Verify the _Quick Info Text_ is set to "QUICK INFO" (without the quotes, found under _Insulin Pump Options_).
-     * Set TBR _Maximum Adjustment_ to 500%
-     * Disable _Signal End of Temporary Basal Rate_
-     * Set TBR _Duration increment_ to 15 min
+     * Vérifiez le _Quick Info Text_ est défini à "QUICK INFO" (sans les guillemets, trouvés sous _Options de la pompe à insuline_).
+     * Paramétrez le DBT _Maximum Adjustment_ à 500%
+     * Désactivez _Signal End of Temporary Basal Rate_
+     * Paramétrez le DBT _Duration increment_ à 15min
      * Activez le Bluetooth
 
-  - **Recommended settings** (marked blue in screenshots)
+  - **Paramètres recommandés** (marqués en bleu dans les captures d'écran) :
 
      * Définissez une alarme de cartouche basse à votre convenance
      * Configurez un bolus max adapté à votre thérapie afin de se protéger contre les bugs logiciel et matériel
@@ -84,17 +84,17 @@ Il est très important de s'assurer que les optimisations de batterie sont désa
      * Activez le verrouillage des touches sur la pompe pour éviter de faire bolus depuis la pompe, par exemple lorsque la pompe a été utilisée avant et que le bolus rapide était une habitude.
      * Définissez un délai d'affichage et de menu aux valeurs minimales respectivement de 5,5s et 5s. Cela permet à AAPS de récupérer plus rapidement de situations d’erreur et réduit la quantité de vibrations qui peuvent se produire pendant ces erreurs.
 
-  ![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
+  ![Capture d’écran de réglages du menu utilisateur](../images/combo/combo-menu-settings.png)
 
-  ![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
+  ![Capture d'écran des paramètres DBT](../images/combo/combo-tbr-settings.png)
 
-  ![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
+  ![Capture d'écran des paramètres de bolus](../images/combo/combo-bolus-settings.png)
 
-  ![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
+  ![Capture d'écran des paramètres de cartouche d'insuline](../images/combo/combo-insulin-settings.png)
 
 ## Activation du pilote et appairage avec la Combo
 
-* Select the "Accu-Chek Combo" driver in the [Config builder](../SettingUpAaps/ConfigBuilder.md). **Important**: There is the old driver, called "Accu-Chek Combo (Ruffy)", in that list as well. Do _not_ select that one.
+* Select the "Accu-Chek Combo" driver in the [Config builder](../SettingUpAaps/ConfigBuilder.md). **Important**: Il y a l'ancien pilote, appelé "Accu-Chek Combo (Ruffy)", dans cette liste également. Ne _pas_ sélectionner celui-ci.
 
   ![Screenshot of Config Builder Combo](../images/combo/combov2-config-builder.png)
 
@@ -112,7 +112,7 @@ Il est très important de s'assurer que les optimisations de batterie sont désa
 
   ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-5.png)
 
-* When the driver asks for the 10-digit PIN that is shown on the Combo, and the code is entered incorrectly, this is shown: ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
+* Quand le pilote demande le code PIN à 10 chiffres qui est affiché sur le combo et que le code n'est pas entré correctement, ceci est affiché : ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
 
 * Une fois l'appairage terminé, l'interface utilisateur est fermée en appuyant sur le bouton OK de la boite de dialogue qui confirme l'appairage. Après sa fermeture, vous retournez à l'interface utilisateur des paramètres du pilote. Le bouton "Appairer la pompe" devrait maintenant être grisé et désactivé.
 
@@ -124,7 +124,7 @@ Il est très important de s'assurer que les optimisations de batterie sont désa
 
   ![Screenshot of Accu-Chek Combo tab without pairing](../images/combo/combov2-tab-without-pairing.png)
 
-* To verify your setup (with the pump **disconnected** from any cannula to be safe!) use AAPS to set a TBR of 500% for 15 min and issue a bolus. La pompe doit normalement avoir un DBT en cours et un bolus dans l'historique. AAPS doit aussi de son côté montrer le DBT actif et le bolus délivré.
+* Pour vérifier votre configuration (avec la pompe **déconnectée** de toute canule pour être sûr!) utilisez AAPS pour définir un TBR de 500% pendant 15 min et émettre un bolus. La pompe doit normalement avoir un DBT en cours et un bolus dans l'historique. AAPS doit aussi de son côté montrer le DBT actif et le bolus délivré.
 
 * Sur la Combo, il est recommandé d'activer le verrouillage des touches pour éviter de faire un bolus depuis la pompe, en particulier si la pompe a été utilisée avant et que l'utilisation de la fonction "bolus rapide" était une habitude.
 
@@ -141,7 +141,7 @@ L'onglet affiche les informations suivantes lorsqu'une pompe a été appairée (
 
 ![Screenshot of Accu-Chek Combo tab with pairing](../images/combo/combov2-tab-with-pairing.png)
 
-1. _Driver state_: The driver can be in one of the following states:
+1. _État du pilote_: Le pilote peut être dans l'un des états suivants :
    - "Déconnecté" : Il n'y a pas de connexion Bluetooth; le pilote est dans cet état la plupart du temps, et ne se connecte à la pompe que si nécessaire - cela économise de l'énergie
    - "Connexion en cours"
    - "Vérification de la Pompe" : la pompe est connectée, mais le pilote effectue actuellement des contrôles de sécurité pour s'assurer que tout est correct et à jour
@@ -149,17 +149,17 @@ L'onglet affiche les informations suivantes lorsqu'une pompe a été appairée (
    - "Suspendue" : la pompe est suspendue (affichée comme "arrêté" dans la Combo)
    - "Exécution de la commande" : une commande AAPS est en cours d'exécution
    - "Erreur" : une erreur est survenue ; la connexion a été interrompue, toute commande en cours a été interrompue
-2. _Last connection_: How many minutes ago did the driver successfully connect to the Combo; if this goes beyond 30 minutes, this item is shown with a red color
-3. _Current activity_: Additional detail about what the pump is currently doing; this is also where a thin progress bar can show a command's execution progress, like setting a basal profile
-4. _Battery_: Battery level; the Combo only indicates "full", "low", "empty" battery, and does not offer anything more accurate (like a percentage), so only these three levels are shown here
-5. _Reservoir_: How many IU are currently in the Combo's reservoir
-6. _Last bolus_: How many minutes ago the last bolus was delivered; if none was delivered yet after AAPS was started, this is empty
-7. _Temp basal_: Details about the currently active temporary basal; if none is currently active, this is empty
-8. _Base basal rate_: Currently active base basal rate ("base" means the basal rate without any active TBR influencing the basal rate factor)
-9. _Serial number_: Combo serial number as indicated by the pump (this corresponds to the serial number shown on the back of the Combo)
-10. _Bluetooth address_: The Combo's 6-byte Bluetooth address, shown in the `XX:XX:XX:XX:XX:XX` format
+2. _Dernière connexion_: Combien de minutes plus tôt, le pilote s'est connecté avec succès à la Combo ; si cela dépasse 30 minutes, cet élément est affiché avec une couleur rouge
+3. _Actuellement en activité_: Détails supplémentaires sur ce que la pompe fait actuellement, c'est également là où une fine barre de progression peut afficher la progression d'exécution d'une commande, comme par exemple définir un profil de basal
+4. _Pile_: niveau de la pile, la Combo indique uniquement "plein", "faible", "vide", "pile", et n'offre rien de plus précis (comme un pourcentage), donc seuls ces trois niveaux sont affichés ici.
+5. _Réservoir_: Combien d'unités sont actuellement dans le réservoir de la Combo
+6. _Dernier bolus_: Il y a combien de minutes le dernier bolus a été injecté, si aucun bolus n'a encore été injecté après le démarrage d'AAPS, ce champ est vide
+7. _Basal temporaire_: Détails sur le basal temporaire actuellement actif, si aucun n'est actuellement actif, ceci est vide
+8. _Débit de Base_: Débit Basal actif (« base» signifie le débit Basal sans aucun DBT actif influant sur le facteur de débit Basal)
+9. _Numéro de série_: Numéro de série de la Combo tel qu'indiqué par la pompe (cela correspond au numéro de série affiché à l'arrière de la Combo)
+10. _Adresse Bluetooth_: Adresse Bluetooth 6 octets du Combo, affichée au format `XX:XX:XX:XX:XX:XX:XX:XX`
 
-The Combo can be operated through Bluetooth in the _remote-terminal_ mode or in the _command_ mode. The remote-terminal mode corresponds to the "remote control mode" on the Combo's meter, which mimics the pump's LCD and four buttons. Some commands have to be performed in this mode by the driver, since they have no counterpart in the command mode. That latter mode is much faster, but, as said, limited in scope. When the remote-terminal mode is active, the current remote-terminal screen is shown in the field that is located just above the Combo drawing at the bottom. When the driver switches to the command mode however, that field is left blank.
+Le Combo peut être commandé via Bluetooth en mode _terminal à distance_ ou en mode _commande_. The remote-terminal mode corresponds to the "remote control mode" on the Combo's meter, which mimics the pump's LCD and four buttons. Some commands have to be performed in this mode by the driver, since they have no counterpart in the command mode. That latter mode is much faster, but, as said, limited in scope. When the remote-terminal mode is active, the current remote-terminal screen is shown in the field that is located just above the Combo drawing at the bottom. When the driver switches to the command mode however, that field is left blank.
 
 (The user does not influence this; the driver fully decides on its own what mode to use. This is merely a note for users to know why sometimes they can see Combo frames in that field.)
 
@@ -200,7 +200,7 @@ Certain warnings are automatically dismissed by the driver. These are:
 - W2 "battery low" : the driver turns this into a "low battery" warning that is shown on the AAPS main tab
 - W3, W6, W7, W8 : these are all purely informational for the user, so it is safe for the driver to auto-dismiss them
 
-Other warnings are _not_ automatically dismissed. Also, errors are _never_ automatically dismissed. Both of these are handled the same way: They cause the driver to produce an alert dialog on top of the AAPS UI, and also cause it to abort any ongoing command execution. The driver then switches to the "error" state (see [the Accu-Chek Combo tab contents description above](#accu-chek-combo-tab-contents)). This state does not allow for any command execution. The user has to handle the error on the pump; for example, an occlusion error may require replacing the cannula. Once the user took care of the error, normal operation can be resumed by pressing the "Refresh" button on the Accu-Chek Combo tab. The driver then connects to the Combo and updates its status, checking for whether an error is still shown on screen etc. Also, the driver auto-refreshes the pump status after a while, so manually pressing that button is not mandatory.
+Other warnings are _not_ automatically dismissed. Also, errors are _never_ automatically dismissed. Both of these are handled the same way: They cause the driver to produce an alert dialog on top of the AAPS UI, and also cause it to abort any ongoing command execution. Both of these are handled the same way: They cause the driver to produce an alert dialog on top of the AAPS UI, and also cause it to abort any ongoing command execution. This state does not allow for any command execution. The user has to handle the error on the pump; for example, an occlusion error may require replacing the cannula. Once the user took care of the error, normal operation can be resumed by pressing the "Refresh" button on the Accu-Chek Combo tab. The driver then connects to the Combo and updates its status, checking for whether an error is still shown on screen etc. Also, the driver auto-refreshes the pump status after a while, so manually pressing that button is not mandatory.
 
 Bolusing is a special case. It is done in the Combo's command mode, which does not report mid-bolus that an alert appeared. As a consequence, the driver cannot automatically dismiss warnings _during_ a bolus. This means that unfortunately, the pump will be beeping until the bolus is finished. The most common mid-bolus alert typically is W1 "reservoir low". **Don't** dismiss Comnbo warnings on the pump itself manually during a bolus. You risk interrupting the bolus. The driver will take care of the warning once the bolus is over.
 
