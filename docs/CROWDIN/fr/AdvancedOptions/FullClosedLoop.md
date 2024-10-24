@@ -37,7 +37,7 @@ For you to enjoy the promised reduced daily burden, you will have to:
 The full closed loop system may **not** be **for everyone**:
 
 - While some full closed loopers using Automations achieve TIR (70-180) around 90%  and HbA1c under 6%, you might prefer tighter control. Notably, **minimizing values over 140 mg/dl at diets with rapid carbs** probably requires pre-bolussing.
-- Are you up for an informed and mindful approach towards a highly personalized calibration of your system? The **personalized tuning** can be **challenging**. This is definitely not for you if you were overwhelmed already with setting basal rate and ISFs. But balance it against what you could gain every day without counting any carbs. You might also value the gained deeper knowledge from analyzing and tuning your loop’s reponse to your meals.
+- Are you up for an informed and mindful approach towards a highly personalized calibration of your system? Are you up for an informed and mindful approach towards a highly personalized calibration of your system? This is definitely not for you if you were overwhelmed already with setting basal rate and ISFs. But balance it against what you could gain every day without counting any carbs. You might also value the gained deeper knowledge from analyzing and tuning your loop’s reponse to your meals.
 - While meal management gets very easy, **activity** management might get a bit more difficult, especially considering most of us probably like to limit sports snacks, in an attempt to control body weight.
 - Unfortunately, there are additional difficulties to establish a full closed loop for **kids** (see next section, pre-requisites)
 
