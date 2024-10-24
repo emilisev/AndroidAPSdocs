@@ -1,5 +1,5 @@
 # Téléphones
 
-- [List of tested phones](../CompatiblePhones/ListOfTestedPhones.md)
-- [Jelly Pro Settings](../CompatiblePhones/Jelly.md)
-- [Huawei Settings](../CompatiblePhones/Huawei.md)
+- [Liste des téléphones testés](../CompatiblePhones/ListOfTestedPhones.md)
+- [Paramètres Jelly Pro](../CompatiblePhones/Jelly.md)
+- [Paramètres Huawei](../CompatiblePhones/Huawei.md)
