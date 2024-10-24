@@ -1,6 +1,6 @@
 # Comment éditer la documentation
 
-**This description is just for editing the English documentation. Toutes les nouvelles informations doivent être ajoutées d'abord en Anglais. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
+**Cette description est juste pour l'édition de la documentation en anglais. Toutes les nouvelles informations doivent être ajoutées d'abord en Anglais. Si vous voulez traduire la documentation dans d'autres langues (merci), utilisez [crowdin](https://crowdin.com/project/androidapsdocs).**
 
 For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#code-syntax) section of this page.
 
@@ -16,17 +16,17 @@ At some point it will be suggested that you make a pull request (PR), which is h
 * Créer un Pull Request, qui demande aux administrateurs d'utiliser vos modifications.
 * Ils feront une vérification et soit (1) ils fusionneront vos modifications, (2) ils vous feront un retour au sujet de vos modifications, ou (3) ils commenceront un nouveau document avec vos modifications.
 
-(Side note:  If you are a visual learner, there is a YouTube video [here](https://youtu.be/4b6tsL0_kzg) showing the PR workflow.)
+(Remarque : Si vous êtes un apprenant visuel, il y a une vidéo YouTube [ici](https://youtu.be/4b6tsL0_kzg) montrant le flux de travail PR.)
 
 Pour notre exemple, nous allons faire une modification à AndroidAPSdocs. This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
 
-1. Go to [https://github.com/openaps/AndroidAPSdocs](https://github.com/openaps/AndroidAPSdocs) and hit Fork in the upper right to make your own copy of the repository.
+1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
 
 ![Fork repo](../images/PR0.png)
 
 2. Allez sur n'importe quelle page et accédez à la page que vous souhaitez modifier. Cliquez sur la boîte noire en bas à gauche de la page avec le mot vert "v: latest" ou similaire. Dans la fenêtre pop up qui apparaît, cliquez sur le mot "edit" pour éditer dans GitHub.
 
-![edit doc](../images/PR1.png)
+![éditer un document](../images/PR1.png)
 
    Or you can click on the "Edit in GitHub" link in the upper right corner, and then click the pencil icon that appears in the top bar of the page contents to be edited. You will need to be already logged into your Github account to do this (if you don't have one, they are straightforward to set up).
 
@@ -40,19 +40,19 @@ Nous utilisons markdown pour les pages de documentation. Le fichier a obtenu le 
 
 4. Vous avez travaillé dans l'onglet "<>Edit file". Sélectionnez l'onglet "Preview changes" pour afficher une prévisualisation de votre page et vérifier que tous vos changements sont comme vous le vouliez. Si vous voyez que c'est perfectible, revenez à l'onglet d'édition pour faire vos améliorations.
 
-![preview mode](../images/PR5.png)
+![mode de prévisualisation](../images/PR5.png)
 
-5. Une fois vos modifications terminées, faites défiler jusqu'au bas de la page.  Dans la zone du bas, indiquez vos commentaires dans le champ texte qui indique "Add an optional extended description...". Le titre par défaut est le nom de fichier. Try to include a sentence explaining the __reason__ for the change. Indiquer la raison permet d'aider les valideurs à comprendre ce que vous essayez de faire avec le PR.
+5. Une fois vos modifications terminées, faites défiler jusqu'au bas de la page.  Dans la zone du bas, indiquez vos commentaires dans le champ texte qui indique "Add an optional extended description...". Le titre par défaut est le nom de fichier. Essayez d'inclure une phrase expliquant la **raison** du la modification. Indiquer la raison permet d'aider les valideurs à comprendre ce que vous essayez de faire avec le PR.
 
-![commit comments](../images/PR4.png)
+![commit commentaires](../images/PR4.png)
 
 6. Cliquez sur le bouton vert "Propose file changes" ou "Commit changes". Dans la page qui s'affiche, cliquez sur "Create Pull Request" et de nouveau dans la page suivante, cliquez sur "Create Pull Request".
 
-![create pull request](../images/PR6.png)
+![créer un pull request](../images/PR6.png)
 
 7. Cela termine l'ouverture d'un Pull Request, PR. GitHub affecte au PR un numéro, situé après le titre et un caratère dièse. Retournez sur cette page pour vérifier si vous avez un retour (ou si vous avez des notifications GitHub envoyées par email, vous recevrez des emails vous indiquant toutes activités sur le PR). La modification sera maintenant dans une liste de PR que l'équipe de documentation va examiner et elle vous fera éventuellement des commentaires avant de l'intégrer dans la documentation principale d'AAPS ! Si vous voulez vérifier l'avancement du PR, vous pouvez cliquer sur le logo de la cloche dans le coin supérieur droit de votre compte GitHub pour voir toutes vos notifications.
 
-![PR tracking](../images/PR7.png)
+![Suivi des PR](../images/PR7.png)
 
 PS : Votre fork et votre branche seront toujours dans votre propre compte GitHub. Après avoir reçu une notification indiquant que votre PR avait été fusionné, vous pouvez supprimer votre branche si vous en avez terminé (la zone de notification de l'étape 8 fournira un lien pour supprimer la branche une fois qu'elle a été fermée ou fusionnée). Pour les modifications ultérieures, si vous suivez cette procédure, les éditions débuteront toujours par une version mise à jour des documents AndroidAPSdocs.  Si vous choisissez d'utiliser une autre méthode pour faire une demande de PR (par ex. en partant de la branche master de dossier local comme point de départ), vous devez vous assurer que votre dossier fork est à jour en effectuant une "comparaison" en premier et en fusionnent dans toutes les mises à jour qui ont été faite depuis que vous avez mis à jour votre fork.  Comme les gens ont tendance à oublier de mettre à jour leur fork, nous recommandons d'utiliser la procédure décrite ci-dessus pour faire vos PR jusqu'à ce que vous vous familiarisiez avec les exécutions des "comparaisons".
 
@@ -76,10 +76,10 @@ Markdown is not a 100% fixed standard and we try to stay as near as possible to 
 
 ### Titres
 
-* Headline 1: `# headline`
-* Headline 2: `## headline`
-* Headline 3: `### headline`
-* Headline 4: `#### headline`
+* Titre 1 : `# titre`
+* Titre 2 : `## titre`
+* Titre 3 : `### titre`
+* Titre 4 : `#### headline`
 
 We try to avoid further levels of headlines.
 
@@ -92,9 +92,7 @@ We try to avoid further levels of headlines.
 ### Ordered list
 
 ```
-1. first
-1. second
-1. troisième
+1. premier deuxième troisième
 ```
 
 1. premier
@@ -119,14 +117,7 @@ We try to avoid further levels of headlines.
 Vous pouvez insérer des "sous-listes" dans les listes en ajoutant 4 espaces de plus à droite que le niveau précédent.
 
 ```
-1. first
-1. second
-1. third
-  1. one element
-  1. another element
-  1. and another element
-1. four
-1. five
+1. premier deuxième troisième un élément un autre élément et un autre élément troisième five
 1. six
 ```
 
@@ -144,14 +135,14 @@ Vous pouvez insérer des "sous-listes" dans les listes en ajoutant 4 espaces de 
 
 Pour inclure des images, vous utilisez cette syntaxe de markdown.
 
-* images: `![alt text](../images/file.png)`
+* images : `![alt text](../images/file.png)`
 
 Le type d'image doit être PNG ou JPEG.
 
 Les noms d'images doivent respecter une des règles de nommage suivantes. Dans l'exemple j'utilise png comme extension. In case you use JPEG please use jpeg as a suffix instead.
 
-* `filename-image-xx.png` where xx is a unique double digit number for the images in this file.
-* `filename-image-xx.png` where xx is a meaning full name for the author of the md file.
+* `nom-de-fichier-image-xx.png` où xx est un nombre unique à deux chiffres pour les images dans ce fichier.
+* `nom-de-fichier-image-xx.png` où xx est un nom complet pour l'auteur du fichier md.
 
 Les images sont situées dans le dossier images pour la langue anglaise et propagées automatiquement vers les autres langues par Crowdin. Vous n'avez rien à faire pour cela !
 
@@ -159,7 +150,7 @@ Nous ne traduisons pas les images pour le moment.
 
 (make-a-PR-image-size)= Utilisez une taille raisonnable pour les images qui doivent être lisibles sur PC, tablette et mobiles.
 
-* Screenshots from web pages images should be up to **1050 pixels wide**.
+* Les captures d'écran de pages web doivent être au maximum de **1050 pixels de largeur**.
 * Diagrams of process flows should be up to **1050 pixels wide**.
 * Screenshots from the app should be up to **500 pixels wide**.
 
@@ -169,13 +160,13 @@ Nous ne traduisons pas les images pour le moment.
 
 Les liens externes sont des liens vers des sites Web externes.
 
-* external link: `[alt text](www.url.tld)`
+* lien externe : `[alt text](www.url.tld)`
 
 #### Liens internes au début d'un fichier md
 
 Les liens internes vers les pages sont des liens vers le début d'un fichier md hébergé sur notre propre serveur.
 
-* internal link to .md page: `[alt text](../folder/file.md)`
+* lien interne vers une page .md : `[texte alternatif](../folder/file.md)`
 
 #### Liens internes vers une ligne spécifique d'un fichier
 
@@ -183,7 +174,7 @@ Les liens internes vers une ligne spécifique sont des liens vers n'importe quel
 
 Ajouter une référence nommée à l'emplacement dans le fichier md cible vers lequel vous voulez vous diriger.
 
-`(name-of-my-md-file-this-is-my-fancy-named-reference)=`
+`(nom-de-mon-fichier-ceci-est-ma-reference-specifique)=`
 
 La référence nommée doit être unique dans tous les fichiers md de la documentation AndroidAPSDocs et pas seulement dans le fichier md dans lequel elle réside !
 
@@ -192,7 +183,7 @@ C'est donc une bonne pratique de commencer par le nom du fichier, puis le nom de
 Utilisez uniquement des lettres minuscules et séparez les mots par un trait d'union.
 
 Ensuite, liez cette référence dans le texte que vous écrivez avec le type de lien suivant.
-* Internal links to named inline refernces: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
+* Lien interne vers une référence nommée : `[texte alternatif](nom-de-mon-fichier-ceci-est-ma-reference-specifique)`
 
 ### Notes, Avertissements, Réduction des Notes
 
@@ -216,10 +207,15 @@ This is a note.
 #### Warnings
 
 ````
-```{admonition} Warning
-:class: warning
-This is a warning.
-```
+<br />#### Warnings
+
+    ````
+    ```{admonition} Warning
+    :class: warning
+    This is a warning.
+```{admonition} Warning headline 
+    :class: warning
+    This is a warning.
 ````
 ```{admonition} Warning headline 
 :class: warning
@@ -240,7 +236,13 @@ without it taking up too much space on the page.
 ````
 
 ```{admonition} further detailed readings for interested readers
+#### Collapsing Notes
+
+
+
+{admonition} further detailed readings for interested readers
 :class: dropdown
+
 This admonition has been collapsed,
 meaning you can add longer form content here,
 without it taking up too much space on the page.
@@ -268,7 +270,7 @@ Avoid using tables with long texts as the contents is difficult to set in Markdo
 
 Use plain English wherever possible. This helps non-native readers and also aids translation of AAPS documents into other languages. Write in a conversational way with the user, imagine you are sitting across the desk from the person you are writing for. Remember - most AAPS users do not have programming backgrounds. Diabetes itself also has a lot of jargon and abbreviations. Bear in mind that some people may be recently diagnosed, may not be as experienced as you with diabetes, or may have been given different diabetes training. If you use shorthand or an abbreviation, write it out in full the first time you use it, giving the abbreviation directly after it in brackets, like “super micro bolus (SMB)”. Also, link to the glossary. Technical terms which might not be familiar to the reader can be also be added in brackets.
 
-Instead of:  *“What causes high postprandial BG peaks in closed loop?"*
+Instead of: *“What causes high postprandial BG peaks in closed loop?"*
 
 Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?"*
 
@@ -408,9 +410,9 @@ A tutorial helps the pupil acquire basic competence. The user will **learn by do
 
 - Future Tense -> to show the final target
 
-- Imperative Tense -> to do the tasks  -> Concrete steps - avoid abstract concepts
+- Imperative Tense -> to do the tasks -> Concrete steps - avoid abstract concepts
 
-- Past Tense -> to show accomplished tasks  -> Quick and immediate visible results
+- Past Tense -> to show accomplished tasks -> Quick and immediate visible results
 
 - Minimum Explanations -> strict necessary to complete the task - **what and why**
 
@@ -526,7 +528,7 @@ The **editor (e.g. a fellow AAPS user, or the person who receives the pull reque
 
 [Diátaxis (diataxis.fr)](https://diataxis.fr/)
 
-[Technical Writer Style Guide Examples  | Technical Writer HQ](https://technicalwriterhq.com/writing/technical-writing/technical-writer-style-guide/)
+[Technical Writer Style Guide Examples | Technical Writer HQ](https://technicalwriterhq.com/writing/technical-writing/technical-writer-style-guide/)
 
 [DigitalOcean's Technical Writing Guidelines | DigitalOcean](https://www.digitalocean.com/community/tutorials/digitalocean-s-technical-writing-guidelines)
 
