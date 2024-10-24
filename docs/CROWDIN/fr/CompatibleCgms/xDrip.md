@@ -6,7 +6,7 @@ Disable battery optimization and allow background activity for the xDrip+ app.
 
 You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features or are using sensors that are being actively integrated (like G7), in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
 
-## Basic settings for all CGM & FGM systems
+## Paramètres de base pour tous les systèmes MGC & MGF
 
 ### Disable Nightscout upload
 
@@ -14,17 +14,18 @@ Starting with AAPS 3.2, you shouldn't let any other app upload data (blood gluco
 
 → Hamburger Menu (1) → Settings (2) → Cloud Upload (3) -> Nightscout Sync (REST-API)(4) → Switch **OFF** `Enabled` (5)
 
-![xDrip+ Basic Settings 1](../images/xDrip_Basic1.png)
+![xDrip+ Paramètres de base 1](../images/xDrip_Basic1.png)
 
 #### Disable automatic calibration and treatments
 
 If you use an older version of AAPS (before 3.2), make sure to deactivate `Automatic Calibration` (7) If the checkbox for `Automatic Calibration` is checked, activate `Download treatments` (6) once, then remove the checkbox for `Automatic Calibration` and deactivate `Download treatments` again.
 
-![xDrip+ Basic Settings 2](../images/xDrip_Basic2.png)
+![xDrip+ Paramètres de base 2](../images/xDrip_Basic2.png)
 
 Tap `Extra Options`(8)
 
 ```{admonition} Safety warning
+{admonition} Safety warning
 :class: warning
 You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB. 
 ```
@@ -33,7 +34,7 @@ Deactivate `Upload treatments`(9) and make sure you will **NOT** use `Back-fill 
 
 Option `Alert on failures` should also be deactivated (10). Otherwise you will get an alarm every 5 minutes in case Wi-Fi/mobile network issues or if the server is not available.
 
-![xDrip+ Basic Settings 3](../images/xDrip_Basic3.png)
+![xDrip+ Paramètres de base 3](../images/xDrip_Basic3.png)
 
 ### **Inter-app Settings** (Broadcast)
 
@@ -60,9 +61,9 @@ Remember to disable Import Sounds to avoid xDrip+ making a ringtone every time A
 #### Identifier le récepteur
 
 * If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to → Hamburger Menu (1) Settings (2) → Inter-app settings (3) → Identify receiver (7) and enter `info.nightscout.androidaps` for AAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
-* Attention: La correction automatique a parfois tendance à changer la lettre i en majuscules. You **must use only lowercase letters** when typing `info.nightscout.androidaps` (or `info.nightscout.aapspumpcontrol` for PumpControl). Un I majuscule empêcherait l'apoplication de recevoir les valeurs de Gly de xDrip+.
+* Attention: La correction automatique a parfois tendance à changer la lettre i en majuscules. Vous **devez utiliser uniquement des lettres minuscules** en tapant `info.nightscout.androidaps` (ou `info.nightscout.aapspumpcontrol` pour PumpControl). Un I majuscule empêcherait l'apoplication de recevoir les valeurs de Gly de xDrip+.
 
-   ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
+   ![xDrip+ Paramètres interapp basiques Identifier le récepteur](../images/xDrip_InterApp_NS.png)
 
 ## Use AAPS to calibrate in xDrip+
 
@@ -72,7 +73,7 @@ Remember to disable Import Sounds to avoid xDrip+ making a ringtone every time A
 ## Dexcom G6
 
 * L'émetteur Dexcom G6 peut être connecté simultanément au récepteur Dexcom (ou alternativement à la pompe t:slim) et à une application sur votre téléphone.
-* Lorsque vous utilisez xDrip+ comme récepteur, désinstallez d'abord l'application Dexcom. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
+* Lorsque vous utilisez xDrip+ comme récepteur, désinstallez d'abord l'application Dexcom. **Vous ne pouvez pas connecter xDrip + et l'application Dexcom avec l'émetteur en même temps !**
 * If you need Clarity and want to profit from xDrip+ features, use the [Build Your Own Dexcom App](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+, or use xDrip+ as a Companion app receiving notifications from the official Dexcom app.
 
 ### Version de XDrip+ en fonction du numéro de série de l'émetteur G6.
@@ -90,9 +91,9 @@ Remember to disable Import Sounds to avoid xDrip+ making a ringtone every time A
 
 **Only rebatteried or modified Dexcom transmitters. [Preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) do not work with standard transmitters and will stop the sensor completely: you need to [remove the transmitter](https://navid200.github.io/xDrip/docs/Remove-transmitter.html) to restart the sensor.**
 
-The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
+L'extension automatique des détecteurs Dexcom (`redémarrage préventif`) n'est pas recommandée car cela peut entraîner des "sauts" dans les valeurs Gly le 9ème jour après le redémarrage.
 
-![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
+![Saut xDrip+ après un redémarrage préventif](../images/xDrip_Dexcom_PreemptiveJump.png)
 
 Pour l'utiliser en toute sécurité, il y a quelques points à prendre en compte :
 
@@ -102,7 +103,7 @@ Pour l'utiliser en toute sécurité, il y a quelques points à prendre en compte
 * La pré-installation du G6 avec un étalonnage d'usine peut entraîner des variations dans les résultats. Si vous faites une pré-installation, alors pour obtenir les meilleurs résultats, vous devrez probablement calibrer le capteur.
 * Si vous n'êtes pas attentif aux changements qui peuvent avoir lieu, il peut être préférable de revenir dans un mode "non calibré en usine" et d'utiliser le système comme un G5.
 
-To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
+Pour en savoir plus sur les détails et les raisons de ces recommandations, consultez [l'article complet](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) publié par Tim Street sur [www.diabettech.com](https://www.diabettech.com).
 
 (xdrip-connect-g6-transmitter-for-the-first-time)=
 
@@ -139,13 +140,13 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.ht
 * [Stop sensor](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html) (only if replacing sensor).
 
 
-* Oubliez le périphérique dans l'état du système xDrip+ (Forget Device) ET dans les réglages BT du smartphone (sera affiché comme DexcomXX où XX are the last two digits of the transmitter serial no.) whereas ?? are the last two digits of the transmitter serial no.)  
+* Oubliez le périphérique dans l'état du système xDrip+ (Forget Device) ET dans les réglages BT du smartphone (sera affiché comme DexcomXX où XX are the last two digits of the transmitter serial no.) whereas ?? Oubliez le périphérique dans l'état du système xDrip+ (Forget Device) ET dans les réglages BT du smartphone (sera affiché comme DexcomXX où XX are the last two digits of the transmitter serial no.)  
   → Hamburger Menu (1) → System Status (2) → If you are on the Classic Status Page (3) swipe the screen (4) to reach → G5/G6/G7 Status screen → Forget Device (5).
 
 ![xDrip+ System status](../images/xDrip_Dexcom_StopSensor.png)
 
 
-* Remove transmitter (and sensor if replacing sensor). To remove transmitter without removing sensor see [this](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), or this video [https://youtu.be/AAhBVsc6NZo](https://youtu.be/AAhBVsc6NZo).
+* Remove transmitter (and sensor if replacing sensor). Remove transmitter (and sensor if replacing sensor).
 * Eloignez l'ancien émetteur pour éviter une reconnexion. A microwave is a perfect Faraday shield for this - but unplug power cord to be 100% sure no one is turning the microwave on.
 * Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 * Ne rallumez pas le récepteur Dexcom d'origine (si utilisé) avant que xDrip+ affiche les premières lectures.
@@ -165,7 +166,7 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.ht
 
 → Hamburger Menu (1) → System Status (2) → If you are on the Classic Status Page (3) swipe the screen (4) to reach → G5/G6/G7 Status screen → Calibration Code.
 
-![xDrip+ Retrieve Dexcom Sensor Code2](../images/xDrip_Dexcom_SensorCode2.png)
+![xDrip+ Récupérer Code Capteur Dexcom 2](../images/xDrip_Dexcom_SensorCode2.png)
 
 (xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)=
 
@@ -189,7 +190,7 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorF
 
   - Disable watchdogs as they will reset the phone Bluetooth and interrupt your pump connection.
 
-  ![xDrip+ Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
+  ![Paramètres xDrip+ Libre Bluetooth 1](../images/xDrip_Libre_BTSettings1.png)
 
 * You can try to enable the following settings (7)
 
@@ -199,7 +200,7 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorF
 
 * If you easily lose connection to the bridge or have difficulties recovering connection, **DISABLE THEM** (8).
 
-  ![xDrip+ Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
+  ![Paramètres xDrip+ Libre Bluetooth 2](../images/xDrip_Libre_BTSettings2.png)
 
 - Leave all other options disabled unless you know why you want to enable them.
 
@@ -210,7 +211,7 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorF
 * Battery level of bridges such as MiaoMiao and Bubble can be displayed in AAPS (not Blucon).
 * Details can be found on [screenshots page](../DailyLifeWithAaps/AapsScreens.md#sensor-level-battery).
 
-### Connect Libre Transmitter & start sensor
+### Connectez l'émetteur du Freestyle Libre & démarrez le capteur
 
 - If your sensor requires it (Libre 2 EU and Libre 1 US) install the [latest out of process algorithm](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view).
 
@@ -220,7 +221,7 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorF
 
   → Hamburger Menu (1) → Settings (2) → Select Libre Bluetooth in Hardware Data source (3)
 
-  ![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
+  ![xDrip+ Démarrer Transmetteur Libre & Capteur 1](../images/xDrip_Libre_Transmitter01.png)
 
 - Scan Bluetooth and connect the bridge.
 
@@ -228,18 +229,19 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorF
 
   - If xDrip+ can't find the bridge, make sure it's not connected to the vendor app. Put it in charge and reset it.
 
-  ![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
+  ![xDrip+ Démarrer Transmetteur Libre & Capteur 2](../images/xDrip_Libre_Transmitter02.png)
 
 - Start the sensor in xDrip+.
 
   ```{admonition} Safety warning
-  :class: warning
-  Do not use sensor data before the one hour warm-up is over: the values can be extremely high and cause wrong decisions in AAPS.  
+  {admonition} Safety warning
+:class: warning
+Do not use sensor data before the one hour warm-up is over: the values can be extremely high and cause wrong decisions in AAPS.  
   ```
 
   → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Set the exact time you started it with the reader or the vendor app. If you didn't start it today, answer "Not Today" (4).
 
-![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ Démarrer Transmetteur Libre & Capteur 3](../images/xDrip_Libre_Transmitter03.png)
 
 
 
@@ -253,7 +255,7 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorF
 
 -   You can add `BgReading:d,xdrip libre_receiver:v` under Less Common Settings->Extra Logging Settings->Extra tags for logging. Cela permettra de consigner des messages d'erreur supplémentaires pour le dépannage.
 
-![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
+![xDrip+ journaux LibreLink](../images/Libre2_Tags.png)
 
 
 
