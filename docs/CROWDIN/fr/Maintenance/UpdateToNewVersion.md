@@ -15,7 +15,7 @@
 
 1. [Export your settings](ExportImportSettings.md) from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
 2. [Update local copy](#2-update-your-local-copy) of the AAPS sourcecode (Git->Fetch and Git -> Pull)
-3. [Build signed APK](#3-build-the-signed-apk)
+3. [Constuire un apk signé](#3-build-the-signed-apk)
 4. [Transfer the built apk](#4-transfer-the-apk) to your phone and install it
 5. [Check the version](#6-check-aaps-version-on-phone) in AAPS
 6. Depending on your [BG source](../Getting-Started/CompatiblesCgms.md) make sure to [identify receiver](../CompatibleCgms/xDrip.md#identify-receiver) in xDrip or use the ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app).
@@ -36,27 +36,27 @@ If you update from versions prior to 2.8.x, please follow the instructions to do
 
 * Open your existing AAPS project with Android Studio. Vous devrez peut-être sélectionner votre projet. (Double) click on the AAPS project.
 
-  ![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
+  ![Android Studio - Sélectionnez un projet](../images/update/01_ProjectSelection.png)
 
-* In the menu bar of Android Studio, select Git -> Fetch
+* Dans la barre de menu d'Android Studio, sélectionnez Git -> Fetch
 
-   ![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
+   ![Menu Android Studio - Git - Fetch](../images/update/02_GitFetch.png)
 
 * Vous verrez un message dans le coin inférieur droit indiquant que Fetch a réussi.
 
-   ![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
+   ![Menu Android Studio - Git - Fetch réussi](../images/update/03_GitFetchSuccessful.png)
 
-* In the menu bar, now select Git -> Pull
+* Dans la barre de menus, sélectionnez Git -> Pull
 
-   ![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
+   ![Menu Android Studio - Git - Pull](../images/update/04_GitPull.png)
 
 * Laissez toutes les options telles qu'elles sont (origin/master) et sélectionnez Pull
 
-   ![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
+   ![Android Studio fenêtre de dialogue - Git - Pull](../images/update/05_GitPullOptions.png)
 
 * Attendez tant que le téléchargement est en cours, vous verrez ceci comme des informations dans la barre du bas. Une fois terminé, vous verrez un message de réussite. Note: Les fichiers qui ont été mis à jour peuvent varier ! Ce n'est pas une indication
 
-   ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
+   ![Android Studio - Pull réussi](../images/update/06_GitPullSuccess.png)
 
 * Gradle Sync s'exécutera quelques secondes pour télécharger des dépendances. Patientez jusqu'à ce que ce soit fini.
 
@@ -81,7 +81,7 @@ On your phone you have to allow installation from unknown sources. Manuals how t
 
 Après avoir installer le nouvel apk, vous pouvez vérifier la version AAPS sur votre téléphone en cliquant sur le menu 3 points en haut à droite puis sur "à propos". Vous devriez voir la version actuelle en résultat.
 
-![AAPS version installed](../images/Update_VersionCheck282.png)
+![Version installée d'AAPS](../images/Update_VersionCheck282.png)
 
 
 ## Troubleshooting
