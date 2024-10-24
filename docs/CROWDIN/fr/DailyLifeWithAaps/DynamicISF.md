@@ -52,7 +52,7 @@ Otherwise, minimum predicted **BG** is used.
 
 ### Enable TDD based sensitivity ratio for basal and glucose target modification
 
-This setting replaces Autosens, and uses the last 24h **TDD**/7D **TDD** as the basis for increasing and decreasing basal rate, in the same way that standard Autosens does. This calculated value is also used to adjust target, if the options to adjust target with sensitivity are enabled. Unlike Autosens, this option does not adjust **ISF** values.
+This setting replaces Autosens, and uses the last 24h **TDD**/7D **TDD** as the basis for increasing and decreasing basal rate, in the same way that standard Autosens does. This calculated value is also used to adjust target, if the options to adjust target with sensitivity are enabled. This calculated value is also used to adjust target, if the options to adjust target with sensitivity are enabled.
 
 ### CAUTION - Automations or Profile Percentage Increase
 **Automations** should always be used with care. This is particularly so with **Dynamic ISF**.
