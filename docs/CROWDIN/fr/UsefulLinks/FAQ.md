@@ -16,17 +16,17 @@ C'est pourquoi les apk ne sont pas disponibles.
 
 (FAQ-how-to-begin)=
 ### How to begin?
-First of all, you have to **get loopable hardware components**:
+Tout d'abord, vous devez **obtenir des composants matériels de la boucle** :
 
 * A [supported insulin pump](../Getting-Started/CompatiblePumps.md),
 * an [Android smartphone](../CompatiblePhones/ListOfTestedPhones.md) (Apple iOS is not supported by AAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and
 * a [continuous glucose monitoring system](../Getting-Started/CompatiblesCgms.md).
 
-Secondly, you have to **setup your hardware**. See [example setup with step-by-step tutorial](Sample-Setup.md).
+Deuxièmement, vous devez **configurer votre matériel**. Voir [exemple de configuration avec le tutoriel étape par étape](Sample-Setup.md).
 
 Thirdly, you have to **setup your software components**: AAPS and CGM/FGM source.
 
-Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. Le principe fondateur de boucle fermée est que votre débit de basal et vos ratios Glucides/Insuline (G/I) et Sensibilité à l'Insuline (SI) sont bien déterminés.  Toutes les recommandations supposent que vos besoins en basal sont satisfaits et que les pics ou les creux que vous voyez sont le résultat d'autres facteurs qui nécessitent par conséquent des ajustements (exercices, stress, etc.).  The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. Si par exemple vous êtes souvent bas à l'approche d'un repas, il est probable que vos débits de basal nécessitent un ajustement.  You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed.  Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
+Quatrièmement, vous devez apprendre et **comprendre le fonctionnement de référence OpenAPS pour vérifier vos paramètres de traitement**. Le principe fondateur de boucle fermée est que votre débit de basal et vos ratios Glucides/Insuline (G/I) et Sensibilité à l'Insuline (SI) sont bien déterminés.  Toutes les recommandations supposent que vos besoins en basal sont satisfaits et que les pics ou les creux que vous voyez sont le résultat d'autres facteurs qui nécessitent par conséquent des ajustements (exercices, stress, etc.).  Les ajustements que la boucle fermée peut effectuer ont été limités pour des raisons de sécurité (voir Débit Basal Temporaire maximum autorisé dans [Conception de référence OpenAPS](https://openaps.org/reference-design/)), ce qui signifie que vous ne devez pas perdre de la marge de manœuvre pour corriger un débit de basal erroné. Si par exemple vous êtes souvent bas à l'approche d'un repas, il est probable que vos débits de basal nécessitent un ajustement.  Vous pouvez utiliser [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) pour analyser un grand nombre de données pour voir comment les débit de basal et/ou la SI doivent être ajustés, et aussi si le ratio G/I doit être modifié.  Vous pouvez aussi tester et configurer vos débits de basal [à l'ancienne](https://integrateddiabetes.com/basal-testing/).
 
 ### What practicalities of looping do I have?
 
@@ -47,10 +47,10 @@ Pour plus de sécurité, les recommandations faites ne sont pas basées sur une 
 
 #### Further readings
 Il y a plusieurs blogs avec de bons conseils pour vous aider à comprendre les aspects pratiques de la boucle :
-  * [Fine-tuning Settings](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
-  * [Why DIA matters](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
-  * [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-  * [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
+  * [Réglage fin des Paramètres](https://seemycgm.com/2017/10/29/fine-tuning-settings/) Voir ma MGC
+  * [Pourquoi la DAI est importante](https://seemycgm.com/2017/08/09/why-dia-matters/) Voir ma MGC
+  * [Limiter les pics de repas](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
+  * [Hormones et autosens](https://seemycgm.com/2017/06/06/hormones-2/) Voir ma MGC
 
 ### What emergency equipment is recommended to take with me?
 Vous devez avoir le même équipement d'urgence avec vous, comme tous les autres diabétique de T1 avec une pompe à insuline.  When looping with AAPS it is strongly recommended to have the following additional equipment with or near to you:
@@ -66,7 +66,7 @@ Vous pouvez le fixer.  Vous pouvez également acheter un brassard pour maintenir
 
 ## AAPS settings
 
-La liste suivante a pour but de vous aider à optimiser les paramètres. Il peut être préférable de commencer par le haut et de travailler vers le bas. Essayez de valider un seul paramètre avant d'en changer un autre. Travaillez avec de petites étapes plutôt que de faire de grands changements à la fois. You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances. Notez que les paramètres interagissent les uns avec les autres - vous pouvez avoir des paramètres "erronés" qui fonctionnent bien ensemble dans certaines circonstances (par exemple si une basal trop élevé se produit en même temps qu'une Gly trop élevée) mais pas dans d'autres. Cela signifie que vous devez tenir compte de tous les paramètres et vérifier qu'ils fonctionnent ensemble dans une variété de circonstances.
+La liste suivante a pour but de vous aider à optimiser les paramètres. Il peut être préférable de commencer par le haut et de travailler vers le bas. Essayez de valider un seul paramètre avant d'en changer un autre. Travaillez avec de petites étapes plutôt que de faire de grands changements à la fois. Vous pouvez utiliser [Autotune](https://autotuneweb.azurewebsites.net/) pour guider votre réflexion, même s'il ne doit pas être suivie aveuglément : il peut ne pas fonctionner correctement pour vous ou en toutes circonstances. Notez que les paramètres interagissent les uns avec les autres - vous pouvez avoir des paramètres "erronés" qui fonctionnent bien ensemble dans certaines circonstances (par exemple si une basal trop élevé se produit en même temps qu'une Gly trop élevée) mais pas dans d'autres. Cela signifie que vous devez tenir compte de tous les paramètres et vérifier qu'ils fonctionnent ensemble dans une variété de circonstances.
 
 ### Duration of insulin activity (DIA)
 #### Description & testing
@@ -108,15 +108,15 @@ Then take an estimated amount of insulin (as per current 1/ISF) to get to your t
 
 Soyez prudent, car elle est bien souvent trop faible. Trop basse signifie qu'1 U va faire baisser la glycémie plus vite que prévu.
 #### Impact
-**Lower ISF** (i.e. 40 instead of 50) meaning insulin drops your BG less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. Si elle est trop basse, cela peut conduire à des hypoglycémies.
+**Une SI plus basse** (par exemple 40 au lieu de 50) signifie que l'insuline va moins faire baisser votre glycémie pour une unité. Ceci conduit à une correction plus agressive / plus forte de la boucle avec **plus d'insuline**. Si elle est trop basse, cela peut conduire à des hypoglycémies.
 
-**Higher ISF** (i.e. 45 instead of 35) meaning insulin drops your BG more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. Si elle est trop élevée, cela peut conduire à des hyperglycémies.
+**Une ISF plus haute** (par exemple 45 au lieu de 35) signifie que l'insuline va plus faire baisser votre glycémie pour une unité. Ceci conduit à une correction moins agressive / plus faible de la boucle avec **moins d'insuline**. Si elle est trop élevée, cela peut conduire à des hyperglycémies.
 
 **Exemple :**
 * Glycémie est à 190 mg/dl (10,5 mmol) et la cible est à 100 mg/dl (5,6 mmol).
 * Donc, vous voulez une correction de 90 mg/dl (= 190 - 100).
-* ISF = 30 -> 90 / 30 = 3 units of insulin
-* ISF = 45 -> 90 / 45 = 2 units of insulin
+* SI = 30 -> 90 / 30 = 3 unités d'insuline
+* SI = 45 -> 90 / 45 = 2 unités d'insuline
 
 Une SI trop faible (pas rare) peut entraîner des "sur-corrections", car AAPS pense qu'il a besoin de plus d'insuline que nécessaire pour corriger une glycémie élevée. Cela peut conduire à des glycémies en "montagnes russes" (surtout à jeun). Dans ce cas, vous devez augmenter votre SI. Cela conduira AAPS à donner de plus petites doses de correction, et évitera une sur-correction d'une hyperglycémie suivie d'une hypoglycémie.
 
@@ -130,7 +130,7 @@ En anglais les acronymes utilisés sont I:C, IC ou également Ratio Carbone (CR)
 
 En supposant que le débit de basal est correct, vous pouvez tester en vérifiant que l'IA est nulle et que vous êtes à l'objectif glycémique, en mangeant une quantité exacte de glucides connue, et en prenant la valeur estimée d'insuline basée sur le rapport actuel de G/I. Le mieux est de manger de la nourriture de votre mangez habituellement à ce moment de la journée et de compter ses glucides précisément.
 
-> **NOTE:** 
+> **REMARQUE :** 
 > 
 > Dans certains pays européens, des unités de pain ont été utilisées pour déterminer la quantité d'insuline nécessaire à l'alimentation. A l'origine 1 unité de pain est équivalent à 12g de glucides, mais plus tard certains ont changés la référence à 10g de glucides.
 > 
@@ -140,18 +140,18 @@ En supposant que le débit de basal est correct, vous pouvez tester en vérifian
 > 
 > Exemple :
 > 
-> Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
+> Facteur pour une unité de pain (1 UP = 12g glucides) : 2,4 U/UP -> Vous avez besoin de 2,4 unités d'insuline quand vous mangez 1 UP.
 > 
-> Corresponding IC: 12g / 2,4 U = 5,0 g/U -> 5,0g carbs can be covered with one unit of insulin.
+> G/I correspondant : 12g / 2,4 U = 5,0 g/U -> 5,0g de glucides peuvent être couverts avec une unité d'insuline.
 > 
-> BU factor 2,4 U / 12g   ===>   IC = 12g / 2,4 U = 5,0 g/U
+> Facteur d'UP 2,4 U / 12g ===> G/I = 12g / 2,4 U = 5,0 g/U
 > 
-> Conversion tables are available online i.e. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Les tables de conversion sont disponibles en ligne : [ici](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 #### Impact
-**Lower IC** = less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Peut aussi être appelé "plus agressif".
+**Augmentation du G/I** = plus de glucides par unité, c'est à dire que vous avez besoin de moins d'insuline pour une quantité fixe de glucides. Peut aussi être appelé "plus agressif".
 
-**Higher IC** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. Peut aussi être appelé "moins agressif".
+**Diminution du G/I ** = moins de glucides par unité, c'est à dire que vous avez besoin de plus d'insuline pour une quantité fixe de glucides. Peut aussi être appelé "moins agressif".
 
 Si, après que le repas ait été digéré et que l'IA est revenu à zéro, votre glycémie reste plus élevée qu'avant avoir mangé, il y a de fortes chances que le ratio G/I soit trop élevé. Inversement, si votre glycémie est inférieure à celle précédent le repas, le ratio G/I est trop faible.
 
@@ -165,7 +165,7 @@ Dans l'AMA, DAI ne signifie pas "Durée d'Action de l'Insuline". C'est un param�
 ### Profile
 
 #### Why using min. 5h DIA (insulin end time) instead of 2-3h?
-Well explained in [this article](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing your DIA.
+Bien expliqué dans [cet article](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). N'oubliez pas d'`ACTIVER LE PROFIL` après avoir changé votre DAI.
 
 #### What causes the loop to frequently lower my BG to hypoglycemic values without COB?
 Tout d'abord, vérifiez votre débit de basal et faites un test de débits de basal sans glucides. S'il est correct, c'est généralement provoqué par une SI trop faible. Une SI trop basse ressemble généralement à ceci :
@@ -185,7 +185,7 @@ In AAPSClient check 'Connection settings'. Peut-être n'êtes-vous pas connecté
 ### CGM settings
 
 #### Why does AAPS say 'BG source doesn't support advanced filtering'?
-If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AAPS OpenAPS-tab. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
+If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AAPS OpenAPS-tab. Voir [Lissage des données de glycémie](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) pour plus de détails.
 
 ### Pump
 
@@ -198,13 +198,13 @@ La boucle peut réduire la durée de vie de la pile de la pompe plus rapidement 
 * réduire la durée du rétro-éclairage (dans le menu des paramètres de la pompe)
 * sélectionnez les paramètres de notification à un bip plutôt que de vibrer (dans le menu des paramètres de la pompe)
 * only press the buttons on the pump to reload, use AAPS to view all history, battery level and reservoir volume.
-* AAPS app may often be closed to save energy or free RAM on some phones. When AAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. Cela consomme de la batterie. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout will receive an event at every restart of AAPS, which makes it easy to track the issue.  To reduce this happening, whitelist AAPS app in the phone battery settings to stop the app power monitor closing it down.
+* AAPS app may often be closed to save energy or free RAM on some phones. When AAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. Cela consomme de la batterie. Pour voir si c'est le cas, allez dans Préférences > NSClient et activer l'option 'Démarrage de l'app journaux vers NS'. Nightscout will receive an event at every restart of AAPS, which makes it easy to track the issue.  To reduce this happening, whitelist AAPS app in the phone battery settings to stop the app power monitor closing it down.
 
    Par exemple, pour l'inscire sur la liste blanche avec un téléphone Samsung fonctionnant sous Android Pie :
-   * Go to Settings -> Device Care -> Battery
+   * Accédez à Paramètres -> Maintenance de l'appareil -> Batterie
    * Scroll until you find AAPS and select it
    * Désélectionnez "Mettre l'application en veille"
-   * ALSO go to Settings -> Apps -> (Three circle symbol in the top-right of the screen) select "special access" -> Optimize battery usage
+   * AUSSI allez dans Paramètres -> Applications -> (Trois points en haut à droite de l'écran), sélectionnez "accès spécial" -> Optimiser util. de la batterie
    * Scroll to AAPS and make sure it is de-selected.
 
 * nettoyez les bornes de la pile avec un tampon d'alcool pour s'assurer qu'aucune cire ou draisse de fabrication ne reste.
@@ -218,7 +218,7 @@ The change of cartridge cannot be done via AAPS but must be carried out as befor
 * Ainsi le remplissage de la tubulure et de la canule peuvent être faites directement sur la pompe. In this case use [PRIME/FILL button](../DailyLifeWithAaps/AapsScreens.md#action-tab) in the actions tab just to record the change.
 * Une fois reconnecté à la pompe, continuez la boucle en appuyant sur "Suspendu (X m)".
 
-Le changement d'une canule n'utilise cependant pas la fonction "Remplir tubulure" / "Remplir canule" de la pompe, mais remplit l'ensemble de perfusion et/ou la canule à l'aide d'un bolus qui n'apparaît pas dans l'historique des bolus. Cela signifie qu'il n'interrompt pas un débit de basal temporaire en cours d'exécution.  On the Actions (Act) tab, use the [PRIME/FILL button](../DailyLifeWithAaps/AapsScreens.md#action-tab) to set the amount of insulin needed to fill the infusion set and start the priming. Si la quantité n'est pas suffisante, répétez le remplissage.  You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts.  Consultez les notices de vos canules et tubulures pour savoir combien d'unités doivent être injectées en fonction de la longueur de l'aiguille et de la longueur de la tubulure.
+Le changement d'une canule n'utilise cependant pas la fonction "Remplir tubulure" / "Remplir canule" de la pompe, mais remplit l'ensemble de perfusion et/ou la canule à l'aide d'un bolus qui n'apparaît pas dans l'historique des bolus. Cela signifie qu'il n'interrompt pas un débit de basal temporaire en cours d'exécution.  On the Actions (Act) tab, use the [PRIME/FILL button](../DailyLifeWithAaps/AapsScreens.md#action-tab) to set the amount of insulin needed to fill the infusion set and start the priming. Si la quantité n'est pas suffisante, répétez le remplissage.  Vous pouvez définir les quantités par défaut dans les Préférences > Autres > Valeurs prédéfinies pour remplir&amorcer.  Consultez les notices de vos canules et tubulures pour savoir combien d'unités doivent être injectées en fonction de la longueur de l'aiguille et de la longueur de la tubulure.
 
 ### Wallpaper
 
@@ -276,9 +276,9 @@ De nombreux utilisateurs mettent le téléphone en mode avion la nuit. If you wa
 
 Maintenant vous ne recevez pas d'appels téléphonique, et vous n'êtes pas connecté à Internet. Mais la boucle est toujours en cours.
 
-Certaines personnes ont découvert des problèmes de diffusion locale (AAPS ne recevant pas les valeurs Gly de xDrip+) lorsque le téléphone est en mode avion. Go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
+Certaines personnes ont découvert des problèmes de diffusion locale (AAPS ne recevant pas les valeurs Gly de xDrip+) lorsque le téléphone est en mode avion. Dans xDrip+ accédez à Paramètres > Paramètres Inter-app > Identifiez le récepteur, et entrez `info.nightscout.androidaps`.
 
-![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
+![xDrip+ Paramètres interapp basiques Identifier le récepteur](../images/xDrip_InterApp_NS.png)
 
 
 #### Travelling
@@ -294,20 +294,20 @@ If you want to share some information about AAPS and DIY looping with your clini
 #### Medical appointment with your endocrinologist
 
 ##### Reporting
-You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
+Vous pouvez montrer vos rapports Nightscout (https://YOUR-NS-SITE.com/report) ou consulter [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
 
 
 ## Frequent questions on Discord and their answers...
 
 ### My problem is not listed here.
 
-[Information to get help.](../GettingHelp/WhereCanIGetHelp.md)
+[Informations pour obtenir de l'aide.](../GettingHelp/WhereCanIGetHelp.md)
 
 ### My problem is not listed here but I found the solution
 
-[Information to get help.](../GettingHelp/WhereCanIGetHelp.md)
+[Informations pour obtenir de l'aide.](../GettingHelp/WhereCanIGetHelp.md)
 
-**Remind us to add your solution to this list!**
+**Rappelez-nous d'ajouter votre solution à cette liste!**
 
 ### AAPS stops everyday around the same time.
 
@@ -317,7 +317,7 @@ Arrêter la protection Google Play. Vérifiez que les applications "nettoyant" (
 
 Exporter les paramètres très régulièrement : après chaque changement de pod, après modification de votre profil, lorsque vous avez terminé et validé un objectif, si vous changez votre pompe… Même si rien ne change, exportez une fois par mois. Conserver plusieurs anciens fichiers d'exportation.
 
-Copy on an internet drive (Dropbox, Google etc) : all the apks you used to install apps on your phone (AAPS, xDrip, BYODA, Patched LibreLink…) as well as the exported setting files from all your apps.
+Copiez sur un lecteur internet (Dropbox, Google etc) : toutes les apks que vous avez utilisés pour installer des applications sur votre téléphone (AAPS, xDrip, BYODA, Patched LibreLink…) ainsi que les fichiers de configuration exportés de toutes vos applications.
 
 ### I have problems, errors building the app.
 
@@ -366,11 +366,11 @@ Settings files will be stored on your phone's internal storage in the directory 
 
 ### How to configure battery savings?
 
-Properly configuring Power Management is important to prevent your Phone's OS to suspend AAPS and related app's and services when your phone is not being used. As a result AAPS can not do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors. On the phone, go to settings->Apps and disable battery savings for: AAPS xDrip or BYODA/Dexcom app The Bluetooth system app (you may need to select for viewing system apps first) Alternatively, fully disable all battery savings on the phone. As a result your battery may drain faster but it is a good way to find out if battery savings is causing your problem. The way battery savings is implemented greatly depends on the phone's brand, model and/or OS version. Because of this it is almost impossible to give instructions to properly set battery savings for your setup. Experiment on what settings work best for you. For additional information, see also Don't kill my app
+Properly configuring Power Management is important to prevent your Phone's OS to suspend AAPS and related app's and services when your phone is not being used. As a result AAPS can not do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors. Properly configuring Power Management is important to prevent your Phone's OS to suspend AAPS and related app's and services when your phone is not being used. As a result your battery may drain faster but it is a good way to find out if battery savings is causing your problem. The way battery savings is implemented greatly depends on the phone's brand, model and/or OS version. Because of this it is almost impossible to give instructions to properly set battery savings for your setup. Experiment on what settings work best for you. For additional information, see also Don't kill my app
 
 ### Pump unreachable alerts several times a day or at night.
 
-Your phone may be suspending AAPS services or even Bluetooth causing it to loose connection to RL (see battery savings) Consider configuring unreachable alerts to 120 minutes by going to the top right-hand side three-dot menu, selecting Preferences->Local Alerts->Pump unreachable threshold [min].
+Votre téléphone peut suspendre les services AAPS ou même le Bluetooth, ce qui lui fait perdre la connexion au RL (voir les économies de batterie) Pensez à configurer les alertes injoignables à 120 minutes en allant dans le menu à trois points en haut à droite sélection Préférences->Alertes Locales >Seuil d'alerte pompe hors de portée [min].
 
 ### Where can I delete treatments in AAPS v3 ?
 
@@ -380,9 +380,9 @@ Your phone may be suspending AAPS services or even Bluetooth causing it to loose
 
 AAPS can be monitored and controlled remotely via the AAPSClient app and optionally via the associated Wear app running on Android Wear watches. Note that the AAPSClient (remote) app is distinct from the NSClient configuration in AAPS, and the AAPSClient (remote) Wear app is distinct from the AAPS Wear app--for clarity the remote apps will be referred to as 'AAPSClient remote' and 'AAPS remote Wear' apps.
 
-To enable AAPSClient remote functionality you must: 1) Install the AAPSClient remote app (the version should match the version of AAPS being used) 2) Run the AAPSClient remote app and proceed through the configuration wizard to grant required permissions and configure access to your Nightscout site. 3) At this point you may want to disable some of the Alarm options, and/or advanced settings which log the start of the AAPSClient remote app to your Nightscout site. Once this is done, AAPSClient remote will download Profile data from your Nightscout site, the 'Overview' tab will display CGM data and some AAPS data, but but may not display graph data, and will indicate that a profile isn't yet set. 4) To activate the profile:
+To enable AAPSClient remote functionality you must: 1) Install the AAPSClient remote app (the version should match the version of AAPS being used) 2) Run the AAPSClient remote app and proceed through the configuration wizard to grant required permissions and configure access to your Nightscout site. 3) At this point you may want to disable some of the Alarm options, and/or advanced settings which log the start of the AAPSClient remote app to your Nightscout site. Once this is done, AAPSClient remote will download Profile data from your Nightscout site, the 'Overview' tab will display CGM data and some AAPS data, but but may not display graph data, and will indicate that a profile isn't yet set. Once this is done, AAPSClient remote will download Profile data from your Nightscout site, the 'Overview' tab will display CGM data and some AAPS data, but but may not display graph data, and will indicate that a profile isn't yet set.
 - Enable remote profile synchronization in AAPS > NSClient > Options
-- Activate the profile in NSClient remote > Profile After doing so, the profile will be set, and AAPSClient remote should display all data from AAPS. Hint: If the graph is still missing, try changing the graph settings to trigger an update. 5) To enable remote control by the AAPSClient, selectively enable the aspects of AAPS (Profile changes, Temp Targets, Carbs, etc.) that you would like to be able to control remotely via AAPS > NSClient > Options . Once these changes are made, you'll be able to remotely control AAPS via either Nightscout or AAPSClient remote.
+- Activate the profile in NSClient remote > Profile After doing so, the profile will be set, and AAPSClient remote should display all data from AAPS. Hint: If the graph is still missing, try changing the graph settings to trigger an update. Hint: If the graph is still missing, try changing the graph settings to trigger an update. Once these changes are made, you'll be able to remotely control AAPS via either Nightscout or AAPSClient remote.
 
 If you'd like to monitor/control AAPS via the AAPSClient remote Wear App, you'll need both AAPSClient remote and the associated Wear app to be installed. To compile the AAPSClient remote Wear app, follow the standard instructions for installing/configuring the AAPS wear app, except when compiling it, choose the AAPSClient variant.
 
@@ -404,13 +404,13 @@ Critical is that pump "state" (which includes it's MAC address) in AAPS and DASH
 
 ### Procedure I follow in this:
 
-1) Suspend the DASH pump. This makes sure there are no running or queued commands active when DASH loses connection 2) Put the phone into airplane mode to disable BT (as well as WiFi and Mobile data). This way it is guaranteed AAPS and DASH can not communicate. 3) Export settings (which includes the DASH state) 4) Copy the settings file just exported from the phone (as it is in airplane mode and we do not want to change that, easiest way is using USB cable) 5) Copy the settings file to the alternate phone. 6) Import settings on the alternate phones AAPS. 7) Check the DASH tab to verify it is seeing the Pod. 8) Un-suspend the Pod. 9) Check the DASH tab and confirm it is communicating with the Pod (use the refresh button)
+1) Suspend the DASH pump. Cela assure qu'il n'y a pas de commandes en cours d'exécution ou en file d'attente actives lorsque DASH perd la connexion 2) Mettez le téléphone en mode avion pour désactiver le BT (ainsi que le WiFi et les données mobiles). This way it is guaranteed AAPS and DASH can not communicate. 3) Exporter les paramètres (ce qui inclut l'état de DASH) 4) Copier le fichier de paramètres juste exporté depuis le téléphone (comme il est en mode avion et nous ne voulons pas changer cela, la façon la plus simple est d'utiliser le câble USB) 5) Copiez le fichier de paramètres sur le téléphone alternatif. 6) Import settings on the alternate phones AAPS. 7) Check the DASH tab to verify it is seeing the Pod. 8) Un-suspend the Pod. 9) Check the DASH tab and confirm it is communicating with the Pod (use the refresh button)
 
 Congratulations: you did it!
 
-_Wait!_ You still have the main phone thinking it can reconnect to the same DASH:
+*Wait!* You still have the main phone thinking it can reconnect to the same DASH:
 
-1) On the main phone choose "deactivate". This is safe because the phone has no way of communicating with DASH to actually deactivated the Pod (it is still in airplane mode) 2) Deactivation will result in a communications error - this is expected. 3) Just hit "retry" a couple of times until AAPS offers the option to "Discard" the Pod.
+1) On the main phone choose "deactivate". Ceci est sûr car le téléphone n'a aucun moyen de communiquer avec DASH pour désactiver le Pod (il est toujours en mode avion) 2) La désactivation entraînera une erreur de communication - c'est normal. 3) Just hit "retry" a couple of times until AAPS offers the option to "Discard" the Pod.
 
 When Discarded, verify AAPS is reporting "No Active Pod". You can now safely disable airplane mode again.
 
