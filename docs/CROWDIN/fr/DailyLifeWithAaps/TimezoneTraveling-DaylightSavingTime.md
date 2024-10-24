@@ -6,7 +6,7 @@ Il n'y a aucun problème avec le changement de fuseau horaire dans le téléphon
 
 ## DanaRv2, DanaRS
 
-These pumps need a special care because AAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
+These pumps need a special care because AAPS is using history from the pump but the records in pump don't have timezone stamp. **Cela signifie que si vous changez simplement de fuseau horaire dans le téléphone, les enregistrements seront lus avec un fuseau horaire différent et seront doublés.**
 
 Pour éviter cela, il y a deux possibilités :
 
@@ -19,10 +19,10 @@ Pour éviter cela, il y a deux possibilités :
    * Sélectionnez "Changement de profil"
    * Définissez le 'Décalage horaire' en fonction de votre destination.
 
-   ![Profile switch with time shift](../images/ProfileSwitchTimeShift2.png)
+   ![Changement de profil avec décalage horaire](../images/ProfileSwitchTimeShift2.png)
 
-   * par ex. Vienna -> New York: profile switch +6 hours
-   * par ex. Vienna -> Sydney: profile switch -8 hours
+   * par ex. Vienne -> New York : Changement de profil +6 heures
+   * par ex. Vienne -> Sydney : Changement de profil -8 heures
 * Probably not an option if using [patched LibreLink app](../CompatibleCgms/Libre2.md#5-use-the-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Option 2: Supprimer l'historique de la pompe
@@ -85,7 +85,7 @@ AAPS will issue an alarm if the time between pump and phone differs too much. In
 
 2. Trouvez un fuseau horaire qui a la même heure que la votre actuellement mais qui n'a pas de changement d'heure.
 
-   * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
+   * Une liste de ces pays est disponible : [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
    * Pour l'Europe Centrale (CET), cela pourrait être "Brazzaville" (Kongo). Changez le fuseau horaire de votre téléphone à Kongo.
 
 3. In AAPS refresh your pump.
