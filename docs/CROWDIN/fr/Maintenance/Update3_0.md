@@ -1,7 +1,7 @@
 # Vérifications nécessaires après la mise à jour vers AAPS 3.0
 
-* **Minimum Android version is 9.0 now.**
-* **Data is not migrated to new database.**
+* **La version minimale d'Android est maintenant 9.0.**
+* **Les données ne sont pas migrées vers la nouvelle base de données.**
 
   Ne vous plaignez pas, c'est un changement si énorme qu'il n'était tout simplement pas possible de le faire. Ainsi après la mise à jour de l'IA, GA, traitements, etc seront effacés. You have to create new [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) and start with zero IOB and COB.
 
@@ -33,7 +33,7 @@
 
 ## Réinitialiser le mot de passe principal
 * Vous pouvez maintenant réinitialiser votre mot de passe principal au cas où vous l'auriez oublié.
-* You need to add a file named `PasswordReset` to the `/AAPS/extra` directory on your phones fileystem.
+* Vous devez ajouter un fichier nommé `PasswordReset` dans le répertoire `/AAPS/extra` du système de fichiers de votre téléphone.
 * Redémarrez AAPS.
 * Le nouveau mot de passe sera le numéro de série de votre pompe active.
 * Pour Dash: Le numéro de série est toujours 4241.
@@ -43,9 +43,9 @@
 
 À partir d'Android 3.0, vous pouvez avoir un signal d'avertissement à côté de votre glycémie sur l'écran principal.
 
-  ![Red BG warning](../images/bg_warn_red.png)
+  ![Avertissement de glycémie rouge](../images/bg_warn_red.png)
 
-  ![Yellow BG warning](../images/bg_warn_yellow.png)
+  ![Avertissement de glycémie jaune](../images/bg_warn_yellow.png)
 
 For details see [AAPS screens page](../DailyLifeWithAaps/AapsScreens.md#bg-warning-sign)
 
