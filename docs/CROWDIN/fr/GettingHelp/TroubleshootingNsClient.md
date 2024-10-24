@@ -35,10 +35,10 @@ Une solution aux problèmes de connexion dans Azure est de définir dans les par
 
 * Pas de lecture de glycémie depuis Nightscout
 
-Si AAPS se connecte correctement à Nightscout mais que la glycémie s'affiche comme N/A. Go to NSCLIENT tab, press the 3 dot menu top right, Click NSClient Preferences -> Synchronization turn on "Receive/backfill CGM data".
+Si AAPS se connecte correctement à Nightscout mais que la glycémie s'affiche comme N/A. Allez dans l'onglet NSCLIENT, appuyez sur le menu à 3 points en haut à droite, cliquez sur Préférences NSClient -> Synchronisation activez "Recevoir/remplir les anciennes données MGC".
 
 * Si vous avez toujours une erreur...
 
-Vérifiez la taille de votre base de données dans MongoDB (ou via le plugin donnant la taille de la base de données dans Nightscout). Si vous utilisez la version gratuite de MongoDB, 496 Mo signifie qu'il est complet et doit être nettoyé. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
+Vérifiez la taille de votre base de données dans MongoDB (ou via le plugin donnant la taille de la base de données dans Nightscout). Si vous utilisez la version gratuite de MongoDB, 496 Mo signifie qu'il est complet et doit être nettoyé. [Suivez ces instructions Nightscout pour vérifier la taille de votre base de données et effacer les données](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
 
 Avant de supprimer les données de votre base de données et si vous ne l'avez pas déjà configuré, vous devriez envisager de donner vos données AAPS au projet Open Humans (pour la recherche). The instructions are on the [OpenHumans configuration page](../SupportingAaps/OpenHumans.md).
