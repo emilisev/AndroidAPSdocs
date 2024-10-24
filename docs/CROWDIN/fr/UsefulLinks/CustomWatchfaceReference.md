@@ -8,14 +8,14 @@ Le format des Cadrans personnalisés est ouvert et conçu specialement pour AAPS
 
 The Watchface file is a simple zip file, but to be recognized as a Watchface file, the zip file must contain the following files:
 
-- One image file named CustomWatchface (can be bitmap files `CustomWatchface.jpg`, `CustomWatchface.png` or a vector `CustomWatchface.svg`). Ce fichier contient la petite icône utilisée pour sélectionner le cadran lorsque vous cliquez sur le bouton "Charger le cadran", et aussi l'image visible dans le plugin AAPS Wear.
-- One file named `CustomWatchface.json` (see [JSON structure](#json-structure) below). Ce deuxième fichier est le fichier principal qui contient toutes les informations nécessaires pour le cadran. Ce fichier json doit être valide (c'est probablement le point le plus délicat lorsque vous éditez manuellement ce fichier dans un éditeur de texte, parce qu'une simple virgule manquante ou additionnelle est suffisante pour casser le format json). This JSON file must also include a `"metadata"` bloc with a `"name"` key with not empty value. This will be the name of your custom watchface (see [Metadata settings](#metadata-settings) below)
+- Un fichier image nommé CustomWatchface (cela peut être un fichier bitmap `CustomWatchface.jpg`, `CustomWatchface.png` ou un fichier vecteur `CustomWatchface.svg`). Ce fichier contient la petite icône utilisée pour sélectionner le cadran lorsque vous cliquez sur le bouton "Charger le cadran", et aussi l'image visible dans le plugin AAPS Wear.
+- One file named `CustomWatchface.json` (see [JSON structure](#json-structure) below). Ce deuxième fichier est le fichier principal qui contient toutes les informations nécessaires pour le cadran. Ce fichier json doit être valide (c'est probablement le point le plus délicat lorsque vous éditez manuellement ce fichier dans un éditeur de texte, parce qu'une simple virgule manquante ou additionnelle est suffisante pour casser le format json). Ce fichier JSON doit également inclure un bloc `"metadata"` avec une clé `"name"` contenant une valeur non vide. This will be the name of your custom watchface (see [Metadata settings](#metadata-settings) below)
 - la taille de ce zip devrait être aussi petite que possible (moins de 500 ko). Si ce fichier est trop volumineux, il sera juste bloqué et ne sera pas transmis à la montre.
 
 Le fichier zip peut également contenir des fichiers de ressources supplémentaires :
 
-- Hardcoded file names for images that will be used used in standard views included in the watchface (like `Background`, `CoverChart`... see [List of hardcoded resource files](#list-of-hardcoded-resource-files) below). All these files can be either `jpg`, `png` or `svg` format. but for most of them, you will have to use `png` or `svg` that manage transparency (jpg are smaller in size compared to png, but with no transparency). Notez que la meilleure qualité associée à la plus petite taille sera généralement obtenue avec les fichiers svg (format vectoriel).
-- Des fichiers de ressources supplémentaires avec Des noms libres. These additional files can be either image files, or font files (`ttf` and `otf` format are accepted for fonts). Note that for these additional files, the `filename` (without extension) will be used as the keyValue, within JSON file, to specify where or when these files should be used.
+- Hardcoded file names for images that will be used used in standard views included in the watchface (like `Background`, `CoverChart`... see [List of hardcoded resource files](#list-of-hardcoded-resource-files) below). Tous ces fichiers peuvent être au format `jpg`, `png` ou `svg`. mais pour la plupart d'entre elles, vous devrez utiliser les formats `png` ou `svg` qui gèrent la transparence (le format jpg est plus compact que le png, mais sans aucune transparence). Notez que la meilleure qualité associée à la plus petite taille sera généralement obtenue avec les fichiers svg (format vectoriel).
+- Des fichiers de ressources supplémentaires avec Des noms libres. Ces fichiers supplémentaires peuvent être soit des fichiers image, soit des fichiers de polices de caractères (les formats `ttf` et `otf` sont acceptés pour les polices). Notez que pour ces fichiers supplémentaires, le `nom du fichier` (sans extension) sera utilisé comme valeur de clé, dans le fichier JSON, pour spécifier où et quand ces fichiers devront être utilisés
   - les fichiers image sont souvent utilisés comme arrière plan de vue texte ou pour une animation dynamique (comme le niveau de la batterie de 0% à 100%)
   - les fichiers de police de caractères vous permettent d'utiliser des polices spécifiques dans votre cadran
 
@@ -25,10 +25,10 @@ Le fichier zip peut également contenir des fichiers de ressources supplémentai
 
 Les fichiers JSON peuvent être édités dans l'éditeur de texte Bloc-notes (ou notepad++) (préférez notepad++ qui reconnaissent le JSON et utilisent le formateur de couleur)
 
-- it contains string keys `"string_key":` and key values that can be strings like `"key value"`, integer, boolean like `true`or `false` or block of data.
-- each value is seperated by a comma `,`
-- A block of data starts by `{`  and ends by `}`
-- the json file is a whole block so it starts by  `{`  and ends by `}`, and inside this file all embeded blocks are associated to a `"key"` that should be unique within the block
+- il contient les clés de type chaîne de caractère `"string_key":` et les valeurs clés qui peuvent être des chaînes comme `"key value"`, entier, booléen comme `true` ou `false` ou encore un bloc de données.
+- chaque valeur est séparée par une virgule `,`
+- Un bloc de données commence par `{`  et se termine par `}`
+- le fichier JSON est lui même un bloc entier, donc il commence par  `{`  et se termine par `}`, et à l'intérieur de ce fichier, tous les blocs intégrés sont associés à une `"clé"` qui doit être unique dans le bloc
 - Pour améliorer la lisibilité du fichier JSON, il est généralement indenté (chaque nouvelle clé est sur une nouvelle ligne, chaque nouveau bloc est décalé à droite par 4 caractères d'espace)
 
 (cwf-reference-metadata-settings)=
@@ -50,9 +50,9 @@ Voir ci-dessous un exemple de bloc metadata:
 },
 ```
 
-Note that `/` used for the date is a special character, so to be recognize correctly within json file, you have to put before an "escape" character `\`
+Notez que `/` utilisé pour la date est un caractère spécial, pour être reconnu correctement dans le fichier json, vous devez mettre avant un caractère "d'échappement" `\`
 
-You can see in some json file an additional key `"filename"`, this key will be automatically created or updated when the custom watchface will be loaded within AAPS (it will be used to show to the user the zip filename within exports folder), so you can remove this key within metadata block.
+Vous pouvez voir dans un fichier JSON une clé supplémentaire `"filename"`, cette clé sera automatiquement créée ou mise à jour lorsque la montre personnalisée sera chargée dans AAPS (elle sera utilisée pour afficher à l'utilisateur le nom du fichier zip dans le dossier d'exportation), donc vous pouvez supprimer cette clé dans le bloc de métadonnées.
 
 (cwf-reference-general-parameter-settings)=
 
@@ -258,7 +258,7 @@ For more information concerning ImageViews and `"color":` key, see dedicated ch
 
 the easiest way to start tuning your watchface is to include within zip file some images with a specific names (see [List of Hardcoded resource files](#list-of-hardcoded-resource-files))
 
-- Image should be in `.jpg`, `.png` or `.svg` format. but be carefull, jpg doesn't manage transparency, so should be only used for background layer. For all intermediate layers (cover_chart, cover_plate, hands) use eather `.png`or `.svg` image
+- Image should be in `.jpg`, `.png` or `.svg` format. but be carefull, jpg doesn't manage transparency, so should be only used for background layer. but be carefull, jpg doesn't manage transparency, so should be only used for background layer.
 
 - If you have a vector image editor (like for example Illustrator), prefer this format that will produce small text files with `.svg` extension the best quality.
 - You should take care to use exact filename (including High/lower case)
@@ -598,7 +598,7 @@ You can note that either `"invalidImage"` or several `"imagexx"` are with `"null
 
 Now we can see a new block `"rotationOffset":` that will have inside two keys `"minValue":` and `"maxValue":`. These values are used to make the convertion between internal datas (in mgdl), and the angle rotation we want to have.
 
-- Steampunk watchface is designed to have maximum from -30 degrees to 30 degrees rotation for the pointer. So according to the scale (here from -5mgdl to 5mgdl), we will want to have 30 degrees for these values. Because `minData` and `maxData`are 4 times greater, then the corresponding minValues and maxValues are 4 * 30 degrees so -120 and +120 degrees. But for all rotation above or below +-30 degrees the pointer will be hidden (no image visible), and the pointer will only be visible for values between -5 and +5mgdl... So it's exactly what is expected here.
+- Steampunk watchface is designed to have maximum from -30 degrees to 30 degrees rotation for the pointer. So according to the scale (here from -5mgdl to 5mgdl), we will want to have 30 degrees for these values. Steampunk watchface is designed to have maximum from -30 degrees to 30 degrees rotation for the pointer. But for all rotation above or below +-30 degrees the pointer will be hidden (no image visible), and the pointer will only be visible for values between -5 and +5mgdl... So it's exactly what is expected here.
 
 The other dynData blocks are defined the same way to tune `"avgDelt10"`and `"avgDelta20"`
 
@@ -937,14 +937,14 @@ Now the text will be in black on white background with a size of 19
 
 #### List of Standard information metadata keys
 
-| Clé            | Commentaire                                                                                                        |
-| -------------- | ------------------------------------------------------------------------------------------------------------------ |
-| name           | Nom du cadran personnalisé                                                                                         |
-| author         | Nom ou pseudo du ou des auteur(s)                                                                                  |
-| created_at     | Creation (or update) date, be carefull `/` is a special character, so if you use it for the date put `\`before    |
-| cwf_version    | Version du Plugin Wear compatible avec la conception de votre cadran (laissez cette valeur inchangée)              |
-| author_version | The author can specify here the version of his watchface                                                           |
-| comment        | Texte libre qui peut être utilisé pour donner des informations complémentaires ou des limitations du cadran actuel |
+| Clé            | Commentaire                                                                                                                               |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| name           | Nom du cadran personnalisé                                                                                                                |
+| author         | Nom ou pseudo du ou des auteur(s)                                                                                                         |
+| created_at     | Date de création (ou de mise à jour), soyez prudent `/` est un caractère spécial, donc si vous l'utilisez pour la date, mettez `\` avant |
+| cwf_version    | Version du Plugin Wear compatible avec la conception de votre cadran (laissez cette valeur inchangée)                                     |
+| author_version | The author can specify here the version of his watchface                                                                                  |
+| comment        | Texte libre qui peut être utilisé pour donner des informations complémentaires ou des limitations du cadran actuel                        |
 
 (cwf-reference-preference-keys)=
 
