@@ -1,10 +1,10 @@
 # Pompe DanaRS et Dana-i
 
-_These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards or the newer Dana-i. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump.md) if you have the original DanaR instead._
+_Ces instructions décrivent la configuration de l’application et de votre pompe si vous avez une DanaRS commercialisée depuis 2017 ou la nouvelle Dana-i. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump.md) if you have the original DanaR instead._
 
-**New Dana RS firmware v3 can be used from AAPS version 2.7 onwards.**
+**Le nouveau firmware Dana RS v3 peut être utilisé depuis la version 2.7 d'AAPS.**
 
-**New Dana-i can be used from AAPS version 3.0 onwards.**
+**La nouvelle Dana-i peut être utilisée depuis la version 3.0 d'AAPS.**
 
 * Sur la pompe DanaRS/i, pompe « BASAL A » est utilisé par l'application. Les données existantes se font écrasé.
 
@@ -15,7 +15,7 @@ _These instructions are for configuring the app and your pump if you have a Dana
 * Dans la section Pompe, sélectionnez 'Dana-i/RS'.
 * Cliquez sur la roue crantée pour accéder directement aux paramètres de la pompe ou retourner à l'écran d'accueil.
 
-  ![AAPS config builder Dana-i/RS](../images/DanaRS_i_ConfigB.png)
+  ![Générateur de configuration AAPS Dana-i/RS](../images/DanaRS_i_ConfigB.png)
 
 * Allez dans l'onglet 'DANA-i/RS'.
 * Sélectionnez le Menu des préférences en appuyant sur le menu 3 points en haut à droite.
@@ -23,11 +23,11 @@ _These instructions are for configuring the app and your pump if you have a Dana
 * Cliquez sur "Pompe sélectionnée".
 * Dans la fenêtre d'appairage, cliquez sur l'entrée correspondant à votre pompe.
 
-  ![AAPS pair Dana-i/RS](../images/DanaRS_i_Pairing.png)
+  ![Appairage Dana-i/RS avec AAPS](../images/DanaRS_i_Pairing.png)
 
-* **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
+* **Vous devez confirmer l'appairage sur la pompe !** C'est juste la façon dont vous êtes habitués à faire d'autres appairages bluetooth (par ex. le smartphone et l'audio de la voiture).
 
-  ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
+  ![Confirmation d'appairage Dana RS](../images/DanaRS_Pairing.png)
 
 * Suivez le processus d'appairage basé sur le type et le firmware de votre pompe :
 
@@ -57,35 +57,35 @@ _These instructions are for configuring the app and your pump if you have a Dana
 * Appuyez sur le bouton OK de la pompe
 * Dans le menu principal, sélectionnez "OPTION" (déplacer à droite en appuyant sur le bouton flèche plusieurs fois)
 
-  ![DanaRS Main Menu](../images/DanaRSPW_01_MainMenu.png)
+  ![Menu principal DanaRS](../images/DanaRSPW_01_MainMenu.png)
 
 * Dans le menu Options, sélectionnez "OPTION UTILISATEUR"
 
-  ![DanaRS Option Menu](../images/DanaRSPW_02_OptionMenu.png)
+  ![Menu Option DanaRS](../images/DanaRSPW_02_OptionMenu.png)
 
 * Utilisez le bouton flèche pour faire défiler vers le bas jusqu'à " 11. Mot de passe "
 
-  ![DanaRS 11. Password](../images/DanaRSPW_03_11PW.png)
+  ![DanaRS 11. Mot de passe](../images/DanaRSPW_03_11PW.png)
 
 * Appuyez sur OK pour saisir l'ancien mot de passe.
 
 * Enter **old password** (Default password see [above](#default-password)) and press OK
 
-  ![DanaRS Enter old password](../images/DanaRSPW_04_11PWenter.png)
+  ![DanaRS Entrez l'ancien mot de passe](../images/DanaRSPW_04_11PWenter.png)
 
 * Si un mauvais mot de passe est entré ici, il n'y aura pas de message indiquant l'échec !
-* Set **new password** (Change numbers with + & - buttons / Move right with arrow button).
+* Définissez un **nouveau mot de passe** (Modifiez les numéros avec les boutons + & - / Déplacez vers la droite avec le bouton flèche).
 
-  ![DanaRS New password](../images/DanaRSPW_05_PWnew.png)
+  ![DanaRS Nouveau mot de passe](../images/DanaRSPW_05_PWnew.png)
 
 * Confirmez avec le bouton OK.
 * Appuyez sur OK pour enregistrer les paramètres.
 
-  ![DanaRS Save new password](../images/DanaRSPW_06_PWnewSave.png)
+  ![DanaRS Sauvegarder le nouveau mot de passe](../images/DanaRSPW_06_PWnewSave.png)
 
 * Déplacer vers le bas jusqu'à "14. QUITTEZ" et appuyez sur le bouton OK pour fermer.
 
-  ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
+  ![DanaRS Quitter](../images/DanaRSPW_07_Exit.png)
 
 (DanaRS-Insulin-Pump-dana-rs-specific-errors)=
 ## Erreurs spécifiques à DanaRS
@@ -93,10 +93,10 @@ _These instructions are for configuring the app and your pump if you have a Dana
 ### Erreur lors de la distribution de l'insuline
 Dans le cas où la connexion entre AAPS et DanaRS est perdue pendant un bolus d'insuline (par ex. vous vous éloignez de votre téléphone alors que la DanaRS est en train de délivrer de l'insuline), vous verrez le message suivant et vous entendrez une alarme sonore.
 
-![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
+![Alarme d'administration de l'insuline](../images/DanaRS_Error_bolus.png)
 
 * Dans la plupart des cas c'est juste un problème de communication et la quantité d'insuline délivrée est correcte.
-* Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.
+* Vérifiez dans l'historique de la pompe (à la pompe ou à l'aide de l'onglet Dana > historique de la pompe > bolus) si le bolus est correct.
 * Delete error entry in [treatments tab](../DailyLifeWithAaps/AapsScreens.md#carb-correction) if you wish.
 * Le montant réel est lu et enregistré lors de la prochaine connexion. Pour forcer cette mise à jour, appuyez sur l'icône BT dans l'onglet dana ou attendez juste la prochaine connexion.
 
@@ -107,7 +107,7 @@ Lors du passage à un nouveau téléphone, les étapes suivantes sont nécessair
 * Transférez les paramètres de l'ancien vers le nouveau téléphone
 
 ### DanaRS v1
-* **Manually pair** Dana RS with the new phone
+* **Appairer manuellement** DanaRS avec le nouveau téléphone
 * Comme les paramètres de connexion de la pompe sont également importés dans AAPS sur votre nouveau téléphone, il va déjà "connaître" la pompe et donc ne démarrera pas une analyse bluetooth. Par conséquent, le nouveau téléphone et la pompe doivent être appairés manuellement.
 * Installez AAPS sur le nouveau téléphone.
 * [Import settings](../Maintenance/ExportImportSettings.md) on your new phone
