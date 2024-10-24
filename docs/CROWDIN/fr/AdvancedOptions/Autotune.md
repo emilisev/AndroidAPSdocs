@@ -1,6 +1,6 @@
 # Comment utiliser le plugin Autotune (dev uniquement)
 
-Documentation about Autotune algorythm can be found in [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
+La documentation sur l'algorythme Autotune peut être trouvée dans [la documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
 
 Le plugin Autotune est une implémentation de l'algorythme autotune OpenAPS dans AAPS.
 
@@ -8,7 +8,7 @@ Le plugin Autotune est une implémentation de l'algorythme autotune OpenAPS dans
 
 ## Interface utilisateur Autotune
 
-![Autotune default screen](../images/Autotune/Autotune_1b.png)
+![Autotune écran par défaut](../images/Autotune/Autotune_1b.png)
 
 - Vous pouvez sélectionner le profil d'entrée que vous voulez régler dans le menu déroulant Profil (par défaut, votre profil actif actuel est sélectionné)
   - Remarque : chaque fois que vous sélectionnez un nouveau profil, les résultats précédents seront supprimés et le paramètre Nb jours sera défini à la valeur par défaut
@@ -21,19 +21,19 @@ Le plugin Autotune est une implémentation de l'algorythme autotune OpenAPS dans
   - Remarque : Autotune ne réglera que le G/I (valeur unique), la SI (valeur unique) et les débits de basal (avec variation circadienne). Les unités, la DAI et les cibles resteront inchangées dans le profil de sortie.
 
 - "Lancer Autotune" exécutera le calcul Autotune avec le profil et le nombre de jours sélectionnés
-  - Remarque : Le calcul Autotune peut prendre beaucoup de temps. Once launched, you can switch to another view (home, ...) and come back later in Autotune plugin to see results
+  - Remarque : Le calcul Autotune peut prendre beaucoup de temps. Une fois lancé, vous pouvez passer à une autre vue (écran d'accueil ...) et revenir plus tard dans le plugin Autotune pour voir les résultats
 
-![Autotune Run start](../images/Autotune/Autotune_2b.png)
+![Démarrage Run Autotune](../images/Autotune/Autotune_2b.png)
 
 - Ensuite, au cours de l'exécution vous verrez les résultats intermédiaires ci-dessous
 
   - Remarque : Pendant l'exécution, les paramètres sont verrouillés, vous ne pouvez donc plus modifier le profil d'entrée sélectionné ou le nombre de jour. Vous devrez attendre la fin du calcul actuel si vous voulez lancer un nouveau calcul avec d'autres paramètres.
 
-  ![Autotune during run](../images/Autotune/Autotune_3b.png)
+  ![Autotune lors de l'exécution](../images/Autotune/Autotune_3b.png)
 
 - Une fois le calcul automatique terminé, vous verrez le résultat (Tuned Profil) et les quatre boutons ci-dessous.
 
-![Autotune Result](../images/Autotune/Autotune_4b.png)
+![Résultat Autotune](../images/Autotune/Autotune_4b.png)
 
 - Il est important de toujours comparer le profil d'entrée (colonne "Profil"), le profil de sortie (colonne "Tuned") et le pourcentage de variation pour chaque valeur (colonne "%").
 
@@ -43,36 +43,36 @@ Le plugin Autotune est une implémentation de l'algorythme autotune OpenAPS dans
 
   - Remarque : dans l'exemple ci-dessous, le profil d'entrée a une variation circadienne pour le G/I et la SI, mais le profil calculé en sortie a une seule valeur. If it's important for you to get a circadian output profile see [Circadian IC or ISF profile](#circadian-ic-or-isf-profile) below.
 
-  ![Autotune Compare profiles](../images/Autotune/Autotune_5.png)
+  ![Comparer les profils Autotune](../images/Autotune/Autotune_5.png)
 
 - Si vous faites confiance aux résultats (faible pourcentage de variation entre le profil d'entrée et le profil de sortie), vous pouvez cliquer sur le bouton "Activer le profil" puis cliquer sur OK pour valider.
 
   - Activer le profil Tuned va automatiquement créer un nouveau profil "Tuned" dans votre plugin de profil local.
   - Si vous avez déjà un profil nommé "Tuned" dans votre plugin de profil local, alors ce profil sera mis à jour avec le profil Autotune calculé avant l'activation
 
-  ![Autotune Activate profile](../images/Autotune/Autotune_6.png)
+  ![Activer Profil Autotune](../images/Autotune/Autotune_6.png)
 
 - Si vous pensez que le profil Tuned doit être ajusté (par exemple si vous pensez que certaines variations sont trop importantes), puis vous pouvez cliquer sur le bouton "Copier vers profil local"
 
   - Un nouveau profil avec le préfixe "Tuned" et la date et l'heure de l'exécution seront créés dans le plugin de profil local
 
-![Autotune Copy to local profile](../images/Autotune/Autotune_7.png)
+![Copier vers Profil Local](../images/Autotune/Autotune_7.png)
 
 - Vous pouvez ensuite sélectionner le profil local pour modifier le profil Tuned (il sera sélectionné par défaut lorsque vous ouvrirez le plugin de profil local)
 
   - les valeurs dans le profil local seront arrondies dans l'interface utilisateur aux capacités de votre pompe
 
-  ![Autotune local profile update](../images/Autotune/Autotune_8.png)
+  ![Mise à jour du profil local](../images/Autotune/Autotune_8.png)
 
 - Si vous souhaitez remplacer votre profil d'entrée par le résultat Autotune, cliquez sur le bouton "Mettre à jour profil d'entrée" et validez la fenêtre pop-up avec OK
 
   - Remarque : si vous cliquez sur "Activer le profil" après avoir cliqué sur "Mettre à jour profil d'entrée", alors vous activerez votre profil mis à jour et non le profil par défaut "Tuned" ?
 
-  ![Autotune Update input profile](../images/Autotune/Autotune_9.png)
+  ![Mettre à jour le profil d'entrée](../images/Autotune/Autotune_9.png)
 
 - Si vous avez mis à jour votre profil d'entrée, alors le bouton "Mettre à jour profil d'entrée" est remplacé par le bouton "Réinitialiser profil d'entrée" (voir capture d'écran ci-dessous). Vous pouvez ainsi voir immédiatement si votre profil d'entrée actuel présent dans le plugin de profil local contient déjà le résultat de la dernière exécution Autotune ou non. Vous avez aussi la possibilité de récupérer votre profil d'entrée initial sans les résultats Autotune avec ce bouton
 
-  ![Autotune Update input profile](../images/Autotune/Autotune_10.png)
+  ![Mettre à jour le profil d'entrée](../images/Autotune/Autotune_10.png)
 
 
 
@@ -82,10 +82,10 @@ Le plugin Autotune est une implémentation de l'algorythme autotune OpenAPS dans
 
 ### Paramètres du plugin Autotune
 
-![Autotune default screen](../images/Autotune/Autotune_11.png)
+![Autotune écran par défaut](../images/Autotune/Autotune_11.png)
 
 - Automation Switch Profile (default Off): see [Run Autotune with an automation rule](#run-autotune-with-an-automation-rule) below. Si vous activez ce paramètre, le profil d'entrée sera automatiquement mis à jour par le profil Tuned, et il sera activé.
-  - **Be Carefull, you must trust and verified during several following days that after an update and activation of Tuned profile without modification, it improves your loop**
+  - **Soyez prudent, vous devez prendre confiance en vérifiant pendant plusieurs jours qu'après une mise à jour et l'activation du profil Tuned sans aucune modification, cela améliore effectivement votre boucle.**
 
 - Catégoriser UAM comme basal (par défaut On) : Ce paramètre est pour les utilisateurs utilisant AndroidAPS sans aucun glucide entré (Full UAM). Il empêchera (quand désactivé) de catégoriser les RNS en tant que basal.
   - Remarque : si vous avez au moins une heure d'absorption de glucides détectée pendant une journée, alors toutes les données catégorisées comme "RNS" seront catégorisées en tant que basal, quel que soit ce paramètre (Activé ou Désactivé)
@@ -94,9 +94,9 @@ Le plugin Autotune est une implémentation de l'algorythme autotune OpenAPS dans
 
 ### Other settings
 
-- Autotune utilise également les ratio Max et Min autotsens pour limiter la variation. You can see and adjust these values in Config Builder > Sensitivity detection plugin > Settings > Advanced Settings
+- Autotune utilise également les ratio Max et Min autotsens pour limiter la variation. Vous pouvez voir et ajuster ces valeurs dans Configuration > Plugin Sensitivité > Paramètres > Paramètres Avancés
 
-  ![Autotune default screen](../images/Autotune/Autotune_12.png)
+  ![Autotune écran par défaut](../images/Autotune/Autotune_12.png)
 
 
 
@@ -112,7 +112,7 @@ Le plugin Autotune est une implémentation de l'algorythme autotune OpenAPS dans
 
 - Vous pouvez voir dans la copie d'écran ci-dessous le profil Tuned avec ce paramètre desactivé (à gauche) et activé (à droite)
 
-  ![Autotune default screen](../images/Autotune/Autotune_13.png)
+  ![Autotune écran par défaut](../images/Autotune/Autotune_13.png)
 
 
 
@@ -122,11 +122,11 @@ Le plugin Autotune est une implémentation de l'algorythme autotune OpenAPS dans
   - If the number of day included in Autotune calculation is lower than the number of Tune days, then you will see how many days will be included on the right of Tune days selector (10 days in the example below)
   - This setting gives good results only if the number of remaining days is not to small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should select a minimum of 21 or 28 Tune days to have 6 or 8 days included in Autotune calculation)
 
-![Autotune default screen](../images/Autotune/Autotune_14b.png)
+![Autotune écran par défaut](../images/Autotune/Autotune_14b.png)
 
 - During Autotune calculation, you can see the progress of the calculations ("Partial result day 3 / 10 tuned" on example below)
 
-  ![Autotune default screen](../images/Autotune/Autotune_15b.png)
+  ![Autotune écran par défaut](../images/Autotune/Autotune_15b.png)
 
 
 
@@ -140,19 +140,19 @@ Note: for more information on how to set an automation rule, see [here](../Daily
 
 - Vous devez sélectionner le déclencheur Période répétitive : il ne faut exécuter Autotune au maximum qu'une seule fois par jour, Autotune est conçu pour être exécuté tous les jours (à chaque nouvelle exécution, vous décalez la période de calcul d'un jour et rapidement les modifications du profil devrait être très faibles)
 
-  ![Autotune default screen](../images/Autotune/Autotune_16.png)
+  ![Autotune écran par défaut](../images/Autotune/Autotune_16.png)
 
 - Il est préférable au début d'exécuter Autotune pendant la journée pour pouvoir vérifier les résultats. Si vous voulez exécuter Autotune dans la nuit, vous devez sélectionner dans le déclencheur 4 heure du matin ou plus tàrd pour inclure le jour courant dans le calcul Autotune suivant.
 
-  ![Autotune default screen](../images/Autotune/Autotune_17.png)
+  ![Autotune écran par défaut](../images/Autotune/Autotune_17.png)
 
 - Ensuite, vous pouvez sélectionner l'action "Lancer Autotune" dans la liste
 
-  ![Autotune default screen](../images/Autotune/Autotune_18.png)
+  ![Autotune écran par défaut](../images/Autotune/Autotune_18.png)
 
 - Vous pouvez ensuite sélectionner l'action Profil Autotune pour régler les paramètres. Les paramètres par défaut sont "Profil actif", le nombre de jours défini dans les préférences Autotune, et tous les jours sont sélectionnés.
 
-  ![Autotune default screen](../images/Autotune/Autotune_19b.png)
+  ![Autotune écran par défaut](../images/Autotune/Autotune_19b.png)
 
 - After a few days, if you fully trust Autotune results and percentage of modification is low, you can modify [Autotune settings](#autotune-plugin-settings) "Automation Switch Profile" to enabled to automatically update and activate profile tuned after calculation.
 
@@ -160,7 +160,7 @@ Note: if you want to automatically tune profiles for specific days of the week (
 
 - See below an example of rule to tune "my profile" on all "Working days" with 14 Tune days selected (so only 10 days included in autotune calculation).
 
-![Autotune default screen](../images/Autotune/Autotune_20b.png)
+![Autotune écran par défaut](../images/Autotune/Autotune_20b.png)
 
 
 
@@ -172,7 +172,7 @@ Autotune n'est qu'une aide, il est important de vérifier régulièrement si vou
 
 Always use Autotune several days manually to check results before applying them. Et ce n'est que lorsque vous faites entièrement confiance aux résultats Autotune et quand la variation devient très faible entre le profil précédent et le profil calculé que vous pouvez commencer à utiliser l'automatisation (jamais avant)
 
-- Autotune can work very well for some users and not for others, so **If you don't trust Autotune result, don't use it**
+- Autotune peut très bien fonctionner pour certains utilisateurs et pas du tout pour d'autres, donc **Si vous ne faites pas confiance au résultat Autotune, ne l'utilisez pas**
 
 Il est également important d'analyser les résultats d'Autotune pour comprendre (ou essayer de comprendre) pourquoi Autotune propose ces modifications
 
