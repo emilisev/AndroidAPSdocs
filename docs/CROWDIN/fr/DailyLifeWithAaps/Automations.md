@@ -92,7 +92,7 @@ Caution must be taken when selecting a ‘negative value’ within the ‘Condit
 
 **Example 1:** Creating a Condition **"is lesser than"** "-0.1" will:
 
-Trigger an **Automation** for any number which is **strictly** less than** -0.1. This includes numbers like -0.2, -0.3, -0.4 and so on. Remember that -0.1 itself **is not** included in this condition. (The condition "is equal or lesser than -0.1" _would_ include -0.1).
+Trigger an **Automation** for any number which is **strictly** less than** -0.1. This includes numbers like -0.2, -0.3, -0.4 and so on. This includes numbers like -0.2, -0.3, -0.4 and so on. Remember that -0.1 itself **is not** included in this condition.
 
 **Example 2:** Creating a Condition "is greater than" -0.1 will:
 
