@@ -8,11 +8,11 @@
 
   ![Open plugin preferences](../images/Pref2020_OpenPlugin2.png)
 
-- **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
+- **Les sous-menus** peuvent être ouverts en cliquant sur le triangle situé sous le titre du sous-menu.
 
   ![Open submenu](../images/Pref2020_Submenu2.png)
 
-- With the **filter** on top of the preferences screen you can quickly access certain preferences. Il suffit de taper une partie du texte que vous cherchez.
+- Avec le **filtre** en haut de l'écran des préférences, vous pouvez accéder rapidement à certaines préférences. Il suffit de taper une partie du texte que vous cherchez.
 
   ![Preferences filter](../images/Pref2021_Filter.png)
 
@@ -26,11 +26,11 @@
 
 ![Preferences > General](../images/Pref2020_General.png)
 
-**Units**
+**Unités**
 
 - Définissez les unités mmol/l ou mg/dl selon vos préférences.
 
-**Language**
+**Langue**
 
 - Nouvelle option pour utiliser la langue par défaut du téléphone (recommandé).
 
@@ -39,7 +39,7 @@
 - Si vous utilisez des langues différentes, vous pouvez parfois voir un mélange de langues. Cela est dû à un problème Android, le remplacement de la langue par défaut d'Android parfois ne fonctionne pas.
 
 
-**Patient name**
+**Nom du patient**
 
 - Peut être utilisé si vous devez différencier plusieurs configurations (par ex. deux enfants DT1 de votre famille).
 
@@ -52,7 +52,7 @@
 
 #### Mot de passe principal
 
-- Necessary to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7. **Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
+- Necessary to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7. **La protection biométrique ne fonctionne pas sur les téléphones OnePlus. Ceci est un problème connu de OnePlus sur certains téléphones.**
 
 - Ouvrez les préférences (menu trois points en haut à droite de l'écran d'accueil)
 
@@ -62,7 +62,7 @@
 
 - Entrez le mot de passe, confirmez le et cliquez sur OK.
 
-  ![Set master password](../images/MasterPW.png)
+  ![Définir le mot de passe principal](../images/MasterPW.png)
 
 #### Protection des paramètres
 
@@ -100,14 +100,14 @@
 
 ##### Orientation portrait
 
-- **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
-- **Large Display** has an increased size of all graphs compared to other skins
+- **Thème d'origine** et **Les boutons sont toujours affichés en bas de l'écran** sont identiques
+- **Grand écran** a une taille de graphiques augmentée comparé aux autres thèmes
 
 ##### Orientation paysage
 
-- Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
+- En utilisant **Thème d'origine** et **Grand écran**, vous devez défiler vers le bas pour voir les boutons en bas de l'écran
 
-- **Large Display** has an increased size of all graphs compared to other skins
+- **Grand écran** a une taille de graphiques augmentée comparé aux autres thèmes
 
   ![Skins depending on phone's display orientation](../images/Screenshots_Skins.png)
 
@@ -222,7 +222,7 @@
 #### Superbolus
 
 - Option to enable superbolus in bolus wizard.
-- [Superbolus](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes.
+- le principe des [Superbolus](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) est "d'emprunter" de l'insuline du débit de basal dans les deux prochaines heures pour éviter les pics.
 
 ## Traitements de sécurité
 
@@ -252,9 +252,9 @@
 ### Mode APS
 
 - Basculer entre les boucles ouvertes et fermées ainsi que le mode arrêt glycémie basses (AGB)
-- **Open looping** means TBR suggestions are made based on your data and appear as a notification. Après confirmation manuelle, la commande d'injection de l'insuline sera transférée à la pompe. Ce n'est que si vous utilisez la pompe virtuelle que vous devez la saisir manuellement.
-- **Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.
-- **Low glucose suspend** is similar to closed looping, but overrides the maxIOB setting to zero. Cela signifie que si la glycémie diminue, le système peut réduire le débit basal pour vous, mais si la glycémie augmente, il n'augmentera le débit basal que si l'IA est négative (liée à un Arrêt Glycémie Basse précédent).
+- **Boucle ouverte** signifie que les suggestions DBT sont faites en fonction de vos données et apparaissent comme une notification. Après confirmation manuelle, la commande d'injection de l'insuline sera transférée à la pompe. Ce n'est que si vous utilisez la pompe virtuelle que vous devez la saisir manuellement.
+- **La Boucle fermée** signifie que les suggestions DBT (Débit de Basal Temporaire) sont automatiquement envoyées à votre pompe sans confirmation ou entrée de votre part.
+- Le mode **Arrêt Glycémie Basse** est similaire à la boucle fermée, mais limite le paramètre maxIOB à zéro. Cela signifie que si la glycémie diminue, le système peut réduire le débit basal pour vous, mais si la glycémie augmente, il n'augmentera le débit basal que si l'IA est négative (liée à un Arrêt Glycémie Basse précédent).
 
 (Preferences-minimal-request-change)=
 ### Changement minimum \[%\]
@@ -274,14 +274,14 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 ### Paramètres OpenAPS AMA
 
 - Permet au système de reagir plus rapidement après un bolus de repas SI vous entrez les Glucides de manière fiable.
-- More details about the settings and Autosens can be found in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+- Plus de détail sur les paramètres et l'Autosens peuvent être trouvés dans la [documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
 (Preferences-max-u-h-a-temp-basal-can-be-set-to)=
 #### Débit max en U/h pour une Temp Basal
 
 - Existe comme une limite de sécurité pour empêcher AAPS d'etre capable d'administrer un dosage de Basal dangereusement élevé.
 - La valeur est definie en Unités d'insuline par heure (U/h).
-- Il est conseillé de definir cette valuer de facon raisonnable et sensée. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**.
+- Il est conseillé de definir cette valuer de facon raisonnable et sensée. Une bonne recommandation est de prendre le **débit de basal le plus élevé** de votre profil et de le **multiplier par 4**.
 - Par exemple, si le dosage basal le plus élevé de votre profil est de 0,5 U/h, vous pourriez le multiplier par 4 pour obtenir la valeur de 2 U/h.
 - See also [detailed feature description](../DailyLifeWithAaps/KeyAapsFeatures.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal).
 
@@ -289,21 +289,21 @@ Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md
 
 - Une quantité d'insuline basale supplémentaire (en unités) a pu s'accumuler dans votre corps, en plus de votre profil basal normal.
 - Une fois cette valeur atteinte, AAPS cessera de délivrer de l'insuline basale supplémentaire jusqu'à ce que votre Insuline basale Active (IA) aie diminuée et soit de nouveau dans cette plage.
-- This value **does not consider bolus IOB**, only basal.
+- Cette valeur **ne prend pas en compte pas l'Insuline Active IA des bolus**, mais seulement la basale.
 - Cette valeur est calculée et surveillée indépendamment de votre débit de basal normal. Ce n'est que l'insuline basale additionnelle en plus du débit normal qui est pris en compte.
 
-When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. Cela empêche AAPS de donner de l'insuline basale supplémentaire. Pendant ce temps, AAPS sera toujours en mesure de limiter ou de désactiver votre insuline basale pour prévenir l'hypoglycémie. C'est une étape importante pour :
+Lorsque vous commencez à boucler, **il est conseillé de mettre l'IA basal Max à 0** pour une période de temps, pendant que vous vous habituez au système. Cela empêche AAPS de donner de l'insuline basale supplémentaire. Pendant ce temps, AAPS sera toujours en mesure de limiter ou de désactiver votre insuline basale pour prévenir l'hypoglycémie. C'est une étape importante pour :
 
 - Avoir un certain temps pour s'habituer en toute sécurité au système AAPS et surveiller son fonctionnement.
 - Profiter de l'occasion pour parfaire votre profil basal et votre Sensibilité à l'Insulin (SI).
 - Voir comment AAPS limite votre insuline basale pour prévenir l'hypoglycémie.
 
-Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commencer à vous donner de l'insuline basale supplémentaire, en augmentant la valeur de l'IA basal Max. The recommended guideline for this is to take the **highest basal rate** in your profile and **multiply it by 3**. Par exemple, si le dosage basal le plus élevé de votre profil est de 0,5 U/h, vous pourriez le multiplier par 3 pour obtenir la valeur de 1,5 U/h.
+Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commencer à vous donner de l'insuline basale supplémentaire, en augmentant la valeur de l'IA basal Max. Une bonne recommandation est de prendre le **débit de basal maximum** de votre profil et de le **multiplier par 3**. Par exemple, si le dosage basal le plus élevé de votre profil est de 0,5 U/h, vous pourriez le multiplier par 3 pour obtenir la valeur de 1,5 U/h.
 
 - Vous pouvez commencer prudemment avec cette valeur et l'augmenter lentement avec le temps.
 - Ce ne sont que des lignes directrices; chacun a un corps différent. Vous trouverez peut-être que vous avez besoin plus ou moins que ce qui est recommandé ici, mais commencez toujours prudemment et ajustez lentement.
 
-**Note: As a safety feature, Max Basal IOB is hard-limited to 7u.**
+**Remarque : En tant que fonction de sécurité, l'IA Max Basal est limitée à 7 U.**
 
 #### Autosens
 
@@ -314,7 +314,7 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 #### Paramètres avancés (OpenAPS AMA)
 
 - Normalement, vous n'avez pas à modifier les paramètres dans cette boîte de dialogue !
-- If you want to change them anyway make sure to read about details in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) and to understand what you are doing.
+- Si vous voulez quand même les changer, lisez en détail la [documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) et assurez-vous de bien comprendre ce que vous faites.
 
 (Preferences-openaps-smb-settings)=
 ### Paramètres OpenAPS SMB
@@ -327,7 +327,7 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 
 - Details on the different enable options are described in [OpenAPS feature section](../DailyLifeWithAaps/KeyAapsFeatures.md#enable-smb).
 
-- *How frequently SMBs will be given in min* is a restriction for SMB to be delivered only every 4 min by default. Cette valeur empêche le système d'émettre trop souvent des SMB (par exemple dans le cas où une cible temporaire a été définie). Vous ne devriez pas modifier ce paramètre sauf si vous en connaissez exactement les conséquences.
+- *La fréquence à laquelle les SMB seront donnés en min* est une restriction pour que le SMB ne soit distribué que toutes les 4 minutes par défaut. Cette valeur empêche le système d'émettre trop souvent des SMB (par exemple dans le cas où une cible temporaire a été définie). Vous ne devriez pas modifier ce paramètre sauf si vous en connaissez exactement les conséquences.
 
 - If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) will modify your glucose target according to your blood glucose deviations.
 
@@ -355,7 +355,7 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 #### Paramètres avancés (OpenAPS SMB)
 
 - Normalement, vous n'avez pas à modifier les paramètres dans cette boîte de dialogue !
-- If you want to change them anyway make sure to read about details in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) and to understand what you are doing.
+- Si vous voulez quand même les changer, lisez en détail la [documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) et assurez-vous de bien comprendre ce que vous faites.
 
 ## Paramètres d’absorption
 
@@ -369,11 +369,11 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 
 - Parfois, lorsque l'absorption de glucides ne peut pas être déterminée de façon dynamique en fonction des glycémies, AAPS intègre une décomposition par défaut à vos glucides. De base, c'est une sécurité intégrée.
 
-- To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc.
+- Pour le dire simplement: L'algorithme "sait" comment vos glycémies *devraient* se comporter quand elles sont affectées par la dose actuelle d'insuline, etc.
 
 - Chaque fois qu'il y a un écart positif par rapport au comportement attendu, certains glucides sont absorbés/décomposés. Gros changement = beaucoup de glucides, etc.
 
-- Le min_5m_carbimpact définit l'impact par défaut de l'absorption des glucides par 5 minutes. For more details see [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
+- Le min_5m_carbimpact définit l'impact par défaut de l'absorption des glucides par 5 minutes. Pour plus de détails, voir la [documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
 
 - La valeur standard pour AMA est de 5, pour SMB c'est 8.
 
@@ -394,11 +394,11 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 
 The options here will vary depending on which pump driver you have selected in [Config Builder](../SettingUpAaps/ConfigBuilder.md#pump).  Appairez et réglez votre pompe selon les instructions relatives à la pompe :
 
-- [DanaR Insulin Pump](../CompatiblePumps/DanaR-Insulin-Pump.md)
-- [DanaRS Insulin Pump](../CompatiblePumps/DanaRS-Insulin-Pump.md)
-- [Accu Chek Combo Pump](../CompatiblePumps/Accu-Chek-Combo-Pump.md)
-- [Accu Chek Insight Pump](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
-- [Medtronic Pump](../CompatiblePumps/MedtronicPump.md)
+- [Pompe à Insuline DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md)
+- [Pompe à Insuline DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
+- [Pompe Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md)
+- [Pompe Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
+- [Pompe Medtronic](../CompatiblePumps/MedtronicPump.md)
 
 If using AAPS to open loop then make sure you have selected Virtual Pump in config builder.
 
@@ -410,7 +410,7 @@ If using AAPS to open loop then make sure you have selected Virtual Pump in conf
 Original communication protocol, can be used with older Nightscout versions.
 
 - Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
-  - **Make sure that the URL is WITHOUT /api/v1/ at the end.**
+  - **Vérifiez bien que l'URL est SANS /api/v1/ à la fin.**
 - The *[API secret](https://nightscout.github.io/nightscout/setup_variables/#api-secret-nightscout-password)* (a 12 character password recorded in your Nightscout variables).
 - This enables data to be read and written between both the Nightscout website and AAPS.
 - Vérifiez deux fois les fautes de frappe ici si vous êtes coincé dans l'objectif 1.
@@ -428,7 +428,7 @@ When using NSClientV3, all uploaders must be using the API V3. Since most are no
 ```
 
 - Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
-  - **Make sure that the URL is WITHOUT /api/v1/ at the end.**
+  - **Vérifiez bien que l'URL est SANS /api/v1/ à la fin.**
 - In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in **NS access token** (not your API Secret!).
 - This enables data to be read and written between both the Nightscout website and AAPS.
 - Vérifiez deux fois les fautes de frappe ici si vous êtes coincé dans l'objectif 1.
