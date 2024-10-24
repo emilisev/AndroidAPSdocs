@@ -6,7 +6,7 @@ La solution de contournement suivante devrait prolonger la durée d'utilisation 
 
 ## 1. Téléchargez la dernière version de Google Services pour Wear OS
 
-- Using [apkmirror website](https://www.apkmirror.com/apk/google-inc/google-play-services-android-wear/) you can find the latest apk for "Google Play Services (Wear OS)".
+- En utilisant le [site web apkmirror](https://www.apkmirror.com/apk/google-inc/google-play-services-android-wear/) vous pouvez trouver la dernière apk pour "Google Play Services (Wear OS)".
 
   Architecture : armeabi-v7a, version minimale : Android 6.0+, Écran DPI : nodpi
 
@@ -20,15 +20,15 @@ La solution de contournement suivante devrait prolonger la durée d'utilisation 
 ## 2. Téléchargez / Installez les outils de débogage adb sur votre ordinateur
 
 - Il y a plusieurs façons d'installer l'outil de débogage adb.
-- It is recommended to use [SDK Platform Tools](https://developer.android.com/studio/releases/platform-tools): Just download zip file and unzip to a directory of your choice.
+- Il est recommandé d'utiliser [SDK Platform Tools](https://developer.android.com/studio/releases/platform-tools) : téléchargez juste le fichier zip et décompressez le vers le répertoire de votre choix.
 
 ## 3. Activez les options de débogage ADB sur votre montre
 
-- Enable developer mode by going to Settings --> About --> Build number
+- Activez le mode développeur en allant dans Paramètres --> À propos --> Numéro de build
 - Or it could be Settings --> System --> About -->  --> Versions --> Build number
 
 - Cliquez dessus 7 fois.
-- Now go to Settings --> Developer Options --> ADB Debugging (enable)
+- Maintenant, allez dans Paramètres --> Options développeur --> Débogage ADB (activer)
 
 ## 4. Connectez votre montre à votre ordinateur
 
