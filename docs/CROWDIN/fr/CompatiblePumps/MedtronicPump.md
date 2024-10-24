@@ -4,31 +4,31 @@ Le pilote ne fonctionne pas avec les nouveaux modèles, y compris tous les modè
 
 Les combinaisons de modèles et de firmware suivantes sont compatibles :
 
-    - 512/712 (any firmware version)
-    - 515/715 (any firmware version)
-    - 522/722 (any firmware version)
-    - 523/723 (firmware 2.4A or lower)
-    - 554/754 EU release (firmware 2.6A or lower)
-    - 554/754 Canada release (firmware 2.7A or lower)
+    - 512/712 (tout firmware)
+    - 515/715 (tout firmware)
+    - 522/722 (tout firmware)
+    - 523/723 (firmware 2.4A ou inférieur)
+    - 554/754 version EU (firmware 2.6A ou inférieur)
+    - 554/754 version canadienne (firmware 2.7A ou inférieure)
 
-You can find out how to check the firmware on the pumps at [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) or [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
+Vous pouvez trouver comment vérifier le firmware de la pompe dans la [documentation d'OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) et la [documentation de Loop](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
 
 ## Configuration matérielle et logicielle requise
-- **Phone:** The Medtronic driver should work with any android phone that supports Bluetooth connections. **IMPORTANT: Phone manufacturers Bluetooth implementations can vary so how each phone model behaves can vary.  Par exemple, certains téléphones géreront différemment l'activation/la désactivation du Bluetooth.  This can impact the user experience when AAPS needs to reconnect to your Rileylink type device.**
-- **RileyLink Compatible Device:** Android phones cannot communicate to Medtronic pumps without a seperate device to handle communications. Cet appareil sera relié à votre téléphone via Bluetooth et à votre pompe via une connexion radio compatible.  Le premier de ces appareils a été appelé un Rileylink mais un certain nombre d'autres options sont maintenant disponibles qui peuvent offrir des fonctionnalités supplémentaires.
+- **Téléphone :** Le pilote Medtronic devrait fonctionner avec n'importe quel téléphone Android prenant en charge les connexions Bluetooth. **IMPORTANT : Les implémentations Bluetooth des fabricants de téléphones peuvent varier de sorte que chaque modèle de téléphone peut varier.  Par exemple, certains téléphones géreront différemment l'activation/la désactivation du Bluetooth.  Par exemple, certains téléphones géreront différemment l'activation/la désactivation du Bluetooth.</li>
+- **Périphérique compatible RileyLink :** Les téléphones Android ne peuvent pas communiquer avec les pompes Medtronic sans un appareil séparé pour gérer les communications. Cet appareil sera relié à votre téléphone via Bluetooth et à votre pompe via une connexion radio compatible.  Le premier de ces appareils a été appelé un Rileylink mais un certain nombre d'autres options sont maintenant disponibles qui peuvent offrir des fonctionnalités supplémentaires.
 
-    - Rileylink available at [getrileylink.org](https://getrileylink.org/product/rileylink916)
-    - Orangelink available at [getrileylink.org](https://getrileylink.org/product/orangelink)
-    - Emalink (multiple model options) available at [github.com](https://github.com/sks01/EmaLink)
-    - Gnarl (some additional DIY required) details available at [github.com](https://github.com/ecc1/gnarl)
+    - Rileylink disponible sur [getrileylink.org](https://getrileylink.org/product/rileylink916)
+    - Orangelink disponible sur [getrileylink.org](https://getrileylink.org/product/orangelink)
+    - Emalink (multiples options de modèles) disponible sur [github.com](https://github.com/sks01/EmaLink)
+    - Gnarl (quelques détails supplémentaires requis) disponible sur [github.com](https://github.com/ecc1/gnarl)</ul>
 
-A comparision chart for the various Rileylink compatible devices can be found at [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
+Un graphique de comparaison pour les différents appareils compatibles avec Rileylink peut être trouvé sur [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
 
 (MedtronicPump-configuration-of-the-pump)=
 ## Configuration de la pompe
 The following settings should be configured on the pump in order for AAPS to remotely send commands.  The steps necessary to make each change on a Medtronic 715 are shown in brackets for each setting.  The exact steps may vary based on pump type and/or firmware version.
 
-- **Enable remote mode on Pump** (On the pump press Act and go to Utilities -> Remote Options, Select On, and on next screen do Add ID and add any random id such as  111111). At least one ID must be on the Remote ID list in order for the pump to expect remote communication.
+- **Activer le mode à distance sur la pompe** (Sur la pompe, appuyez sur Act puis allez dans Utilitaires -> Options à distance et sélectionnez Activé. Dans l'écran suivant, faites Ajouter un ID et ajoutez n'importe quel id aléatoire, tel que 1111). At least one ID must be on the Remote ID list in order for the pump to expect remote communication.
 - **Set Max Basal** (On the pump press Act and got to Basal and then select Max Basal Rate) As an example setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
 - **Set Max Bolus** (On the pump press Act and to to Bolus and then select Max Bolus) This is the largest bolus that the pump will accept.  The maximum value permitted by the pump is 25.
 - **Set profile to Standard**. (On the pump press Act and go to Basal and then Select Patterns) The pump will only need one profile as AAPS will manage different profiles on your phone.  No other patterns are required.
@@ -43,13 +43,13 @@ The following settings should be configured on the pump in order for AAPS to rem
 
 When configuring your Medtronic pump with the setup wizard it is possible that you will be prevented from completing setup because of Bluetooth issues (e.g. you cannot succesfully connect to the pump).  Should this happen you should select the virtual pump option in order to complete the configuration and allow for further troubleshooting by using option 2.
 
-![Medtronic Settings](../images/Medtronic01a.png)
+![Paramètres Medtronic](../images/Medtronic01a.png)
 
 While setting up AAPS to work with your medtronic pump you need to set following items: (see picture above)
 - **Pump Serial Number**: Displayed on the back of your pump and starts with SN. You should only enter the 6 numbers shown without any alpabetic characters (e.g. 123456).
 - **Pump Type**: The model pump you are using (e.g. 522).
 - **Pump Frequency**: There are two options based on where your pump was originally distributed.  Please check the [FAQ](#faq) if you are unsure which option to select):
-    - for US & Canada, frequency used is 916 Mhz
+    - pour les US & le Canada, la fréquence utilisée est 916 Mhz
     - pour le reste du monde, la fréquence utilisée est de 868 Mhz
 - **Max Basal on Pump (U/h)**: This needs to match the setting set on your pump (see Configuration of the pump above).  Again this setting must be carefully selected as it will determine how much AAPS can deliver via your basal rate.  This will effectively set the maximum temporary basal rate.  As an example, setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
 - **Max Bolus on Pump (U)** (in an hour): This needs to match the setting set on your pump (see Configuration of the pump above).  This setting should be carefully considered as it determines how large a bolus AAPS can ever set.
@@ -63,14 +63,14 @@ While setting up AAPS to work with your medtronic pump you need to set following
     - NiZn (vue étendue)
     - NiMH (vue Étendue)
 
-- **Bolus/Treatments Debugging**:  Select On or Off depending on requirements.
+- **Débogage Bolus/Traitements**: Sélectionnez On ou Off selon les exigences.
 - **RileyLink Configuration**: This option allows you to find and pair your Rileylink compatible device.  Selecting this will show any nearby Rileylink compatible devices and the signal strength.
 - **Use Scanning** Activates Bluetooth scanning before connecting with your Rileylink Compatible devices.  This should improve the reliability of your connection to the device.
 - **Show battery level reported by OrangeLink/EmaLink/DiaLink** This feature is only supported on newer link devices such as the EmaLink or OrangeLink. Values will be shown in the Medtronic tab in AnroidAPS.
 - **Set neutral temp basals** By default Medtronic pumps beep on the hour when a temporary basal rate is active.  Enabling this option can help reduce the number of beeps heard by interupting a temporary basal at the hour change in order to supress the beep.
 
 ## Onglet MEDTRONIC (MDT)
-![MDT Tab](../images/Medtronic02.png) When AAPS is configured to use a Medtronic pump a MDT tab will be shown in the list of tabs at the top of the screen.  This tab displays the current pump status information along with some Medtronic specific actions.
+![Onglet MDT](../images/Medtronic02.png) When AAPS is configured to use a Medtronic pump a MDT tab will be shown in the list of tabs at the top of the screen.  This tab displays the current pump status information along with some Medtronic specific actions.
 - **RileyLink Status**: The current status of the connection between your phone and Rileylink compatible device.  This should show as Connected at all times. Any other status may require user intervention.
 - **RileyLink Battery**: The current battery level of your EmaLink or OrangeLink device.  Dependent on selecting "Show battery level reported by OrangeLink/EmaLink/DiaLink device" in the Medtronic Pump Configuration menu.
 - **Pump Status**: The current status of the pump connection.  As the pump will not be constantly connected this will primarily show the sleep icon.  There are a number of possible other status including "Waking Up" when AAPS is trying to issue a command or other possible pump commands such as "Get Time", "Set TBR", etc.
@@ -79,8 +79,8 @@ While setting up AAPS to work with your medtronic pump you need to set following
 - **Last Bolus**: How long ago the last succesful bolus was delivered.
 - **Base Basal Rate**: This is the base basal rate that runs on pump at this hour in your active Profile.
 - **Temp basal**: Temp basal currently being delivered which can be 0 units per hour.
-- **Reservoir**: How much insulin is in reservoir (updated at least every hour).
-- **Errors**: Error string if there is problem (mostly shows if there is error in configuration).
+- **Réservoir** : Indique la quantité d'insuline présente dans le réservoir (mise à jour au minimum toutes les heures).
+- **Erreurs** : Affiche une erreur en cas d'incident (le plus souvent il s'agit d'une erreur dans la configuration).
 
 At the bottom of the screen there are three buttons:
 - **Refresh** is for refreshing the current status of the pump. This should only be used if the connection was lost for a sustained period as this will require a full data refresh (retrieve history, get/set time, get profile, get battery status, etc).
@@ -89,18 +89,18 @@ At the bottom of the screen there are three buttons:
 
 (MedtronicPump-pump-history)=
 ## Historique pompe
-![Pump History Dialog](../images/Medtronic03.png)
+![Boîte de dialogue Historique pompe](../images/Medtronic03.png)
 
 L'historique de la pompe est récupéré toutes les 5 minutes et stocké localement. Only the previous 24 hours worth of history is stored.  The allows for a convinient way to see pump behaviour should that be required.  The only items stored are those relevenant to AAPS and will not inlcude a configuration function that has no relevance.
 
 (MedtronicPump-rl-status-rileylink-status)=
 ## État RL (RileyLink État)
-![RileyLink Status - Settings](../images/Medtronic04.png) ![RileyLink Status - History](../images/Medtronic05.png)
+![État RileyLink - Paramètres](../images/Medtronic04.png) ![État RileyLink - Historique](../images/Medtronic05.png)
 
 
 The RL Status dialog has two tabs:
 - **Settings**: Shows settings about the RileyLink compatible device: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Le type d'appareil est toujours Pompe Medtronic, Modèle affiche votre modèle de pompe, Numéro de série est le numéro de la pompe configuré, Fréquence de pompe indique la fréquence utilisée, Dernière fréquence est la dernière fréquence utilisée.
-- **History**: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
+- **Historique** : Affiche l'historique des communications, pour le RileyLink cela concerne les changements d'état et pour le Medtronic les commandes envoyées à la pompe.
 
 ## Actions
 When the Medtronic driver is used, two additional actions are added to Actions Tab:
@@ -158,7 +158,7 @@ There are a number of options to try and resolve connectivity issues.
 ![Pump Model](../images/Medtronic06.png)
 
 On the back of the pump you will find a line detailing your model number along with a special 3 letter code. The first two letters determine the frequency type and the last one determines color. Here are possible values for Frequency:
-- NA - North America (in frequency selection you need to select "US & Canada (916 MHz)")
-- CA - Canada (in frequency selection you need to select "US & Canada (916 MHz)")
+- NA - Amérique du Nord (pour la fréquence, vous devez sélectionner "US & Canada (916 MHz)")
+- CA - Canada (pour la fréquence, vous devez sélectionner "US & Canada (916 MHz)")
 - WW - Worldwide (pour la fréquence, vous devez sélectionner "Worldwide (868 Mhz)")
  
