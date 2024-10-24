@@ -11,7 +11,7 @@ When first embarking on your **AAPS** journey you will need to create a **Profil
 
 - Night or pattern shift workers - a time shift in **Profile** can be set up for pattern shift workers by altering the number of hours in the **Profile** to how much later/earlier the user will go to bed or wake up.
 
-Why use a  **Profile Percentage** rather than a temporary basal adjustment?  To be more effective in its application a  **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. This ensures a balanced approach is calculated by **AAPS** when administering the user’s insulin intake. Little benefit can be gained in a user’s **Profile** in **AAPS** by a basal reduction if the algorithm continues to deliver the same ratios for ISF and I:C.
+Why use a **Profile Percentage** rather than a temporary basal adjustment?  To be more effective in its application a **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. This ensures a balanced approach is calculated by **AAPS** when administering the user’s insulin intake. Little benefit can be gained in a user’s **Profile** in **AAPS** by a basal reduction if the algorithm continues to deliver the same ratios for ISF and I:C.
 
 ## How to activate a Profile Switch?
 
@@ -25,7 +25,7 @@ Once a new **Profile** has been created and saved, **AAPS** will maintain a libr
 
 A. In order use this feature the user must have more than one **Profile** saved within **AAPS**. To activate a **Profile Switch**:
 
-- __long-press__ on the name of the **Profile** (the example below adopts a ‘Profile’ saved as: “(Lyum) low” on **AAPS’** homescreen and selects the desired **Profile**  form the drop down tab:
+- **long-press** on the name of the **Profile** (the example below adopts a ‘Profile’ saved as: “(Lyum) low” on **AAPS’** homescreen and selects the desired **Profile** form the drop down tab:
 
 1. Long press **Profile**;
 2. Select desired **Profile**; and
@@ -59,9 +59,9 @@ How to action a **Profile** ‘Percentage’:
 It is important that a user understands the essential features of a **Profile Percentage**. By applying a percentage increase or decrease to a **Profile Switch** this will apply in the same percentage to either raise or lower the user’s settings parameters as set within the **Profile**.
 
 For example: a **Profile Switch** to 130% (means the user is 30% more insulin resistant) will instruct **AAPS** to
-- __increase__ the basal rate by 30%;
-- __lower__ the **ISF**: by dividing by 1.3;
-- __lower__ the **I:C** by dividing by 1.3.
+- **increase** the basal rate by 30%;
+- **lower** the **ISF**: by dividing by 1.3;
+- **lower** the **I:C** by dividing by 1.3.
 
 Remember lowering the **ISF** or **I:C** means a stronger ratio and more insulin being administered. This fact can be easily overlooked by new users to **AAPS**.
 
@@ -76,21 +76,21 @@ The effect of a **Profile** Percentage is summarised in the table below::
 
 A ‘time shift’ within a user’s **Profile** feature will move the user’s **Profile’s** settings around the day-to-day clock (‘circadian’) to the desired number of hours entered. This can be helpful for:
 
-- __night shift or pattern workers__:  work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up;
-- __users changing time zones during travelling__; or
-- __users who are type 1 children__: and have a set bedtime routine and insulin resistance catered for within their **Profile**. If for whatever reason, there is a predicted later bedtime for the child, the caregiver can apply a ‘time shift’ to the child’s **Profile** to allow **AAPS** to react to insulin resistance at a desired time period as set by the user.
+- **night shift or pattern workers**: work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up;
+- **users changing time zones during travelling**; or
+- **users who are type 1 children**: and have a set bedtime routine and insulin resistance catered for within their **Profile**. If for whatever reason, there is a predicted later bedtime for the child, the caregiver can apply a ‘time shift’ to the child’s **Profile** to allow **AAPS** to react to insulin resistance at a desired time period as set by the user.
 
 It is always a question of which hour’s **Profile’s** settings should replace the settings of the current time. Cette heure doit être décalée de x heures. So please be mindful of the directions as described in the following example:
   * Heure actuelle : 12:00
-  * **Positive** time shift
+  * **Positif** décalage horaire +10h
     * 2:00 **+10 h** -> 12:00
     * Les paramètres à partir de 2:00 seront utilisés à la place des paramètres normalement utilisés à 12:00 en raison du décalage horaire positif.
-  * **Negative** time shift
+  * **Négatif** décalage horaire +10h
     * 22:00 **-10 h** -> 12:00
     * Les paramètres à partir de 22:00 seront utilisés à la place des paramètres normalement utilisés à 12:00 en raison du décalage horaire négatif.
 
-![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
+![Changement de profil et sens du décalage horaire](../images/ProfileSwitch_PlusMinus2.png)
 
-This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile**  changes.
+This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
 
 
