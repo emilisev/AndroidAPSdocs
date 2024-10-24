@@ -24,7 +24,7 @@ This method uses Juggluco to receive raw, 1-minute interval data from the sensor
 ### Step 1: Setup Juggluco
 Download and install the Juggluco app from [here](https://www.juggluco.nl/Juggluco/download.html). Follow the instructions [here](https://www.juggluco.nl/Juggluco/libre3/)
 
-Make sure you send the glucose values to Xdrip+: In Juggluco's settings you can configure Juggluco to send its glucose value to other apps. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip+
+Make sure you send the glucose values to Xdrip+: In Juggluco's settings you can configure Juggluco to send its glucose value to other apps. Make sure you send the glucose values to Xdrip+: In Juggluco's settings you can configure Juggluco to send its glucose value to other apps.
 
 ![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)
 
@@ -36,13 +36,13 @@ The blood glucose values are received by the xDrip+ app on the smartphone.
 - In xDrip+ select "Libre2 (patched app)" as data source.
 - If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings → Extra Logging Settings → Extra tags for logging. This will log additional error messages for troubleshooting.
 
-![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
+![xDrip+ journaux LibreLink](../images/Libre2_Tags.png)
 
 - Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes by default. You can change the period in the NFC Scan features menu.
 
   → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-  ![xDrip+ advanced settings Libre 2 & raw values](../images/xDrip_Libre3_Smooth.png)
+  ![xDrip+ paramètres avancés Libre 2 & valeurs brutes](../images/xDrip_Libre3_Smooth.png)
 
 
 
@@ -106,4 +106,4 @@ In order to switch from the Libre 3 app to Juggluco, you need to force-stop Libr
 
 Original instructions: [jkaltes website](https://www.juggluco.nl/Juggluco/libre3/)
 
-Additional Github repo: [Github link](https://github.com/maheini/FreeStyle-Libre-3-patch)
+Dépôt Github Supplémentaire : [Lien Github](https://github.com/maheini/FreeStyle-Libre-3-patch)
