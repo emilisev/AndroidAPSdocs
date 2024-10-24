@@ -7,15 +7,15 @@ Physical cartridge/reservoir changes cannot be done via **AAPS** and have to be 
 
 ### Guide for changing both the pump reservoir and cannula
 
-1)  In **AAPS**, disconnect the pump: Long press “Open Loop”/”Closed Loop” icon on the **AAPS** Home Screen and select ‘Disconnect pump - 1 hour”. The pump icon will change to a grey icon, indicating that the pump is disconnected.
+In **AAPS**, disconnect the pump: Long press “Open Loop”/”Closed Loop” icon on the **AAPS** Home Screen and select ‘Disconnect pump - 1 hour”. The pump icon will change to a grey icon, indicating that the pump is disconnected.
 
-2)  Physically change the insulin reservoir: physically disconnect your pump from the body, and change the reservoir/cartridge and cannula as per manufacturer's instructions.
+Physically change the insulin reservoir: physically disconnect your pump from the body, and change the reservoir/cartridge and cannula as per manufacturer's instructions.
 
-3)  Prime/fill the tubing and cannula: this can be done directly on the pump. Be sure to eliminate any bubbles in the tubing.
+Prime/fill the tubing and cannula: this can be done directly on the pump. Be sure to eliminate any bubbles in the tubing.
 
-4)  Attach the new cannula to the body. Once the cannula is inserted and the needle is removed, the attached cannula now has a small air gap which also needs to be primed. To announce this in **AAPS** and prime the site: select the PRIME/FILL button in the **AAPS** actions tab and tick “Pump site change” and/or “Insulin Cartridge Change” as appropriate to record the change. Now press the default insulin cannula prime amount (it is usually around 0.3 U, but check this value is correct for your cannula) and select “OK”. Read the summary message, and confirm to execute the priming by tapping “OK”.
+Attach the new cannula to the body. Once the cannula is inserted and the needle is removed, the attached cannula now has a small air gap which also needs to be primed. Once the cannula is inserted and the needle is removed, the attached cannula now has a small air gap which also needs to be primed. Now press the default insulin cannula prime amount (it is usually around 0.3 U, but check this value is correct for your cannula) and select “OK”. Read the summary message, and confirm to execute the priming by tapping “OK”.
 
-5)  Reconnect the pump in **AAPS**: Press the grey disconnected pump symbol and select ‘Reconnect pump’ to continue looping.
+Reconnect the pump in **AAPS**: Press the grey disconnected pump symbol and select ‘Reconnect pump’ to continue looping.
 
 ### Useful information concerning insulin/cannula changes
 
