@@ -2,7 +2,7 @@
 # Cibles temporaires
 
 ## Que sont les cibles temporaires et où puis-je les définir et les configurer ?
-A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](../SettingUpAaps/YourAapsProfile.md#glucose-targets) for planned activities. This is achieved by **AAPS** manipulating the user’s insulin usage.
+The success of attaining a desired **BG** target will vary depending on a multiple factors ranging from: the reliability of the user’s **AAPS** settings, overall **BG** control, **IOB**, insulin sensitivity, insulin resistance, level of exertion undertaken during the exercise and so forth. Users should have realistic expectations on the results that can be achieved when selecting a **Temp-Target** in **AAPS**.
 
 Temporary targets can be defined within those boundaries :
 
@@ -13,9 +13,9 @@ Temporary targets can be defined within those boundaries :
 
 **AAPS** provides for three **Temp-Target** options suitable for exercise (**Temp-Target- Activity**), meals (**Temp-Target- Eating soon**) and predicted hypoglycemia (**Temp-Target-Hypo**). **Temp-Targets** are located under the **Actions tab**.
 
-Users should have realistic expectations on the results that can be achieved when selecting a **Temp-Target** in **AAPS**. The success of attaining a desired **BG** target will vary depending on a multiple factors ranging from: the reliability of the user’s **AAPS** settings, overall **BG** control, **IOB**, insulin sensitivity, insulin resistance, level of exertion undertaken during the exercise and so forth.
-
 A **Temp-Target** can take approximately 30 minutes or longer in order to attain a desired **BG** target. It is impossible for **AAPS** to achieve a **BG** target with immediate effect and users should be mindful of this when selecting a **Temp-Target**.
+
+A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](../SettingUpAaps/YourAapsProfile.md#glucose-targets) for planned activities. This is achieved by **AAPS** manipulating the user’s insulin usage.
 
 The table below summarises the features of **Temp-Target- Activity**, **Temp-Target- Eating soon**, and **Temp-Target-Hypo**.
 
