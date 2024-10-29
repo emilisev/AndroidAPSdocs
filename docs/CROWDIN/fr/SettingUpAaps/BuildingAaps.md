@@ -171,7 +171,7 @@ Select "Standard" as installation type.
 
 Verify the settings by clicking "Next" again.
 
-![Verify_Settings](../images/Building-the-App/024_DefaultInstallation.png)
+![Verify\_Settings](../images/Building-the-App/024_DefaultInstallation.png)
 
 Now you need to accept the license agreements. You have two sections (1 + 3) on the left side which you have to select one after the other and each select "Accept" (2 + 4) on the right side.
 
