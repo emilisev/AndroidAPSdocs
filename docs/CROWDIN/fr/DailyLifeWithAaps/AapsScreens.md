@@ -1,7 +1,7 @@
 # Les écrans d'AAPS
 
 ```{contents} Table of Contents
-:depth: 2
+```{contents} Table of Contents :depth: 2
 ```
 
 ## Écran d'accueil
@@ -95,14 +95,15 @@ If for any reason, there are issues in the BG readings **AAPS** receives, you wi
 The red warning sign is signaling you to get active immediately: You are receiving **duplicate BG data**, which does avoid the loop to do its work right. Therefore, your loop will be disabled until it is resolved.
 
 ```{admonition} Your loop is not running
+```{admonition} Your loop is not running
 :class: note
 Your loop is not running until you solve this issue !
 ```
 
-  ![Red BG warning](../images/bg_warn_red.png)
+  ![Avertissement de glycémie rouge](../images/bg_warn_red.png)
 
 Vous devez savoir pourquoi vous avez des Gly dupliquées :
-* Is Dexcom bridge enabled on your Nightscout site? Disable the bridge by going to the administration panel of your Nightscout instance, edit the "enable" variable and remove the "bridge" part there. (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
+* Is Dexcom bridge enabled on your Nightscout site? Disable the bridge by going to the administration panel of your Nightscout instance, edit the "enable" variable and remove the "bridge" part there. (Pour heroku les [détails peuvent être trouvés ici](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
 * Do multiple sources upload your BG to Nightscout? If you use the BYODA app, enable the upload in **AAPS** but do not enable it in xDrip+, if you use that.
 * Do you have any followers that might receive your BG but do also upload it again to your Nightscout site?
 * Last resort: In **AAPS**, go to [Preferences > NSClient](../SettingUpAaps/Preferences.md#nsclient), select the sync settings and disable the "Accept CGM data from NS" option.
@@ -200,7 +201,7 @@ On the main graph, you can switch on these optional information:
 
 To show this information, click the triangle on the right side of the main graph. Pour le graphique principal, juste les trois options au-dessus de la ligne "\---\---- Graph 1 \---\----" sont disponibles.
 
-   ![Réglage du graphique principal](../images/Home2020_MainGraphSetting.png)
+   ![Détection incorrecte des GA](../images/Home2020_MainGraphSetting.png)
 
 #### Lignes de prédiction
 
@@ -252,7 +253,7 @@ To open settings for additional graphs click the triangle on the right side of t
 
 ![Paramètres graphiques additionnels](../images/Home2020_AdditionalGraphSetting.png)
 
-To add another graph check the box on the left side of its name (i.e. ------- Graph 1 -------).
+To add another graph check the box on the left side of its name (i.e. \---\---- Graph 1 \---\----).
 
 Most users find the following configuration of additional graphs to be adequate :
 * Graph 1 with IOB, COB, Sensitivity
@@ -303,11 +304,11 @@ This line shows the degree to which BG ‘should’ rise or fall based on insuli
 
 ![Boutons de l'écran d'accueil](../images/Screenshots_DEV_BGI.png)
 
-It is a good combination to display this line along with the Deviation bars. They share the same scale, but it is  a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Comparing the BGI line and the Deviation bars is another way to understand how **BG** fluctuates. Here, at the time marked **1**, the Deviation bars are greater than the BGI line, indicating that BG is rising. Later, during the hours marked **2**, BGI and DEV are pretty much in line, indicating that BG is stable.
+It is a good combination to display this line along with the Deviation bars. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Comparing the BGI line and the Deviation bars is another way to understand how **BG** fluctuates. Here, at the time marked **1**, the Deviation bars are greater than the BGI line, indicating that BG is rising. Later, during the hours marked **2**, BGI and DEV are pretty much in line, indicating that BG is stable.
 
 ### Section H - Boutons
 
-![Homescreen buttons](../images/Home2020_Buttons.png)
+![Boutons de l'écran d'accueil](../images/Home2020_Buttons.png)
 
 Buttons for Insulin, Carbs and Calculator are almost always visible. If the connection to the pump is lost, the insulin button will not be visible.
 
@@ -365,7 +366,7 @@ Details are set up in [Preferences > Overview > QuickWizard settings](../Setting
 
 ## Assistant bolus
 
-![Assistant Bolus](../images/Home2020_BolusWizard_v2.png)
+![Assistant bolus](../images/Home2020_BolusWizard_v2.png)
 
 When you want to make a meal bolus, this is where you will normally make it from.
 
@@ -460,7 +461,7 @@ Thresholds can be set in [Preferences > Overview > Status lights](../SettingUpAa
 
 If the sensor level is the same as the phone battery level, your xDrip+ version is probably too old and needs an update. (Needs xDrip+ nightly build Dec. 10, 2020 or newer.)
 
-   ![Le niveau de la batterie du capteur est égal au niveau de la batterie du téléphone](../images/Home2021_ActionSensorBat.png)
+   ![![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)](../images/Home2021_ActionSensorBat.png)
 
 ### Careportal - section O
 
@@ -496,7 +497,7 @@ Comme la plupart de ces règles empiriques, leur validité réelle est limitée.
 
 This shows the activity profile of the insulin you have chosen in [config builder](../SettingUpAaps/ConfigBuilder.md#insulin).
 
-The **purple**  line shows how much insulin remains after it has been injected as it decays with time and the **blue** line shows how active it is. The important thing to note is that the decay has a **long tail**. If you have been used to manual pumping, you have probably been used to assuming that insulin decays over about 3.5 hours. However, when you are looping, the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the **AAPS** algorithm.
+The **purple** line shows how much insulin remains after it has been injected as it decays with time and the **blue** line shows how active it is. The important thing to note is that the decay has a **long tail**. If you have been used to manual pumping, you have probably been used to assuming that insulin decays over about 3.5 hours. However, when you are looping, the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the **AAPS** algorithm.
 
 Pour plus d'informations sur les différents types d'insuline, leurs profils d'activité et l'importance de tout cela, vous pouvez lire un article ici sur [Comprendre les nouvelles courbes IA basées sur des courbes d'activité exponentielles](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
@@ -531,7 +532,7 @@ Le profil contient des informations sur vos paramètres individuels du diabète 
 
 See the detailed **[Profile](../SettingUpAaps/YourAapsProfile.md)** page for more information.
 
-## Automation
+## Automatisation
 
 See the dedicated page [here](../DailyLifeWithAaps/Automations.md).
 
@@ -551,7 +552,7 @@ Depending on your BG source settings, this tab is named differently.
 
 Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low) or duplicate readings.
 
-## Treatments
+## Traitements
 
 This view can be accessed by pressing the 3 dots on the right of the menu, then Treatments. It is not possible to show it in the main menu through the Config Builder. In this view, you can view and alter the history of the following treatments:
 
@@ -569,7 +570,7 @@ In the last column, the data source for each line is displayed in blue. It can b
 
 ### Bolus & carbs
 
-![Carbs & bolus](../images/TreatmentsView1.png)
+![Glucides et bolus](../images/TreatmentsView1.png)
 
 On this tab you can view the bolus and carbs log. Each bolus (line **1** and **4**) shows the remaining associated IOB next to the insulin amount. The origin of the bolus can be either :
 * Meal (manually entered though the Insulin, Quick Wizard or Bolus Wizard buttons)
@@ -579,7 +580,7 @@ The carbs (line **2**) are only stored in Nightscout. If you have used the [Bolu
 
 Depending on the pump used, insulin and carbs can be shown in one single line, or will result in multiple lines: one for the calculation detail, one for the carbs, one for the bolus itself.
 
-The treatment tab can be used to correct faulty carb entries (_i.e._ you over- or underestimated carbs). Note that it is not possible to edit an existing entry, you need to follow the following process:
+The treatment tab can be used to correct faulty carb entries (*i.e.* you over- or underestimated carbs). Note that it is not possible to edit an existing entry, you need to follow the following process:
 
 1. Vérifiez et mémorisez les GA et IA actuels sur l'écran d'accueil.
 2. Selon la pompe, dans l'onglet Traitement, les glucides peuvent être affichés avec l'insuline sur une seule ligne ou dans deux lignes séparées (par ex. avec Dana RS).
