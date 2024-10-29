@@ -30,7 +30,7 @@ The example below illustrates how an **Automation** can enable steps to be elimi
 
 1. **Automations** may conflict with each other, and it is good to review any new **Automation(s)** setting carefully in a safe environment, and understand why an **Automation** may or may not have triggered in the way you expect.
 
-1. If using Autosens, try to use **Temp Targets** instead of **Profile Switches**. **Temp Targets** do not reset Autosens back to 0. **Profile Switches** reset Autosens.
+1. **Profile Switches** reset Autosens. If using Autosens, try to use **Temp Targets** instead of **Profile Switches**. **Temp Targets** do not reset Autosens back to 0.
 
 1. Most **Automations** should only be set for a **limited time duration**, after which **AAPS** can re-evaluate and repeat the **Automation**, if necessary, and if the condition is still met. For example, "start temp target of 7.0 mmol/l for 30 min" or "start **Profile** 110% for 10 min" _and_ "start temp target of 5.0 mmol/l for 10 min". Using **Automations** to create permanent changes (e.g. to stronger %profile) risks hypoglycemia.
 
@@ -60,7 +60,7 @@ To deactivate an **Automation** rule, untick the box left of the name of the **A
 ![Alt text](../images/automation_2024-02-12_20-56-08.png)
 
 
-When setting up an **Automation**, you can first test it by activating the ‘notification’ option under "Actions". This triggers **AAPS** to first display a notification rather than actually automating an action. When you are comfortable that the notification has been triggered at the correct time/conditions, the **Automation** rule can be updated to replace the ‘Notification’ with an ‘Action’.
+When you are comfortable that the notification has been triggered at the correct time/conditions, the **Automation** rule can be updated to replace the ‘Notification’ with an ‘Action’. When setting up an **Automation**, you can first test it by activating the ‘notification’ option under "Actions". This triggers **AAPS** to first display a notification rather than actually automating an action.
 
 ![Alt text](../images/automation_2024-02-12_20-55-05.png)
 
@@ -169,7 +169,7 @@ Once the ‘Action’ is added,  the default values must be changed to the desir
 
 ![Alt text](../images/automation_2024-02-12_20-57-48.png-500x.png)
 
-To reprioritize the **Automation** rules, click and hold the four-lines-button on the right side of the screen. Reorder the  **Automations** by moving the rules up or down.
+Reorder the  **Automations** by moving the rules up or down. To reprioritize the **Automation** rules, click and hold the four-lines-button on the right side of the screen.
 
 ![Alt text](../images/automation_2024-02-12_20-58-00.png-500x.png)
 
