@@ -56,11 +56,11 @@ Avez-vous pensé à désactiver l'autorisation d'installation depuis Google Driv
 Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
 
 ## Option 2. Utiliser un câble USB pour transférer des fichiers
-The second way to transfer the AAPS apk file is with a  [USB cable](https://support.google.com/android/answer/9064445?hl=en).
+La deuxième façon de transférer le fichier APK d'AAPS est avec un [câble USB](https://support.google.com/android/answer/9064445?hl=fr).
 
 Transférez le fichier depuis son emplacement sur votre ordinateur vers le dossier "Downloads" sur le téléphone.
 
-Sur votre téléphone, vous devez autoriser l'installation à partir de sources inconnues. Explanations of how to do this can be found on the internet (_e.g._ [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
+Sur votre téléphone, vous devez autoriser l'installation à partir de sources inconnues. Vous trouverez les explications pour ce faire sur Internet (_par exemple_ [ici](https://www.expressvpn.com/fr/support/vpn-setup/enable-apk-installs-android/) ou [ici](https://www.frandroid.com/comment-faire/tutoriaux/184151_comment-installer-un-fichier-apk-sur-son-terminal-android)).
 
 Une fois que vous avez transféré le fichier en le faisant glisser de votre ordinateur à votre smartphone, pour l'installer, ouvrez le dossier "Downloads" sur le téléphone, cliquez sur l'APK AAPS et sélectionnez "installer". You can then proceed to the next step, [Setup Wizard](../SettingUpAaps/SetupWizard.md), which will help you setup the **AAPS** app and loop on your smartphone.
 
