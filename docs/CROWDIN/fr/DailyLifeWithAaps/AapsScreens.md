@@ -1,7 +1,8 @@
 # Les écrans d'AAPS
 
-```{contents} Table of Contents
-```{contents} Table of Contents :depth: 2
+```{contents}
+:backlinks: entry
+:depth: 2
 ```
 
 ## Écran d'accueil
