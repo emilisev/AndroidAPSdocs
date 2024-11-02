@@ -12,7 +12,7 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 ## Prérequis matériels et logiciels pour la compilation de AAPS
 
 * Please use the **[Android Studio version called at least Hedgehog (2023.1.1) or one more recent like Iguana, Jellyfish, Koala or Ladybug](https://developer.android.com/studio/)** to build the apk. Older versions of Android Studio need to be updated first!
-* [Windows 32-bit systems](../GettingHelp/TroubleshootingAndroidStudio#unable-to-start-daemon-process) are not supported by Android Studio. Veuillez garder à l'esprit qu'à la fois **le processeur (CPU 64 bits) et le système d'exploitation 64 bits sont des conditions obligatoires**. Si votre système NE satisfait PAS à cette condition, vous devez changer le matériel ou le système d'exploitation qui pose problème, ou tout le système.
+* [Windows 32-bit systems](#troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Veuillez garder à l'esprit qu'à la fois **le processeur (CPU 64 bits) et le système d'exploitation 64 bits sont des conditions obligatoires**. Si votre système NE satisfait PAS à cette condition, vous devez changer le matériel ou le système d'exploitation qui pose problème, ou tout le système.
 
 <table class="tg">
 <tbody>
@@ -91,6 +91,7 @@ Git is known as a “_Versioning Control System_” (VCS).\
 Git is a program that allows you to track changes in code and to collaborate with others. You will use Git to make a copy of the **AAPS** source code from the GitHub website to your local computer. Then, you will use Git on your computer to build the **AAPS** application (apk). 
 ```
 
+(BuildingAaps-steps-for-installing-git)=
 #### Étapes pour l'installation de Git
 
 1.  Vérifiez que vous n'avez pas déjà installé **Git**. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#install-android-studio):
@@ -296,8 +297,8 @@ Si la détection automatique réussit, la version de **Git** s'affiche sous chem
 
 
 If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error (1), you can either
-* manually enter the path which you saved [earlier](#steps-for-installing-git), or
-* click on the folder icon (1) and manually navigating to the directory where **git.exe** was installed [earlier](#steps-for-installing-git)
+* manually enter the path which you saved [earlier](#BuildingAaps-steps-for-installing-git), or
+* click on the folder icon (1) and manually navigating to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
 * Verify your settings with the **Test** button!
 
   ![Git not found](../images/Building-the-App/039_GitTestError.png)
@@ -357,7 +358,7 @@ Make sure to note down for yourself where your keystore is stored. You will need
 
 * Now choose a simple password (and make a note of it), enter it in the password box (2), and confirm it (2).
 
-  Les mots de passe du fichier de clés et de la clé n'ont pas besoin d'être très complexes. If you lose your password in the future, see [troubleshooting for lost key store](../GettingHelp/TroubleshootingAndroidStudio#lost-keystore).
+  Les mots de passe du fichier de clés et de la clé n'ont pas besoin d'être très complexes. If you lose your password in the future, see [troubleshooting for lost key store](#troubleshooting_androidstudio-lost-keystore).
 
 * L'alias par défaut (3) de votre clé est "key0", laissez-le tel quel.
 
