@@ -9,6 +9,7 @@ Il existe actuellement deux serveurs de reporting compatibles avec l'utilisation
 
 Nous recommandons l'utilisation de Nightscout.
 
+(SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
 Nightscout is a web application that can log and display your CGM data and **AAPS** data and creates reports. It is a powerful platform which has been integrated into **AAPS** for many years. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). Il permet également aux soignants d'envoyer des commandes à distance à **AAPS**.
@@ -34,8 +35,9 @@ Certains des fournisseurs qui hébergent Nightscout pour vous sont répertoriés
 
 ### Further configuration of Nightscout
 
-One you have your Nightscout instance up and running, see [Nightscout configuration page](../SettingUpAaps/Nightscout.md) for additional considerations.
+Once you have your Nightscout instance up and running, see [Nightscout configuration page](../SettingUpAaps/Nightscout.md) for additional considerations.
 
+(SettingUpTheReportingServer-tidepool)=
 ## Tidepool
 
 Tidepool n'est disponible dans **AAPS** que depuis la version 3.2, publiée fin 2023.
