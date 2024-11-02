@@ -30,11 +30,11 @@ La fonctionnalité SMB contient des mécanismes de sécurité:
 
 3. Des calculs supplémentaires sont effectués pour prédire l'évolution de la glycémie, par ex. Même si aucun glucide n'est renseigné par l'utilisateur, RNS peut détecter automatiquement une augmentation significative des niveaux de glycémie liés à des repas, l'adrénaline ou d'autres facteurs et essaiera de les ajuster avec des SMB. Pour être en sécurité, cela marche aussi dans l'autre sens et peut arrêter les SMB plus tôt si une chute rapide inattendue de la glycémie survient. That's why UAM should always be active at SMB.
 
-**You must have started [objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
+**You must have started [objective 9](#objectives-objective9) to use SMB.**
 
 Voir aussi : [Documentation OpenAPS pour oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) et [les infos de Tim sur les SMB](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
-(Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal)=
+(Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)=
 ### Max. U/h pour le débit temp Basal (OpenAPS "max-basal")
 Ce paramètre de sécurité détermine le débit de base temporaire maximal que la pompe à insuline peut délivrer. La valeur doit être la même dans la pompe et dans les AAPS et doit être au moins égale à 3 fois le débit de base le plus élevé.
 
@@ -54,7 +54,7 @@ AAPS limite la valeur ainsi :
 
 *See also [overview of hard-coded limits](#overview-of-hard-coded-limits).*
 
-(Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob)=
+(Open-APS-features-maximum-total-iob-openaps-cant-go-over)=
 ### IA totale maximale pour OpenAPS \[U\] (OpenAPS "max-IA")
 Cette valeur détermine le "maxIA" sous laquelle AAPS restera lors de l'exécution en mode boucle fermée. Si l'IA en cours (par exemple après un bolus de repas) est supérieure à la valeur définie, la boucle arrêtera d'administrer de l'insuline jusqu'à ce que la l'IA soit inférieure à la valeur limite renseignée.
 
@@ -81,6 +81,7 @@ Here, you can choose if you want to use the [sensitivity detection](../DailyLife
 ### Activer SMB
 Activer cette option pour utiliser la fonctionnalité SMB. Si désactiver, aucun SMB ne sera injecté.
 
+(Open-APS-features-enable-smb-with-high-temp-targets)=
 ### Activer les SMB avec cibles temp hautes
 Quand ce paramètre est activé, les SMB seront autorisés, mais pas nécessairement activés, lorsqu'une cible temporaire élevée est active (définie comme étant supérieure à 100mg/dL quelle que soit la cible du profil). Grâce à cette option, vous pouvez désactiver les SMB lorsque le paramètre est désactivé. Par exemple, si cette option est désactivée, les SMB peuvent être désactivés en définissant une cible temporaire supérieure à 100 mg/dl. Cette option force la désactivation des SMB même dans les situations où d'autres options concurrentes autoriseraient les SMB.
 
@@ -88,7 +89,7 @@ Quand ce paramètre est activé, les SMB ne seront activés avec une cible tempo
 
 (Open-APS-features-enable-smb-always)=
 ### Activer en permanence les SMB
-Quand ce paramètre est activé, les SMB sont activés en permanence (indépendamment des GA, des cibles temporaires ou des bolus). Quand ce paramètre est activé, les autres paramètres d'activation ci-dessous sont ignorés. Cependant, si “Activer les SMB avec cibles temp hautes” est désactivé et qu'une cible temporaire élevée est définie, les SMB seront désactivés. Pour des raisons de sécurité, cette option n'est utilisable que pour les sources de glycémie ayant un bon filtrage des données bruitées ou erratiques. Currently it is only an available option with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. Si une valeur de glycémie montre une variation trop importante par rapport à la précédente, le G5/G6 ne l'envoie pas et attend la valeur suivante 5 minutes après.
+Quand ce paramètre est activé, les SMB sont activés en permanence (indépendamment des GA, des cibles temporaires ou des bolus). Quand ce paramètre est activé, les autres paramètres d'activation ci-dessous sont ignorés. Cependant, si “Activer les SMB avec cibles temp hautes” est désactivé et qu'une cible temporaire élevée est définie, les SMB seront désactivés. Pour des raisons de sécurité, cette option n'est utilisable que pour les sources de glycémie ayant un bon filtrage des données bruitées ou erratiques. Currently it is only an available option with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. Si une valeur de glycémie montre une variation trop importante par rapport à la précédente, le G5/G6 ne l'envoie pas et attend la valeur suivante 5 minutes après.
 
 Pour les autres MGC/MGF comme le Freestyle Libre, "Activer les SMB en permanence" ne sera disponible que quand xDrip+ aura un meilleur plugin de lissage du bruit. You can find more [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
@@ -99,7 +100,7 @@ Quand ce paramètre est activé, les SMB sont activés lorsque la valeur de GA e
 Quand ce paramètre est activé, les SMB sont activés lorsqu'une cible temporaire est définie (repas imminent, activité, hypo, personnalisé). Si ce paramètre est activé mais que "Activer le SMB avec des cibles temp hautes" est désactivé, les SMB seront actifs lorsqu'une cible temporaire basse est définie (inférieure à 100 mg/dl) mais désactivés lorsqu'une cible temporaire haute est définie.
 
 ### Activer SMB après ingestion de glucides
-Quand ce paramètre est activé, les SMB sont activés pendant 6h après l'annonce des glucides, même si les GA sont revenus à 0. Pour des raisons de sécurité, cette option n'est utilisable que pour les sources de glycémie ayant un bon filtrage des données bruitées. Currently it is only an available option with a Dexcom G5 or G6 if using the ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. Si une valeur de glycémie montre une variation trop importante par rapport à la précédente, le G5/G6 ne l'envoie pas et attend la valeur suivante 5 minutes après.
+Quand ce paramètre est activé, les SMB sont activés pendant 6h après l'annonce des glucides, même si les GA sont revenus à 0. Pour des raisons de sécurité, cette option n'est utilisable que pour les sources de glycémie ayant un bon filtrage des données bruitées. Currently it is only an available option with a Dexcom G5 or G6 if using the ['Build your own Dexcom App'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. Si une valeur de glycémie montre une variation trop importante par rapport à la précédente, le G5/G6 ne l'envoie pas et attend la valeur suivante 5 minutes après.
 
 Pour les autres MGC/MGF comme le Freestyle Libre, les ‘SMB sans glucides actifs’ seront désactivés jusqu'à ce que xDrip+ dispose d'un meilleur plugin de filtrage. You can find [more information here](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
