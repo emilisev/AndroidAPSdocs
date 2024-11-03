@@ -21,10 +21,6 @@ The eCarbs on the overview tab, note the carbs in brackets at the COB field, whi
 
 ![eCarbs in graph](../images/eCarbs_Graph.png)
 
-Les glucides qui se seront pris en compte plus tard sont en orange foncé dans l'onglet Traitement :
-
-![eCarbs in future in treatment tab](../images/eCarbs_Treatment.png)
-
 ______________________________________________________________________
 
 Une façon de gérer les graisses et les protéines avec cette fonctionnalité est décrite ici: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
